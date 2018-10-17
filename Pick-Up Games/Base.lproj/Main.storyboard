@@ -17,35 +17,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login-pic" translatesAutoresizingMaskIntoConstraints="NO" id="sEN-H4-QRh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-Fg-luI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textField opaque="NO" alpha="0.25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yp-tY-AAB">
-                                <rect key="frame" x="31" y="481" width="292" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LSB-zu-z50">
+                                <rect key="frame" x="61" y="393" width="253" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930045871561" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" alpha="0.25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LSB-zu-z50">
-                                <rect key="frame" x="31" y="397" width="292" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.44154059193121697" green="0.44154059193121697" blue="0.44154059193121697" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="USERNAME" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bib-Ch-AnH">
+                                <rect key="frame" x="61" y="356" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="U8s-fq-CZm"/>
+                                </constraints>
+                                <color key="textColor" red="0.23775596269617844" green="0.99316922949735453" blue="0.98085817639368245" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yp-tY-AAB">
+                                <rect key="frame" x="61" y="480" width="253" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39912652905198776" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIu-MZ-Wwg">
+                                <rect key="frame" x="61" y="559" width="253" height="30"/>
+                                <color key="backgroundColor" red="0.23921568627450979" green="0.99215686274509807" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RQX-Wa-822"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PASSWORD" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFN-Lk-Bob">
+                                <rect key="frame" x="61" y="443" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1vZ-cW-AwD"/>
+                                </constraints>
+                                <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test-login" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-5W-B3R">
+                                <rect key="frame" x="33" y="111" width="309" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aw2-Vx-tUD">
+                                <rect key="frame" x="61" y="619" width="253" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="18"/>
+                                <state key="normal" title="REGISTER">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.1121854056" green="0.1052894435" blue="0.13640873019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LSB-zu-z50" firstAttribute="top" secondItem="bib-Ch-AnH" secondAttribute="bottom" constant="8" id="2PK-2O-S8Q"/>
+                            <constraint firstAttribute="bottom" secondItem="ujZ-Fg-luI" secondAttribute="bottom" id="AVD-9f-FWU"/>
+                            <constraint firstItem="bib-Ch-AnH" firstAttribute="leading" secondItem="Sqa-T5-SZf" secondAttribute="leading" constant="61" id="CqL-bs-ped"/>
+                            <constraint firstItem="ujZ-Fg-luI" firstAttribute="centerX" secondItem="3yp-tY-AAB" secondAttribute="centerX" id="EQP-aD-0gM"/>
+                            <constraint firstItem="bib-Ch-AnH" firstAttribute="leading" secondItem="LSB-zu-z50" secondAttribute="leading" id="IaH-P9-oFA"/>
+                            <constraint firstItem="bib-Ch-AnH" firstAttribute="leading" secondItem="HFN-Lk-Bob" secondAttribute="leading" id="OvE-tS-YId"/>
+                            <constraint firstAttribute="trailing" secondItem="ujZ-Fg-luI" secondAttribute="trailing" id="Q7z-b6-Zlw"/>
+                            <constraint firstItem="HFN-Lk-Bob" firstAttribute="top" secondItem="LSB-zu-z50" secondAttribute="bottom" constant="20" id="Xjk-lg-lzS"/>
+                            <constraint firstItem="ujZ-Fg-luI" firstAttribute="centerX" secondItem="LSB-zu-z50" secondAttribute="centerX" id="YPR-7d-bTL"/>
+                            <constraint firstItem="RIu-MZ-Wwg" firstAttribute="top" secondItem="3yp-tY-AAB" secondAttribute="bottom" constant="49" id="bBd-ej-Uy7"/>
+                            <constraint firstItem="RIu-MZ-Wwg" firstAttribute="leading" secondItem="Sqa-T5-SZf" secondAttribute="leading" constant="61" id="bbF-dD-OpB"/>
+                            <constraint firstItem="Sqa-T5-SZf" firstAttribute="trailing" secondItem="bib-Ch-AnH" secondAttribute="trailing" constant="191" id="dKv-TG-uzo"/>
+                            <constraint firstItem="3yp-tY-AAB" firstAttribute="top" secondItem="HFN-Lk-Bob" secondAttribute="bottom" constant="8" symbolic="YES" id="goF-rI-29q"/>
+                            <constraint firstItem="ujZ-Fg-luI" firstAttribute="leading" secondItem="Mvf-xl-moG" secondAttribute="leading" id="hQo-A7-Ec1"/>
+                            <constraint firstItem="ujZ-Fg-luI" firstAttribute="top" secondItem="Mvf-xl-moG" secondAttribute="top" id="jyr-co-NTf"/>
+                            <constraint firstItem="bib-Ch-AnH" firstAttribute="leading" secondItem="3yp-tY-AAB" secondAttribute="leading" id="kFY-TA-CzV"/>
+                            <constraint firstItem="bib-Ch-AnH" firstAttribute="top" secondItem="Sqa-T5-SZf" secondAttribute="top" constant="312" id="tZL-xC-vKg"/>
+                            <constraint firstItem="RIu-MZ-Wwg" firstAttribute="centerX" secondItem="3yp-tY-AAB" secondAttribute="centerX" constant="-0.5" id="wJe-3n-hgl"/>
+                            <constraint firstItem="bib-Ch-AnH" firstAttribute="trailing" secondItem="HFN-Lk-Bob" secondAttribute="trailing" id="yMm-2C-SEM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Sqa-T5-SZf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyL-nQ-zuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2000000000000002" y="10.344827586206897"/>
+            <point key="canvasLocation" x="-8.8000000000000007" y="9.6059113300492616"/>
         </scene>
     </scenes>
     <resources>
-        <image name="login-pic" width="125" height="270"/>
+        <image name="Login" width="125" height="270"/>
+        <image name="test-login" width="341" height="204"/>
     </resources>
 </document>
