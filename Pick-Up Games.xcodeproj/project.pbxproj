@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A6013D0478FBA6011E8AE3D /* Pods_Pick_Up_Games.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CF25F61D943C4E5F4E0180 /* Pods_Pick_Up_Games.framework */; };
+		1C67A98DC17D31A4298A018C /* Pods_Pick_Up_GamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7205FAF923D117FBB13132F /* Pods_Pick_Up_GamesTests.framework */; };
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
 		293B1B2B217095D5005D5CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* ViewController.swift */; };
 		293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		293B1B36217095D9005D5CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */; };
 		293B1B41217095D9005D5CCC /* Pick_Up_GamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B40217095D9005D5CCC /* Pick_Up_GamesTests.swift */; };
 		293B1B4C217095D9005D5CCC /* Pick_Up_GamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */; };
+		41AB20C721781324000A5760 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41AB20C621781323000A5760 /* GoogleService-Info.plist */; };
+		78E5A261A9770E4950199414 /* Pods_Pick_Up_GamesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA1A3D246E105542313483B /* Pods_Pick_Up_GamesUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,16 @@
 		293B1B47217095D9005D5CCC /* Pick-Up GamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pick-Up GamesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_Up_GamesUITests.swift; sourceTree = "<group>"; };
 		293B1B4D217095DA005D5CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A1B26F55B0068310C6DD840 /* Pods-Pick-Up GamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesTests/Pods-Pick-Up GamesTests.release.xcconfig"; sourceTree = "<group>"; };
+		41AB20C621781323000A5760 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4C25347BED44C42D67299A39 /* Pods-Pick-Up Games.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up Games.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up Games/Pods-Pick-Up Games.release.xcconfig"; sourceTree = "<group>"; };
+		60CF25F61D943C4E5F4E0180 /* Pods_Pick_Up_Games.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pick_Up_Games.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6417757329CDA7754B883027 /* Pods-Pick-Up Games.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up Games.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up Games/Pods-Pick-Up Games.debug.xcconfig"; sourceTree = "<group>"; };
+		693CEA4F3997B553CACEB1A7 /* Pods-Pick-Up GamesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesUITests/Pods-Pick-Up GamesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9EA323618020241FFDA01612 /* Pods-Pick-Up GamesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesUITests/Pods-Pick-Up GamesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAA1A3D246E105542313483B /* Pods_Pick_Up_GamesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pick_Up_GamesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55CD70466CEC354AEADBA43 /* Pods-Pick-Up GamesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesTests/Pods-Pick-Up GamesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7205FAF923D117FBB13132F /* Pods_Pick_Up_GamesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pick_Up_GamesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A6013D0478FBA6011E8AE3D /* Pods_Pick_Up_Games.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C67A98DC17D31A4298A018C /* Pods_Pick_Up_GamesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E5A261A9770E4950199414 /* Pods_Pick_Up_GamesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,8 @@
 				293B1B3F217095D9005D5CCC /* Pick-Up GamesTests */,
 				293B1B4A217095D9005D5CCC /* Pick-Up GamesUITests */,
 				293B1B26217095D5005D5CCC /* Products */,
+				6B77D3829FD22C66D21700CE /* Pods */,
+				5EA775EDA11B4AB0F9D7F9B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +124,7 @@
 				293B1B32217095D9005D5CCC /* Assets.xcassets */,
 				293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */,
 				293B1B37217095D9005D5CCC /* Info.plist */,
+				41AB20C621781323000A5760 /* GoogleService-Info.plist */,
 				293B1B2F217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld */,
 			);
 			path = "Pick-Up Games";
@@ -128,6 +148,29 @@
 			path = "Pick-Up GamesUITests";
 			sourceTree = "<group>";
 		};
+		5EA775EDA11B4AB0F9D7F9B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60CF25F61D943C4E5F4E0180 /* Pods_Pick_Up_Games.framework */,
+				C7205FAF923D117FBB13132F /* Pods_Pick_Up_GamesTests.framework */,
+				AAA1A3D246E105542313483B /* Pods_Pick_Up_GamesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B77D3829FD22C66D21700CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6417757329CDA7754B883027 /* Pods-Pick-Up Games.debug.xcconfig */,
+				4C25347BED44C42D67299A39 /* Pods-Pick-Up Games.release.xcconfig */,
+				B55CD70466CEC354AEADBA43 /* Pods-Pick-Up GamesTests.debug.xcconfig */,
+				2A1B26F55B0068310C6DD840 /* Pods-Pick-Up GamesTests.release.xcconfig */,
+				9EA323618020241FFDA01612 /* Pods-Pick-Up GamesUITests.debug.xcconfig */,
+				693CEA4F3997B553CACEB1A7 /* Pods-Pick-Up GamesUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 293B1B50217095DA005D5CCC /* Build configuration list for PBXNativeTarget "Pick-Up Games" */;
 			buildPhases = (
+				08830B20B0F75DFB99BA6065 /* [CP] Check Pods Manifest.lock */,
 				293B1B21217095D5005D5CCC /* Sources */,
 				293B1B22217095D5005D5CCC /* Frameworks */,
 				293B1B23217095D5005D5CCC /* Resources */,
+				A1DF043B65F5696F1CFD617D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 293B1B53217095DA005D5CCC /* Build configuration list for PBXNativeTarget "Pick-Up GamesTests" */;
 			buildPhases = (
+				4853D81CB99A831FB3BF9AF7 /* [CP] Check Pods Manifest.lock */,
 				293B1B38217095D9005D5CCC /* Sources */,
 				293B1B39217095D9005D5CCC /* Frameworks */,
 				293B1B3A217095D9005D5CCC /* Resources */,
@@ -170,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 293B1B56217095DA005D5CCC /* Build configuration list for PBXNativeTarget "Pick-Up GamesUITests" */;
 			buildPhases = (
+				BA83F320D62711F1A657FDA9 /* [CP] Check Pods Manifest.lock */,
 				293B1B43217095D9005D5CCC /* Sources */,
 				293B1B44217095D9005D5CCC /* Frameworks */,
 				293B1B45217095D9005D5CCC /* Resources */,
@@ -236,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				293B1B36217095D9005D5CCC /* LaunchScreen.storyboard in Resources */,
+				41AB20C721781324000A5760 /* GoogleService-Info.plist in Resources */,
 				293B1B33217095D9005D5CCC /* Assets.xcassets in Resources */,
 				293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */,
 			);
@@ -256,6 +304,107 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08830B20B0F75DFB99BA6065 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pick-Up Games-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4853D81CB99A831FB3BF9AF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pick-Up GamesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1DF043B65F5696F1CFD617D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pick-Up Games/Pods-Pick-Up Games-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pick-Up Games/Pods-Pick-Up Games-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA83F320D62711F1A657FDA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pick-Up GamesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		293B1B21217095D5005D5CCC /* Sources */ = {
@@ -437,6 +586,7 @@
 		};
 		293B1B51217095DA005D5CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6417757329CDA7754B883027 /* Pods-Pick-Up Games.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +605,7 @@
 		};
 		293B1B52217095DA005D5CCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C25347BED44C42D67299A39 /* Pods-Pick-Up Games.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -473,6 +624,7 @@
 		};
 		293B1B54217095DA005D5CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B55CD70466CEC354AEADBA43 /* Pods-Pick-Up GamesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +646,7 @@
 		};
 		293B1B55217095DA005D5CCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A1B26F55B0068310C6DD840 /* Pods-Pick-Up GamesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +668,7 @@
 		};
 		293B1B57217095DA005D5CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA323618020241FFDA01612 /* Pods-Pick-Up GamesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +689,7 @@
 		};
 		293B1B58217095DA005D5CCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 693CEA4F3997B553CACEB1A7 /* Pods-Pick-Up GamesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
