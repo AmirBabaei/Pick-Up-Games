@@ -75,6 +75,9 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.1121854056" green="0.1052894435" blue="0.13640873019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="KFf-bx-3hC" kind="show" id="jRP-al-vsJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,6 +108,136 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyL-nQ-zuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8.8000000000000007" y="9.6059113300492616"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jN5-F9-M6S">
+            <objects>
+                <viewController id="KFf-bx-3hC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="No4-Om-O5h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="NMl-Oo-1xF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-Tz-Lks">
+                                <rect key="frame" x="61" y="152" width="253" height="305"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="GgX-qb-mZq">
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="65"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="USERNAME" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLf-Ac-iMK">
+                                                <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="H3n-SX-NaO"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvL-rk-uGp">
+                                                <rect key="frame" x="0.0" y="36" width="253" height="29"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Dok-WR-Kxg">
+                                        <rect key="frame" x="0.0" y="80" width="253" height="65"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="EMAIL" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hx4-oX-MbR">
+                                                <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="NOg-fx-66b"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giY-G7-494">
+                                                <rect key="frame" x="0.0" y="36" width="253" height="29"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="k1U-HI-tUc">
+                                        <rect key="frame" x="0.0" y="160" width="253" height="65"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PASSWORD" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="27o-Ne-2Vf">
+                                                <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="Zcz-62-yQw"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5r7-pM-vXP">
+                                                <rect key="frame" x="0.0" y="36" width="253" height="29"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Rpj-18-Vs1">
+                                        <rect key="frame" x="0.0" y="240" width="253" height="65"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="CONFIRM PASSWORD" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbJ-Ud-Emm">
+                                                <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="Uw2-lh-pUm"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHP-JZ-HOe">
+                                                <rect key="frame" x="0.0" y="36" width="253" height="29"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-oj-2XX">
+                                <rect key="frame" x="61" y="525" width="253" height="30"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.99215686270000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <state key="normal" title="REGISTER">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FLb-oj-2XX" firstAttribute="top" secondItem="Dst-Tz-Lks" secondAttribute="bottom" constant="68" id="0N9-tS-lTb"/>
+                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="top" secondItem="96l-1O-ThS" secondAttribute="top" constant="108" id="0zo-zj-Hd0"/>
+                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="centerX" secondItem="NMl-Oo-1xF" secondAttribute="centerX" id="2Mf-Gu-0wj"/>
+                            <constraint firstItem="NMl-Oo-1xF" firstAttribute="top" secondItem="No4-Om-O5h" secondAttribute="top" id="6Ce-LN-qCa"/>
+                            <constraint firstItem="NMl-Oo-1xF" firstAttribute="leading" secondItem="No4-Om-O5h" secondAttribute="leading" id="8uU-c3-Jn1"/>
+                            <constraint firstItem="96l-1O-ThS" firstAttribute="bottom" secondItem="FLb-oj-2XX" secondAttribute="bottom" constant="223" id="BSa-qZ-cm2"/>
+                            <constraint firstAttribute="bottom" secondItem="NMl-Oo-1xF" secondAttribute="bottom" id="G5F-vX-3dR"/>
+                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="leading" secondItem="96l-1O-ThS" secondAttribute="leading" constant="61" id="LaN-yd-12w"/>
+                            <constraint firstAttribute="trailing" secondItem="NMl-Oo-1xF" secondAttribute="trailing" id="OHB-8z-ySy"/>
+                            <constraint firstItem="FLb-oj-2XX" firstAttribute="trailing" secondItem="Dst-Tz-Lks" secondAttribute="trailing" id="bND-0G-ltY"/>
+                            <constraint firstItem="FLb-oj-2XX" firstAttribute="leading" secondItem="Dst-Tz-Lks" secondAttribute="leading" id="vjI-t0-LgP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="96l-1O-ThS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQn-uY-uNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720.79999999999995" y="-171.42857142857144"/>
         </scene>
     </scenes>
     <resources>
