@@ -146,7 +146,7 @@
         <!--RegisterView-->
         <scene sceneID="jN5-F9-M6S">
             <objects>
-                <viewController title="RegisterView" id="KFf-bx-3hC" customClass="RegisterView" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="RegisterView" id="KFf-bx-3hC" customClass="RegisterViewController" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="No4-Om-O5h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +242,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="RegisterPressed:" destination="KFf-bx-3hC" eventType="touchUpInside" id="Bug-ar-luc"/>
+                                    <action selector="RegisterPressed:" destination="KFf-bx-3hC" eventType="touchUpInside" id="zQU-4x-JzI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBz-AK-cgn">
@@ -274,8 +274,11 @@
                     </view>
                     <connections>
                         <outlet property="CONPassTF" destination="UHP-JZ-HOe" id="iIG-D3-ncy"/>
-                        <outlet property="EmailTF" destination="giY-G7-494" id="22s-cJ-7ru"/>
+                        <outlet property="ConPassTf" destination="UHP-JZ-HOe" id="T11-U3-xNn"/>
+                        <outlet property="EmailTF" destination="giY-G7-494" id="3CS-eb-ybp"/>
                         <outlet property="PasswordTF" destination="5r7-pM-vXP" id="EIe-H7-WVk"/>
+                        <outlet property="PasswordTf" destination="5r7-pM-vXP" id="Ic8-79-M8s"/>
+                        <outlet property="UserNameTF" destination="pvL-rk-uGp" id="BQE-S7-pTp"/>
                         <outlet property="UsernameTF" destination="pvL-rk-uGp" id="Lub-jm-gba"/>
                     </connections>
                 </viewController>

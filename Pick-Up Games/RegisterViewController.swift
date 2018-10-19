@@ -10,14 +10,23 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    override func viewDidLoad() {
+  @IBOutlet var UserNameTF: UITextField!
+  
+  @IBOutlet var EmailTF: UITextField!
+  
+  @IBOutlet var PasswordTf: UITextField!
+  
+  @IBOutlet var ConPassTf: UITextField!
+  override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
+  @IBAction func RegisterPressed(_ sender: Any) {
+  }
+  /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
