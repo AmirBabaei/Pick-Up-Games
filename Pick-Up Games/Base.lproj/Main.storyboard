@@ -138,7 +138,7 @@
         <!--Register-->
         <scene sceneID="jN5-F9-M6S">
             <objects>
-                <viewController title="Register" id="KFf-bx-3hC" sceneMemberID="viewController">
+                <viewController title="Register" id="KFf-bx-3hC" customClass="RegisterViewController" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="No4-Om-O5h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
