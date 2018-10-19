@@ -77,7 +77,7 @@
                                     <color key="titleShadowColor" red="0.1121854056" green="0.1052894435" blue="0.13640873019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KFf-bx-3hC" kind="show" id="jRP-al-vsJ"/>
+                                    <segue destination="KFf-bx-3hC" kind="show" id="hya-d9-hjQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -273,13 +273,8 @@
                         <viewLayoutGuide key="safeArea" id="96l-1O-ThS"/>
                     </view>
                     <connections>
-                        <outlet property="CONPassTF" destination="UHP-JZ-HOe" id="iIG-D3-ncy"/>
-                        <outlet property="ConPassTf" destination="UHP-JZ-HOe" id="T11-U3-xNn"/>
                         <outlet property="EmailTF" destination="giY-G7-494" id="3CS-eb-ybp"/>
-                        <outlet property="PasswordTF" destination="5r7-pM-vXP" id="EIe-H7-WVk"/>
                         <outlet property="PasswordTf" destination="5r7-pM-vXP" id="Ic8-79-M8s"/>
-                        <outlet property="UserNameTF" destination="pvL-rk-uGp" id="BQE-S7-pTp"/>
-                        <outlet property="UsernameTF" destination="pvL-rk-uGp" id="Lub-jm-gba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQn-uY-uNd" userLabel="First Responder" sceneMemberID="firstResponder"/>

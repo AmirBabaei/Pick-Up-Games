@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
-  @IBOutlet var UserNameTF: UITextField!
+  //@IBOutlet var UserNameTF: UITextField!
   
   @IBOutlet var EmailTF: UITextField!
   
   @IBOutlet var PasswordTf: UITextField!
   
-  @IBOutlet var ConPassTf: UITextField!
+  // @IBOutlet var ConPassTf: UITextField!
+  
   override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +27,14 @@ class RegisterViewController: UIViewController {
     
 
   @IBAction func RegisterPressed(_ sender: Any) {
+    Auth.auth().createUser(withEmail: EmailTF.text!, password: PasswordTf.text!) { (user, error) in
+      if error != nil{
+        print(error!)
+      }else
+      {
+        print("registration successful!")
+      }
+    }
   }
   /*
     // MARK: - Navigation
