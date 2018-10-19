@@ -250,7 +250,7 @@
                                 <state key="normal" title="" image="Back icon"/>
                                 <connections>
                                     <action selector="Backtologin:" destination="OiF-4p-Vti" eventType="touchUpInside" id="FVc-xb-0lW"/>
-                                    <segue destination="fCb-6n-Owd" kind="show" id="S97-kU-KzP"/>
+                                    <segue destination="OiF-4p-Vti" kind="unwind" identifier="UnwindToLogin" unwindAction="unwindToLoginWithSegue:" id="OyT-DF-qZs"/>
                                 </connections>
                             </button>
                         </subviews>
