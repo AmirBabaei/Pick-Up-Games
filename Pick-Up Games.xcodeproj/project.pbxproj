@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
-		293B1B2B217095D5005D5CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* ViewController.swift */; };
+		293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* LoginView.swift */; };
 		293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
 		293B1B31217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2F217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld */; };
 		293B1B33217095D9005D5CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B32217095D9005D5CCC /* Assets.xcassets */; };
 		293B1B36217095D9005D5CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */; };
 		293B1B41217095D9005D5CCC /* Pick_Up_GamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B40217095D9005D5CCC /* Pick_Up_GamesTests.swift */; };
 		293B1B4C217095D9005D5CCC /* Pick_Up_GamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */; };
+		296CF099217979E000A56E6A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296CF098217979E000A56E6A /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		293B1B25217095D5005D5CCC /* Pick-Up Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-Up Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B28217095D5005D5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		293B1B2A217095D5005D5CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		293B1B2A217095D5005D5CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		293B1B2D217095D5005D5CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		293B1B30217095D5005D5CCC /* Pick_Up_Games.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pick_Up_Games.xcdatamodel; sourceTree = "<group>"; };
 		293B1B32217095D9005D5CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		293B1B47217095D9005D5CCC /* Pick-Up GamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pick-Up GamesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_Up_GamesUITests.swift; sourceTree = "<group>"; };
 		293B1B4D217095DA005D5CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		296CF098217979E000A56E6A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				293B1B28217095D5005D5CCC /* AppDelegate.swift */,
-				293B1B2A217095D5005D5CCC /* ViewController.swift */,
+				293B1B2A217095D5005D5CCC /* LoginView.swift */,
+				296CF098217979E000A56E6A /* RegisterView.swift */,
 				293B1B2C217095D5005D5CCC /* Main.storyboard */,
 				293B1B32217095D9005D5CCC /* Assets.xcassets */,
 				293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */,
@@ -263,7 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				293B1B31217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld in Sources */,
-				293B1B2B217095D5005D5CCC /* ViewController.swift in Sources */,
+				296CF099217979E000A56E6A /* RegisterView.swift in Sources */,
+				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
 				293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

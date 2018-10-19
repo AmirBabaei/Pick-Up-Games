@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginView-->
         <scene sceneID="2NF-SJ-6yd">
             <objects>
-                <viewController id="fCb-6n-Owd" sceneMemberID="viewController">
+                <viewController title="LoginView" id="fCb-6n-Owd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mvf-xl-moG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,13 +63,14 @@
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test-login" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-5W-B3R">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="test-login" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-5W-B3R">
                                 <rect key="frame" x="33" y="111" width="309" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aw2-Vx-tUD">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aw2-Vx-tUD">
                                 <rect key="frame" x="61" y="619" width="253" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="3JN-CS-5A2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="18"/>
                                 <state key="normal" title="REGISTER">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,9 +84,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LSB-zu-z50" firstAttribute="top" secondItem="bib-Ch-AnH" secondAttribute="bottom" constant="8" id="2PK-2O-S8Q"/>
+                            <constraint firstItem="Aw2-Vx-tUD" firstAttribute="centerX" secondItem="LKi-5W-B3R" secondAttribute="centerX" id="9YO-G8-fEM"/>
                             <constraint firstAttribute="bottom" secondItem="ujZ-Fg-luI" secondAttribute="bottom" id="AVD-9f-FWU"/>
+                            <constraint firstItem="LKi-5W-B3R" firstAttribute="leading" secondItem="Sqa-T5-SZf" secondAttribute="leading" constant="33" id="BpV-dA-nnr"/>
                             <constraint firstItem="bib-Ch-AnH" firstAttribute="leading" secondItem="Sqa-T5-SZf" secondAttribute="leading" constant="61" id="CqL-bs-ped"/>
                             <constraint firstItem="ujZ-Fg-luI" firstAttribute="centerX" secondItem="3yp-tY-AAB" secondAttribute="centerX" id="EQP-aD-0gM"/>
+                            <constraint firstItem="LKi-5W-B3R" firstAttribute="top" secondItem="Sqa-T5-SZf" secondAttribute="top" constant="67" id="G6L-1o-G1v"/>
                             <constraint firstItem="bib-Ch-AnH" firstAttribute="leading" secondItem="LSB-zu-z50" secondAttribute="leading" id="IaH-P9-oFA"/>
                             <constraint firstItem="bib-Ch-AnH" firstAttribute="leading" secondItem="HFN-Lk-Bob" secondAttribute="leading" id="OvE-tS-YId"/>
                             <constraint firstAttribute="trailing" secondItem="ujZ-Fg-luI" secondAttribute="trailing" id="Q7z-b6-Zlw"/>
@@ -94,10 +98,14 @@
                             <constraint firstItem="RIu-MZ-Wwg" firstAttribute="top" secondItem="3yp-tY-AAB" secondAttribute="bottom" constant="49" id="bBd-ej-Uy7"/>
                             <constraint firstItem="RIu-MZ-Wwg" firstAttribute="leading" secondItem="Sqa-T5-SZf" secondAttribute="leading" constant="61" id="bbF-dD-OpB"/>
                             <constraint firstItem="Sqa-T5-SZf" firstAttribute="trailing" secondItem="bib-Ch-AnH" secondAttribute="trailing" constant="191" id="dKv-TG-uzo"/>
+                            <constraint firstItem="bib-Ch-AnH" firstAttribute="top" secondItem="LKi-5W-B3R" secondAttribute="bottom" constant="28" id="eKF-NN-O5N"/>
                             <constraint firstItem="3yp-tY-AAB" firstAttribute="top" secondItem="HFN-Lk-Bob" secondAttribute="bottom" constant="8" symbolic="YES" id="goF-rI-29q"/>
                             <constraint firstItem="ujZ-Fg-luI" firstAttribute="leading" secondItem="Mvf-xl-moG" secondAttribute="leading" id="hQo-A7-Ec1"/>
                             <constraint firstItem="ujZ-Fg-luI" firstAttribute="top" secondItem="Mvf-xl-moG" secondAttribute="top" id="jyr-co-NTf"/>
                             <constraint firstItem="bib-Ch-AnH" firstAttribute="leading" secondItem="3yp-tY-AAB" secondAttribute="leading" id="kFY-TA-CzV"/>
+                            <constraint firstItem="Aw2-Vx-tUD" firstAttribute="leading" secondItem="RIu-MZ-Wwg" secondAttribute="leading" id="klX-96-zzJ"/>
+                            <constraint firstItem="Aw2-Vx-tUD" firstAttribute="trailing" secondItem="RIu-MZ-Wwg" secondAttribute="trailing" id="lNH-eh-6r2"/>
+                            <constraint firstItem="Aw2-Vx-tUD" firstAttribute="top" secondItem="RIu-MZ-Wwg" secondAttribute="bottom" constant="30" id="o8b-bZ-VAL"/>
                             <constraint firstItem="bib-Ch-AnH" firstAttribute="top" secondItem="Sqa-T5-SZf" secondAttribute="top" constant="312" id="tZL-xC-vKg"/>
                             <constraint firstItem="RIu-MZ-Wwg" firstAttribute="centerX" secondItem="3yp-tY-AAB" secondAttribute="centerX" constant="-0.5" id="wJe-3n-hgl"/>
                             <constraint firstItem="bib-Ch-AnH" firstAttribute="trailing" secondItem="HFN-Lk-Bob" secondAttribute="trailing" id="yMm-2C-SEM"/>
@@ -135,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="-47.200000000000003" y="-707.14285714285722"/>
         </scene>
-        <!--Register-->
+        <!--RegisterView-->
         <scene sceneID="jN5-F9-M6S">
             <objects>
-                <viewController title="Register" id="KFf-bx-3hC" sceneMemberID="viewController">
+                <viewController title="RegisterView" id="KFf-bx-3hC" customClass="RegisterView" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="No4-Om-O5h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,9 +162,6 @@
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="USERNAME" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLf-Ac-iMK">
                                                 <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="H3n-SX-NaO"/>
-                                                </constraints>
                                                 <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -175,9 +180,6 @@
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="EMAIL" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hx4-oX-MbR">
                                                 <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="NOg-fx-66b"/>
-                                                </constraints>
                                                 <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -196,9 +198,6 @@
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PASSWORD" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="27o-Ne-2Vf">
                                                 <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="Zcz-62-yQw"/>
-                                                </constraints>
                                                 <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -217,9 +216,6 @@
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="CONFIRM PASSWORD" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbJ-Ud-Emm">
                                                 <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="Uw2-lh-pUm"/>
-                                                </constraints>
                                                 <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -238,37 +234,50 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-oj-2XX">
                                 <rect key="frame" x="61" y="525" width="253" height="30"/>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.99215686270000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pFl-bw-Wff"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                 <state key="normal" title="REGISTER">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="RegisterPressed:" destination="KFf-bx-3hC" eventType="touchUpInside" id="Bug-ar-luc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBz-AK-cgn">
                                 <rect key="frame" x="31" y="48" width="16" height="22"/>
                                 <state key="normal" title="" image="Back icon"/>
                                 <connections>
-                                    <segue destination="OiF-4p-Vti" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLoginWithSegue:" id="xCX-mG-XGd"/>
+                                    <action selector="Backtologin:" destination="OiF-4p-Vti" eventType="touchUpInside" id="FVc-xb-0lW"/>
+                                    <segue destination="fCb-6n-Owd" kind="show" id="S97-kU-KzP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FLb-oj-2XX" firstAttribute="top" secondItem="Dst-Tz-Lks" secondAttribute="bottom" constant="68" id="0N9-tS-lTb"/>
-                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="top" secondItem="96l-1O-ThS" secondAttribute="top" constant="108" id="0zo-zj-Hd0"/>
-                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="centerX" secondItem="NMl-Oo-1xF" secondAttribute="centerX" id="2Mf-Gu-0wj"/>
-                            <constraint firstItem="NMl-Oo-1xF" firstAttribute="top" secondItem="No4-Om-O5h" secondAttribute="top" id="6Ce-LN-qCa"/>
-                            <constraint firstItem="wBz-AK-cgn" firstAttribute="top" secondItem="96l-1O-ThS" secondAttribute="top" constant="4" id="8aa-ot-kBV"/>
-                            <constraint firstItem="NMl-Oo-1xF" firstAttribute="leading" secondItem="No4-Om-O5h" secondAttribute="leading" id="8uU-c3-Jn1"/>
-                            <constraint firstItem="96l-1O-ThS" firstAttribute="bottom" secondItem="FLb-oj-2XX" secondAttribute="bottom" constant="223" id="BSa-qZ-cm2"/>
-                            <constraint firstAttribute="bottom" secondItem="NMl-Oo-1xF" secondAttribute="bottom" id="G5F-vX-3dR"/>
-                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="leading" secondItem="96l-1O-ThS" secondAttribute="leading" constant="61" id="LaN-yd-12w"/>
-                            <constraint firstAttribute="trailing" secondItem="NMl-Oo-1xF" secondAttribute="trailing" id="OHB-8z-ySy"/>
-                            <constraint firstItem="wBz-AK-cgn" firstAttribute="leading" secondItem="96l-1O-ThS" secondAttribute="leading" constant="31" id="U55-6o-wBs"/>
-                            <constraint firstItem="FLb-oj-2XX" firstAttribute="trailing" secondItem="Dst-Tz-Lks" secondAttribute="trailing" id="bND-0G-ltY"/>
-                            <constraint firstItem="FLb-oj-2XX" firstAttribute="leading" secondItem="Dst-Tz-Lks" secondAttribute="leading" id="vjI-t0-LgP"/>
+                            <constraint firstItem="wBz-AK-cgn" firstAttribute="leading" secondItem="96l-1O-ThS" secondAttribute="leading" constant="31" id="1Qv-Hx-cJO"/>
+                            <constraint firstItem="96l-1O-ThS" firstAttribute="bottom" secondItem="FLb-oj-2XX" secondAttribute="bottom" constant="223" id="Gf9-qM-g2G"/>
+                            <constraint firstItem="wBz-AK-cgn" firstAttribute="top" secondItem="96l-1O-ThS" secondAttribute="top" constant="4" id="LW6-Hr-N0d"/>
+                            <constraint firstAttribute="trailing" secondItem="NMl-Oo-1xF" secondAttribute="trailing" id="Usg-nK-nWZ"/>
+                            <constraint firstAttribute="bottom" secondItem="NMl-Oo-1xF" secondAttribute="bottom" id="cIZ-0U-dJH"/>
+                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="leading" secondItem="FLb-oj-2XX" secondAttribute="leading" id="dCf-Vu-Cry"/>
+                            <constraint firstItem="NMl-Oo-1xF" firstAttribute="centerX" secondItem="Dst-Tz-Lks" secondAttribute="centerX" id="e5G-FJ-uEj"/>
+                            <constraint firstItem="NMl-Oo-1xF" firstAttribute="leading" secondItem="No4-Om-O5h" secondAttribute="leading" id="iE7-Rt-Gr5"/>
+                            <constraint firstItem="FLb-oj-2XX" firstAttribute="top" secondItem="Dst-Tz-Lks" secondAttribute="bottom" constant="68" id="jgL-kr-EXI"/>
+                            <constraint firstItem="NMl-Oo-1xF" firstAttribute="top" secondItem="No4-Om-O5h" secondAttribute="top" id="kj4-Sf-8wG"/>
+                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="trailing" secondItem="FLb-oj-2XX" secondAttribute="trailing" id="qAN-51-BQg"/>
+                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="leading" secondItem="96l-1O-ThS" secondAttribute="leading" constant="61" id="r3g-eD-LfV"/>
+                            <constraint firstItem="Dst-Tz-Lks" firstAttribute="top" secondItem="96l-1O-ThS" secondAttribute="top" constant="108" id="yPN-Ht-JGo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="96l-1O-ThS"/>
                     </view>
+                    <connections>
+                        <outlet property="CONPassTF" destination="UHP-JZ-HOe" id="iIG-D3-ncy"/>
+                        <outlet property="EmailTF" destination="giY-G7-494" id="22s-cJ-7ru"/>
+                        <outlet property="PasswordTF" destination="5r7-pM-vXP" id="EIe-H7-WVk"/>
+                        <outlet property="UsernameTF" destination="pvL-rk-uGp" id="Lub-jm-gba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQn-uY-uNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="OiF-4p-Vti" userLabel="Exit" sceneMemberID="exit"/>
