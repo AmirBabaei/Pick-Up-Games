@@ -26,10 +26,17 @@ class RegisterViewController: UIViewController {
     }
     
 
+/*  @IBAction func BackB(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindToLogin", sender: nil)
+  }*/
+  
+  
+  
   @IBAction func RegisterPressed(_ sender: Any) {
     Auth.auth().createUser(withEmail: EmailTF.text!, password: PasswordTf.text!) { (user, error) in
       if error != nil{
         print(error!)
+        print(">>>>>>>failed to register<<<<<<<<")
       }else
       {
         print("registration successful!")
