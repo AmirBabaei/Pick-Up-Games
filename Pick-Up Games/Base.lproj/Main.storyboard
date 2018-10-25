@@ -136,12 +136,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="LOf-MH-bVJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="-7" width="375" height="819"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LOf-MH-bVJ" firstAttribute="top" secondItem="TxO-S9-Dim" secondAttribute="top" id="64c-16-kLz"/>
+                            <constraint firstItem="LOf-MH-bVJ" firstAttribute="top" secondItem="TxO-S9-Dim" secondAttribute="top" constant="-7" id="64c-16-kLz"/>
                             <constraint firstAttribute="trailing" secondItem="LOf-MH-bVJ" secondAttribute="trailing" id="P4h-UH-06V"/>
                             <constraint firstAttribute="bottom" secondItem="LOf-MH-bVJ" secondAttribute="bottom" id="dL7-XF-2Vk"/>
                             <constraint firstItem="LOf-MH-bVJ" firstAttribute="leading" secondItem="TxO-S9-Dim" secondAttribute="leading" id="eeW-uP-GUp"/>
@@ -235,7 +235,7 @@
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
