@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let myDatabase = Database.database().reference()
     
-    myDatabase.setValue("Temp data to be deleted")
     
     return true
   }
