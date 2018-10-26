@@ -12,13 +12,16 @@
         <!--LoginView-->
         <scene sceneID="2NF-SJ-6yd">
             <objects>
-                <viewController title="LoginView" id="fCb-6n-Owd" sceneMemberID="viewController">
+                <viewController title="LoginView" id="fCb-6n-Owd" customClass="LoginView" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mvf-xl-moG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-Fg-luI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <accessibility key="accessibilityConfiguration" identifier="gotoLoginView">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LSB-zu-z50">
                                 <rect key="frame" x="61" y="393" width="253" height="30"/>
@@ -53,6 +56,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="Login_button:" destination="fCb-6n-Owd" eventType="touchUpInside" id="Azc-Iz-RDy"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PASSWORD" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFN-Lk-Bob">
                                 <rect key="frame" x="61" y="443" width="123" height="29"/>
@@ -112,6 +118,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sqa-T5-SZf"/>
                     </view>
+                    <connections>
+                        <outlet property="LoginPasswordTF" destination="3yp-tY-AAB" id="945-9k-gZH"/>
+                        <outlet property="UsernameTF" destination="LSB-zu-z50" id="SIc-Jr-Jyg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyL-nQ-zuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,7 +260,7 @@
                                 <state key="normal" title="" image="Back icon"/>
                                 <connections>
                                     <action selector="Backtologin:" destination="OiF-4p-Vti" eventType="touchUpInside" id="FVc-xb-0lW"/>
-                                    <segue destination="fCb-6n-Owd" kind="show" id="6tk-4e-Hel"/>
+                                    <segue destination="fCb-6n-Owd" kind="show" identifier="gotoLoginView" id="6tk-4e-Hel"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -273,6 +283,7 @@
                         <viewLayoutGuide key="safeArea" id="96l-1O-ThS"/>
                     </view>
                     <connections>
+                        <outlet property="ConPassTF" destination="UHP-JZ-HOe" id="reb-39-wIr"/>
                         <outlet property="EmailTF" destination="giY-G7-494" id="3CS-eb-ybp"/>
                         <outlet property="PasswordTf" destination="5r7-pM-vXP" id="Ic8-79-M8s"/>
                     </connections>
