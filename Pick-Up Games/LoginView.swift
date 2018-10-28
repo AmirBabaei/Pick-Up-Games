@@ -7,14 +7,34 @@
 //
 
 import UIKit
+import Firebase
 
-class LoginView: UIViewController {
-  override func viewDidLoad() {
+class LoginView: UIViewController{
+    
+    @IBOutlet var UsernameTF: UITextField!
+    
+    @IBOutlet var LoginPasswordTF: UITextField!
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
 
   @IBAction func unwindToLogin(segue:UIStoryboardSegue) { }
 
+    @IBAction func Login_button(_ sender: Any) {
+        Auth.auth().signIn(withEmail: UsernameTF.text!, password: LoginPasswordTF.text!) { (user, error) in
+            
+            if error != nil{
+                print(">>>>>>>>> LOGIN FAILED <<<<<<<<<")
+                print(error!)
+            }
+            else{
+                print(">>>>>>>>> login successful <<<<<<<<<<")
+                self.performSegue(withIdentifier: "gotoFeed", sender: self)
+            }
+            
+        }
+    }
 }
 
