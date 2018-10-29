@@ -11,11 +11,12 @@ import Firebase
 
 class RegisterViewController: UIViewController {
 
-  //@IBOutlet var UserNameTF: UITextField!
+    
+    @IBOutlet var UsernameTF: UITextField!
+    
+    @IBOutlet var EmailTF: UITextField!
   
-  @IBOutlet var EmailTF: UITextField!
-  
-  @IBOutlet var PasswordTf: UITextField!
+    @IBOutlet var PasswordTf: UITextField!
 
     @IBOutlet var ConPassTF: UITextField!
     
@@ -34,7 +35,8 @@ class RegisterViewController: UIViewController {
   
   @IBAction func RegisterPressed(_ sender: Any) {
     Auth.auth().createUser(withEmail: EmailTF.text!, password: PasswordTf.text!) { (user, error) in
-      if self.PasswordTf.text! != self.ConPassTF.text!
+    var ref: DatabaseReference!
+    if self.PasswordTf.text! != self.ConPassTF.text!
       {
         print("Passwords do not match!")
         //need to add functionality so that the user will not be registered
@@ -47,6 +49,8 @@ class RegisterViewController: UIViewController {
         else
       {
         print("registration successful!")
+        ref = Database.database().reference()
+        ref.child("users").child((user?.user.uid)!).setValue(["username": self.UsernameTF.text!])
         self.performSegue(withIdentifier: "gotoLoginView", sender: self)
       }
         }
