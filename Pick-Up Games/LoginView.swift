@@ -33,7 +33,7 @@ class LoginView: UIViewController {
             else{
                 print(">>>>>>>>> login successful <<<<<<<<<<")
                 
-                //self.performSegue(withIdentifier: "gotoFeed", sender: <#T##Any?#>)
+                self.performSegue(withIdentifier: "gotoFeed", sender: self)
                 // The above needs to be implmented once we have feed page segue to feed page should be gotoFeed
             }
             

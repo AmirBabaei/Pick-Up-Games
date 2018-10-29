@@ -121,6 +121,7 @@
                     <connections>
                         <outlet property="LoginPasswordTF" destination="3yp-tY-AAB" id="945-9k-gZH"/>
                         <outlet property="UsernameTF" destination="LSB-zu-z50" id="SIc-Jr-Jyg"/>
+                        <segue destination="Wgb-bm-Zk1" kind="show" identifier="gotoFeed" id="6nR-7j-P3o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyL-nQ-zuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,7 +131,6 @@
         <!--Feed-->
         <scene sceneID="n51-H0-IoN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AJQ-xi-hkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Feed" id="Wgb-bm-Zk1" customClass="Feed" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TxO-S9-Dim">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -240,6 +240,7 @@
                         <outlet property="feedTable" destination="VVV-YM-cWM" id="tTF-Oe-Cjw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJQ-xi-hkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-47.200000000000003" y="-707.14285714285722"/>
         </scene>
