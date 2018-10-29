@@ -9,8 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginView: UIViewController {
-    
+class LoginView: UIViewController{
     
     @IBOutlet var UsernameTF: UITextField!
     
@@ -32,9 +31,7 @@ class LoginView: UIViewController {
             }
             else{
                 print(">>>>>>>>> login successful <<<<<<<<<<")
-                
-                //self.performSegue(withIdentifier: "gotoFeed", sender: <#T##Any?#>)
-                // The above needs to be implmented once we have feed page segue to feed page should be gotoFeed
+                self.performSegue(withIdentifier: "gotoFeed", sender: self)
             }
             
         }

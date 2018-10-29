@@ -121,11 +121,12 @@
                     <connections>
                         <outlet property="LoginPasswordTF" destination="3yp-tY-AAB" id="945-9k-gZH"/>
                         <outlet property="UsernameTF" destination="LSB-zu-z50" id="SIc-Jr-Jyg"/>
+                        <segue destination="Wgb-bm-Zk1" kind="show" identifier="gotoFeed" id="9Bw-9P-jDS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyL-nQ-zuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8.8000000000000007" y="9.6059113300492616"/>
+            <point key="canvasLocation" x="-79" y="101"/>
         </scene>
         <!--Feed-->
         <scene sceneID="n51-H0-IoN">
@@ -286,6 +287,7 @@
                         <outlet property="ConPassTF" destination="UHP-JZ-HOe" id="reb-39-wIr"/>
                         <outlet property="EmailTF" destination="giY-G7-494" id="3CS-eb-ybp"/>
                         <outlet property="PasswordTf" destination="5r7-pM-vXP" id="Ic8-79-M8s"/>
+                        <outlet property="UsernameTF" destination="pvL-rk-uGp" id="qVw-TP-lND"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQn-uY-uNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
