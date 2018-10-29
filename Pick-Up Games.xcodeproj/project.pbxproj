@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27B1F28D2181C88600E942E8 /* AddEventPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1F28C2181C88600E942E8 /* AddEventPage.swift */; };
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
 		293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* LoginView.swift */; };
 		293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27B1F28C2181C88600E942E8 /* AddEventPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventPage.swift; sourceTree = "<group>"; };
 		293B1B25217095D5005D5CCC /* Pick-Up Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-Up Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B28217095D5005D5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293B1B2A217095D5005D5CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		293B1B27217095D5005D5CCC /* Pick-Up Games */ = {
 			isa = PBXGroup;
 			children = (
+				27B1F28C2181C88600E942E8 /* AddEventPage.swift */,
 				293B1B28217095D5005D5CCC /* AppDelegate.swift */,
 				293B1B2A217095D5005D5CCC /* LoginView.swift */,
 				293B1B2C217095D5005D5CCC /* Main.storyboard */,
@@ -430,6 +433,7 @@
 				293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */,
 				29C895E92182CD2300A1B80C /* Event.swift in Sources */,
 				41350FEC21796DC800597D68 /* RegisterViewController.swift in Sources */,
+				27B1F28D2181C88600E942E8 /* AddEventPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
