@@ -679,13 +679,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfh-k4-k9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568.79999999999995" y="-324.38423645320199"/>
+            <point key="canvasLocation" x="-434" y="417"/>
         </scene>
         <!--Add Event View-->
         <scene sceneID="Pak-9x-wQT">
             <objects>
-                <exit id="Fu1-eH-I6p" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mmf-h3-psv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ynS-0a-Via" customClass="AddEventView" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gUk-q1-lNV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -905,8 +903,10 @@
                         <outlet property="PrivatePublicSwitch" destination="Iu4-wF-Lls" id="KUW-QP-y8c"/>
                     </connections>
                 </viewController>
+                <exit id="Fu1-eH-I6p" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mmf-h3-psv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296.80000000000001" y="-1388.423645320197"/>
+            <point key="canvasLocation" x="-434" y="-1060"/>
         </scene>
     </scenes>
     <resources>
