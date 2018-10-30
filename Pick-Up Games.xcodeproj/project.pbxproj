@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27B1F28D2181C88600E942E8 /* AddEventPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B1F28C2181C88600E942E8 /* AddEventPage.swift */; };
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
 		293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* LoginView.swift */; };
 		293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
@@ -16,6 +15,7 @@
 		293B1B36217095D9005D5CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */; };
 		293B1B41217095D9005D5CCC /* Pick_Up_GamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B40217095D9005D5CCC /* Pick_Up_GamesTests.swift */; };
 		293B1B4C217095D9005D5CCC /* Pick_Up_GamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */; };
+		295808172187E78300031304 /* CreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295808162187E78300031304 /* CreateEvent.swift */; };
 		29C895E52182C31600A1B80C /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E42182C31600A1B80C /* FeedCell.swift */; };
 		29C895E72182C6FC00A1B80C /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E62182C6FC00A1B80C /* Feed.swift */; };
 		29C895E92182CD2300A1B80C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E82182CD2300A1B80C /* Event.swift */; };
@@ -44,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27B1F28C2181C88600E942E8 /* AddEventPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventPage.swift; sourceTree = "<group>"; };
 		293B1B25217095D5005D5CCC /* Pick-Up Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-Up Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B28217095D5005D5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293B1B2A217095D5005D5CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		293B1B47217095D9005D5CCC /* Pick-Up GamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pick-Up GamesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_Up_GamesUITests.swift; sourceTree = "<group>"; };
 		293B1B4D217095DA005D5CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		295808162187E78300031304 /* CreateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEvent.swift; sourceTree = "<group>"; };
 		29C895E42182C31600A1B80C /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		29C895E62182C6FC00A1B80C /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		29C895E82182CD2300A1B80C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -128,7 +128,6 @@
 		293B1B27217095D5005D5CCC /* Pick-Up Games */ = {
 			isa = PBXGroup;
 			children = (
-				27B1F28C2181C88600E942E8 /* AddEventPage.swift */,
 				293B1B28217095D5005D5CCC /* AppDelegate.swift */,
 				293B1B2A217095D5005D5CCC /* LoginView.swift */,
 				293B1B2C217095D5005D5CCC /* Main.storyboard */,
@@ -141,6 +140,7 @@
 				29C895E42182C31600A1B80C /* FeedCell.swift */,
 				29C895E62182C6FC00A1B80C /* Feed.swift */,
 				29C895E82182CD2300A1B80C /* Event.swift */,
+				295808162187E78300031304 /* CreateEvent.swift */,
 			);
 			path = "Pick-Up Games";
 			sourceTree = "<group>";
@@ -428,12 +428,12 @@
 			files = (
 				293B1B31217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld in Sources */,
 				29C895E72182C6FC00A1B80C /* Feed.swift in Sources */,
+				295808172187E78300031304 /* CreateEvent.swift in Sources */,
 				29C895E52182C31600A1B80C /* FeedCell.swift in Sources */,
 				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
 				293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */,
 				29C895E92182CD2300A1B80C /* Event.swift in Sources */,
 				41350FEC21796DC800597D68 /* RegisterViewController.swift in Sources */,
-				27B1F28D2181C88600E942E8 /* AddEventPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
