@@ -385,10 +385,10 @@
             </objects>
             <point key="canvasLocation" x="-1394" y="417"/>
         </scene>
-        <!--Event Scene-->
+        <!--Event-->
         <scene sceneID="XBJ-q1-MW5">
             <objects>
-                <viewController title="Event Scene" id="xly-fV-JLV" sceneMemberID="viewController">
+                <viewController title="Event" id="xly-fV-JLV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5iw-GA-h36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
