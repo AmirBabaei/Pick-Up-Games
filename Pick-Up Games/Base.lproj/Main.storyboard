@@ -774,6 +774,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CreateEventButton:" destination="Fu1-eH-I6p" eventType="touchUpInside" id="stm-h0-htJ"/>
+                                    <action selector="CreateEventButton:" destination="ynS-0a-Via" eventType="touchUpInside" id="xdg-GS-jYK"/>
                                 </connections>
                             </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-OL-tpO">
@@ -939,6 +940,9 @@
                         <viewLayoutGuide key="safeArea" id="ju2-LF-5UE"/>
                     </view>
                     <navigationItem key="navigationItem" title="createEvent" id="hEP-bi-03J"/>
+                    <connections>
+                        <outlet property="EventType" destination="URv-ba-plL" id="mUF-NM-bv9"/>
+                    </connections>
                 </viewController>
                 <exit id="Fu1-eH-I6p" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmf-h3-psv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -970,7 +974,4 @@
         <image name="sport" width="16" height="16"/>
         <image name="test-login" width="341" height="204"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hya-d9-hjQ"/>
-    </inferredMetricsTieBreakers>
 </document>
