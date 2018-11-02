@@ -45,10 +45,11 @@ extension Feed: UITableViewDelegate, UITableViewDataSource {
                 let pug = PUG(address: address, sport: sport, players: players, name: name)
                 funcEventArray.append(pug)
                 }
+            handler(funcEventArray)
             }
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in feedTable: UITableView) -> Int {
         return 1
     }
     
@@ -58,7 +59,7 @@ extension Feed: UITableViewDelegate, UITableViewDataSource {
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCell else { return UITableViewCell() }
-        let image = UIImage(named: "error.png")
+        let image = UIImage(named: "test-login")
         let event = eventArray[indexPath.row]
         
         cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, name: event.name)
