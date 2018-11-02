@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KFf-bx-3hC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ynS-0a-Via">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -777,9 +777,6 @@
                                     <action selector="CreateEventButton:" destination="ynS-0a-Via" eventType="touchUpInside" id="xdg-GS-jYK"/>
                                 </connections>
                             </button>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-OL-tpO">
-                                <rect key="frame" x="157" y="105" width="195" height="162"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Participant Limit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWD-0a-6xb">
                                 <rect key="frame" x="20" y="293" width="124" height="20"/>
                                 <constraints>
@@ -814,7 +811,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qjf-Lu-yNx">
-                                <rect key="frame" x="159" y="288" width="195" height="30"/>
+                                <rect key="frame" x="159" y="287" width="195" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -858,6 +855,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-OL-tpO">
+                                <rect key="frame" x="157" y="105" width="195" height="162"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -941,7 +941,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="createEvent" id="hEP-bi-03J"/>
                     <connections>
-                        <outlet property="EventType" destination="URv-ba-plL" id="mUF-NM-bv9"/>
+                        <outlet property="AgeLimitMaxTxtField" destination="Fm7-k2-kIN" id="T42-jk-55K"/>
+                        <outlet property="AgeLimitMinTxtField" destination="BPf-RN-Bjt" id="bdp-aB-pqh"/>
+                        <outlet property="DescriptionTxtField" destination="Ruf-HF-nG3" id="uWz-jd-YF2"/>
+                        <outlet property="EventDescription" destination="Ruf-HF-nG3" id="8qX-Fb-Tmz"/>
+                        <outlet property="EventType" destination="URv-ba-plL" id="TlB-KO-68l"/>
+                        <outlet property="Header" destination="hEP-bi-03J" id="TO7-NN-SGb"/>
+                        <outlet property="ParticipLimitTxtField" destination="qjf-Lu-yNx" id="WhO-cu-asv"/>
+                        <outlet property="ParticipantLimitTxtField" destination="qjf-Lu-yNx" id="ibh-ak-Icl"/>
                     </connections>
                 </viewController>
                 <exit id="Fu1-eH-I6p" userLabel="Exit" sceneMemberID="exit"/>
@@ -974,4 +981,7 @@
         <image name="sport" width="16" height="16"/>
         <image name="test-login" width="341" height="204"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6tk-4e-Hel"/>
+    </inferredMetricsTieBreakers>
 </document>
