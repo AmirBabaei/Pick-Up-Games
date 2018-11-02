@@ -10,21 +10,17 @@ import UIKit
 
 class FeedCell: UITableViewCell {
 
-  @IBOutlet var ProfPic: UIImageView!
-  @IBOutlet var uName: UILabel!
-  @IBOutlet var address: UILabel!
-  @IBOutlet var sportType: UILabel!
+    @IBOutlet weak var profPic: UIImageView!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var sportType: UILabel!
+    @IBOutlet weak var players: UILabel!
+    @IBOutlet weak var uName: UILabel!
   
-  @IBOutlet var Players: UILabel!
-  override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func fillCell(profPic: UIImage, address: String, sport: String, playerCount: String, name: String) {
+        self.profPic.image = profPic
+        self.address.text = address
+        self.sportType.text = sport
+        self.players.text = playerCount
+        self.uName.text = name
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
