@@ -150,7 +150,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="145.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lnn-so-BuN">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="error.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lnn-so-BuN">
                                                     <rect key="frame" x="15" y="11" width="94" height="88"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="88" id="TUV-gT-bQ6"/>
@@ -973,6 +973,7 @@
     <resources>
         <image name="Back icon" width="16" height="16"/>
         <image name="Login" width="125" height="270"/>
+        <image name="error.png" width="28" height="28"/>
         <image name="sport" width="16" height="16"/>
         <image name="test-login" width="341" height="204"/>
     </resources>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11BB5EFA218C0A4300462E69 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB5EF9218C0A4300462E69 /* Message.swift */; };
+		11BB5EFA218C0A4300462E69 /* PUG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB5EF9218C0A4300462E69 /* PUG.swift */; };
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
 		293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* LoginView.swift */; };
 		293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11BB5EF9218C0A4300462E69 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		11BB5EF9218C0A4300462E69 /* PUG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUG.swift; sourceTree = "<group>"; };
 		293B1B25217095D5005D5CCC /* Pick-Up Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-Up Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B28217095D5005D5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293B1B2A217095D5005D5CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				29C895E62182C6FC00A1B80C /* Feed.swift */,
 				29C895E82182CD2300A1B80C /* Event.swift */,
 				295808162187E78300031304 /* CreateEvent.swift */,
-				11BB5EF9218C0A4300462E69 /* Message.swift */,
+				11BB5EF9218C0A4300462E69 /* PUG.swift */,
 			);
 			path = "Pick-Up Games";
 			sourceTree = "<group>";
@@ -432,7 +432,7 @@
 				293B1B31217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld in Sources */,
 				29C895E72182C6FC00A1B80C /* Feed.swift in Sources */,
 				295808172187E78300031304 /* CreateEvent.swift in Sources */,
-				11BB5EFA218C0A4300462E69 /* Message.swift in Sources */,
+				11BB5EFA218C0A4300462E69 /* PUG.swift in Sources */,
 				29C895E52182C31600A1B80C /* FeedCell.swift in Sources */,
 				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
 				293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */,

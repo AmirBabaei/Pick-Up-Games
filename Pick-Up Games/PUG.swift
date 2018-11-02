@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Message {
+class PUG {
     private var _address: String
     private var _sport: String
     private var _players: String
