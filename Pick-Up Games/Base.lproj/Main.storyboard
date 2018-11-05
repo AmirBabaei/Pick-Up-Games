@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nWt-42-Lve">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GSv-Uc-OX6">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -676,6 +676,59 @@
             </objects>
             <point key="canvasLocation" x="1511.2" y="-324.38423645320199"/>
         </scene>
+        <!--Map Screen-->
+        <scene sceneID="9rc-aD-Egv">
+            <objects>
+                <viewController id="GSv-Uc-OX6" customClass="MapScreen" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7c5-Lg-mOd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hT9-hd-oPo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GSv-Uc-OX6" id="KgD-JC-0fa"/>
+                                </connections>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="rf9-lX-pzx">
+                                <rect key="frame" x="167" y="366" width="40" height="40"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4s-NEW">
+                                <rect key="frame" x="0.0" y="697" width="375" height="115"/>
+                                <color key="backgroundColor" red="0.1121854056" green="0.1052894435" blue="0.13640873019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="uFv-BK-abE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="22"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hT9-hd-oPo" firstAttribute="bottom" secondItem="auL-Pb-YhV" secondAttribute="bottom" id="9uw-Px-6sJ"/>
+                            <constraint firstItem="auL-Pb-YhV" firstAttribute="bottom" secondItem="rf9-lX-pzx" secondAttribute="bottom" constant="372" id="InK-F7-9et"/>
+                            <constraint firstAttribute="bottom" secondItem="nQw-4s-NEW" secondAttribute="bottom" id="KH8-1L-PwV"/>
+                            <constraint firstItem="nQw-4s-NEW" firstAttribute="trailing" secondItem="hT9-hd-oPo" secondAttribute="trailing" id="bTa-iF-0yn"/>
+                            <constraint firstAttribute="trailing" secondItem="hT9-hd-oPo" secondAttribute="trailing" id="c6N-6y-9gK"/>
+                            <constraint firstItem="nQw-4s-NEW" firstAttribute="leading" secondItem="hT9-hd-oPo" secondAttribute="leading" id="jcY-LP-r4m"/>
+                            <constraint firstItem="rf9-lX-pzx" firstAttribute="leading" secondItem="auL-Pb-YhV" secondAttribute="leading" constant="167" id="l18-c2-EHy"/>
+                            <constraint firstItem="hT9-hd-oPo" firstAttribute="top" secondItem="7c5-Lg-mOd" secondAttribute="top" id="oZX-VE-fDN"/>
+                            <constraint firstItem="hT9-hd-oPo" firstAttribute="leading" secondItem="7c5-Lg-mOd" secondAttribute="leading" id="ojt-Fa-Oca"/>
+                            <constraint firstItem="hT9-hd-oPo" firstAttribute="centerX" secondItem="rf9-lX-pzx" secondAttribute="centerX" id="wAm-Sr-6DA"/>
+                            <constraint firstItem="rf9-lX-pzx" firstAttribute="top" secondItem="auL-Pb-YhV" secondAttribute="top" constant="322" id="z2w-sV-97f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="auL-Pb-YhV"/>
+                    </view>
+                    <connections>
+                        <outlet property="MapView" destination="hT9-hd-oPo" id="mjb-vB-yuA"/>
+                        <outlet property="addressLabel" destination="nQw-4s-NEW" id="9SM-Qz-SS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwW-De-bEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="-1017.4876847290641"/>
+        </scene>
         <!--createEvent-->
         <scene sceneID="Pak-9x-wQT">
             <objects>
@@ -931,7 +984,11 @@
     <resources>
         <image name="Back icon" width="37.5" height="37.5"/>
         <image name="Login" width="281.25" height="609"/>
+        <image name="pin" width="409.60000610351562" height="409.60000610351562"/>
         <image name="sport" width="16" height="16"/>
         <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6tk-4e-Hel"/>
+    </inferredMetricsTieBreakers>
 </document>
