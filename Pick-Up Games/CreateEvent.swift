@@ -13,11 +13,43 @@ class CreateEvent: UIViewController {
     var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+      //date picker
+      
+      datePicker = UIDatePicker()
+      datePicker?.datePickerMode = .date
+      
+      dateText.inputView = datePicker
+      datePicker?.addTarget(self, action: #selector(CreateEvent.dateChanged(datePicker:)), for: .valueChanged)
+      let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateEvent.viewTapped(gestureRecognizer:)))
+      
+      view.addGestureRecognizer(tapGesture)
+      
+      
         // Do any additional setup after loading the view.
+    }
+  
+    //dimiss date picker
+  @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
+    view.endEditing(true)
+  }
+  
+  @objc func dateChanged(datePicker: UIDatePicker){
+    
+      let dateFormatter = DateFormatter()
+      dateFormatter.dateFormat = "MM/dd/yyy"
+      dateText.text = dateFormatter.string(from: datePicker.date)
+      //view.endEditing(true)
     }
     
     @IBOutlet var EventType: UITextField!
-    
+    @IBOutlet weak var dateText: UITextField!
+  
+  //date picker
+  private var datePicker: UIDatePicker?
+  
+  
+  
+  
     @IBAction func CreateEventButton(_ sender: Any)
     {
         print(EventType.text!)//prints to debug console used for testing
@@ -54,14 +86,6 @@ class CreateEvent: UIViewController {
         //from here the createEventButton needs to return to the feed page also any checks on values should be done before this button can be pressed.
 
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

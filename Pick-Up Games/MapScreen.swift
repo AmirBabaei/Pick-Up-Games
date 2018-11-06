@@ -130,7 +130,7 @@ extension MapScreen: MKMapViewDelegate {
        // if (locationName != (" \(streetNumber) \(streetName)")){
            //self.addressLabel.text = " \(locationName) \n"
        // }
-        self.addressLabel.text = "\(streetNumber) \(streetName)\n \(cityName)"
+        self.addressLabel.text = " \(streetNumber) \(streetName)\n \(cityName)"
       }
     }
   }

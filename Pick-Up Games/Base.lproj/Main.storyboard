@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GSv-Uc-OX6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ynS-0a-Via">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -693,7 +693,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="rf9-lX-pzx">
                                 <rect key="frame" x="167" y="366" width="40" height="40"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4s-NEW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4s-NEW">
                                 <rect key="frame" x="0.0" y="697" width="375" height="115"/>
                                 <color key="backgroundColor" red="0.1121854056" green="0.1052894435" blue="0.13640873019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -747,17 +747,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="np1-Pg-aaD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URv-ba-plL">
-                                <rect key="frame" x="157" y="177" width="195" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930045871561" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="EventField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="cOa-mK-EIi"/>
-                                    <action selector="EventTxtField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="59g-D5-SHe"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELr-pR-EAe">
                                 <rect key="frame" x="149" y="100" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -771,21 +760,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sporting Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-JJ-qd8">
-                                <rect key="frame" x="9" y="125" width="117" height="21"/>
+                                <rect key="frame" x="9" y="125" width="119" height="21"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="mZS-D8-vNy"/>
+                                    <constraint firstAttribute="height" constant="21" id="9sK-iH-Ycf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location/Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91y-oG-0a1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location/Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91y-oG-0a1">
                                 <rect key="frame" x="6" y="174" width="141" height="20"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="9HE-Z8-0ui"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -810,10 +796,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMD-tv-BBg">
-                                <rect key="frame" x="65" y="413" width="0.0" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" id="7Ye-Cb-ibQ"/>
-                                </constraints>
+                                <rect key="frame" x="66" y="413" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -825,57 +808,34 @@
                                 <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Private/Public?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVM-Yj-sSn">
-                                <rect key="frame" x="6" y="358" width="119" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Private/Public?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVM-Yj-sSn">
+                                <rect key="frame" x="6" y="358" width="120" height="21"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qjf-Lu-yNx">
-                                <rect key="frame" x="157" y="288" width="197" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930045871561" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ar3-Ft-ARG"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iu4-wF-Lls">
-                                <rect key="frame" x="159" y="347" width="49" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iu4-wF-Lls">
+                                <rect key="frame" x="160" y="347" width="50" height="31"/>
                             </switch>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCz-8Z-2gP">
-                                <rect key="frame" x="157" y="231" width="195" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930045871561" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U7-mV-NeZ">
-                                <rect key="frame" x="233" y="347" width="0.0" height="0.0"/>
+                                <rect key="frame" x="233" y="473" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breif Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om9-1f-MtH">
-                                <rect key="frame" x="123" y="477" width="129" height="20"/>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ruf-HF-nG3">
-                                <rect key="frame" x="23" y="519" width="329" height="147"/>
+                                <rect key="frame" x="17" y="481" width="341" height="183"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930045871561" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bu-TZ-2ot">
-                                <rect key="frame" x="86" y="706" width="203" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bu-TZ-2ot">
+                                <rect key="frame" x="128" y="703" width="118" height="30"/>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.99215686270000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="oTW-hY-4fl"/>
+                                    <constraint firstAttribute="height" constant="30" id="SOg-5h-Lv8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="19"/>
                                 <state key="normal" title="Create Event">
@@ -886,82 +846,102 @@
                                     <action selector="CreateEventButton:" destination="ynS-0a-Via" eventType="touchUpInside" id="xdg-GS-jYK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Wg-3q-0Zk">
-                                <rect key="frame" x="157" y="125" width="195" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="URv-ba-plL">
+                                <rect key="frame" x="159" y="121" width="195" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930045871561" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="LocationTxtField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="iql-hu-FW4"/>
+                                    <action selector="EventField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="cOa-mK-EIi"/>
+                                    <action selector="EventTxtField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="59g-D5-SHe"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-XE-bch">
+                                <rect key="frame" x="159" y="174" width="195" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="EventField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="x2X-z5-cPk"/>
+                                    <action selector="EventTxtField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="ad9-2B-Qvv"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeF-GH-DiV">
+                                <rect key="frame" x="159" y="228" width="195" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Breif Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om9-1f-MtH">
+                                <rect key="frame" x="117" y="445" width="140" height="20"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8Wg-3q-0Zk" firstAttribute="leading" secondItem="URv-ba-plL" secondAttribute="leading" id="0S1-rJ-SJA"/>
-                            <constraint firstItem="URv-ba-plL" firstAttribute="top" secondItem="8Wg-3q-0Zk" secondAttribute="bottom" constant="22" id="1Us-pf-3yA"/>
-                            <constraint firstItem="91y-oG-0a1" firstAttribute="leading" secondItem="LVM-Yj-sSn" secondAttribute="leading" id="1ZA-T5-44w"/>
-                            <constraint firstItem="cqd-JJ-qd8" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="9" id="3kW-2Z-wHv"/>
-                            <constraint firstItem="LVM-Yj-sSn" firstAttribute="top" secondItem="JWD-0a-6xb" secondAttribute="bottom" constant="49" id="7z1-kZ-WG3"/>
-                            <constraint firstItem="URv-ba-plL" firstAttribute="top" secondItem="ju2-LF-5UE" secondAttribute="top" constant="83" id="82D-f3-Zve"/>
-                            <constraint firstItem="Iu4-wF-Lls" firstAttribute="top" secondItem="7U7-mV-NeZ" secondAttribute="top" id="Brt-qD-Hiq"/>
-                            <constraint firstItem="8Wg-3q-0Zk" firstAttribute="top" secondItem="cqd-JJ-qd8" secondAttribute="top" id="CSW-O1-g4K"/>
-                            <constraint firstItem="91y-oG-0a1" firstAttribute="centerX" secondItem="JWD-0a-6xb" secondAttribute="centerX" id="Dg6-Hi-mdE"/>
-                            <constraint firstItem="np1-Pg-aaD" firstAttribute="centerX" secondItem="Ruf-HF-nG3" secondAttribute="centerX" id="Dp6-vO-TAT"/>
-                            <constraint firstItem="91y-oG-0a1" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="6" id="FIN-KY-a66"/>
-                            <constraint firstItem="ahI-pa-yfd" firstAttribute="top" secondItem="91y-oG-0a1" secondAttribute="bottom" constant="34" id="GW3-7N-wAz"/>
-                            <constraint firstItem="Om9-1f-MtH" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="123" id="GZI-WN-Rb5"/>
-                            <constraint firstItem="8Wg-3q-0Zk" firstAttribute="leading" secondItem="lCz-8Z-2gP" secondAttribute="leading" id="Gsj-AI-bS7"/>
-                            <constraint firstItem="ju2-LF-5UE" firstAttribute="trailing" secondItem="8Wg-3q-0Zk" secondAttribute="trailing" constant="23" id="Hnh-Rd-FsF"/>
-                            <constraint firstItem="Om9-1f-MtH" firstAttribute="top" secondItem="Iu4-wF-Lls" secondAttribute="bottom" constant="99" id="I5c-K7-OE1"/>
-                            <constraint firstItem="Iu4-wF-Lls" firstAttribute="top" secondItem="qjf-Lu-yNx" secondAttribute="bottom" constant="29" id="Jyr-Yz-YnO"/>
-                            <constraint firstItem="ju2-LF-5UE" firstAttribute="bottom" secondItem="3Bu-TZ-2ot" secondAttribute="bottom" constant="42" id="LDl-Fd-Tr0"/>
-                            <constraint firstItem="ahI-pa-yfd" firstAttribute="leading" secondItem="JWD-0a-6xb" secondAttribute="leading" id="M8Y-08-BTu"/>
-                            <constraint firstItem="cqd-JJ-qd8" firstAttribute="top" secondItem="ju2-LF-5UE" secondAttribute="top" constant="37" id="Paa-N1-zpf"/>
-                            <constraint firstItem="liC-ff-Pqh" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leadingMargin" constant="42" id="QfY-Lw-mq8"/>
-                            <constraint firstItem="8Wg-3q-0Zk" firstAttribute="leading" secondItem="cqd-JJ-qd8" secondAttribute="trailing" constant="29" id="RR4-Fi-ZGM"/>
-                            <constraint firstItem="lCz-8Z-2gP" firstAttribute="trailing" secondItem="Ruf-HF-nG3" secondAttribute="trailing" id="Sav-Pr-LY6"/>
-                            <constraint firstItem="Ruf-HF-nG3" firstAttribute="centerX" secondItem="3Bu-TZ-2ot" secondAttribute="centerX" id="UPm-Nx-QB6"/>
-                            <constraint firstItem="8Wg-3q-0Zk" firstAttribute="trailing" secondItem="URv-ba-plL" secondAttribute="trailing" id="WoQ-Q3-uVU"/>
-                            <constraint firstItem="91y-oG-0a1" firstAttribute="top" secondItem="cqd-JJ-qd8" secondAttribute="bottom" constant="28" id="YKV-I2-ymv"/>
-                            <constraint firstItem="URv-ba-plL" firstAttribute="leading" secondItem="91y-oG-0a1" secondAttribute="trailing" constant="10" id="ZWc-GX-814"/>
-                            <constraint firstItem="YMD-tv-BBg" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leadingMargin" constant="49" id="aF9-l3-hFE"/>
-                            <constraint firstItem="3Bu-TZ-2ot" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="86" id="aOO-rF-aXo"/>
-                            <constraint firstItem="qjf-Lu-yNx" firstAttribute="leading" secondItem="Iu4-wF-Lls" secondAttribute="leading" id="axB-vg-9RI"/>
-                            <constraint firstItem="lCz-8Z-2gP" firstAttribute="top" secondItem="URv-ba-plL" secondAttribute="bottom" constant="30" id="bOP-Ox-Tdk"/>
-                            <constraint firstItem="Ruf-HF-nG3" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="23" id="bdl-Pg-co7"/>
-                            <constraint firstItem="Ruf-HF-nG3" firstAttribute="top" secondItem="Om9-1f-MtH" secondAttribute="bottom" constant="22" id="bzS-BE-TVp"/>
-                            <constraint firstItem="qjf-Lu-yNx" firstAttribute="leading" secondItem="JWD-0a-6xb" secondAttribute="trailing" constant="16" id="cr3-e0-VCC"/>
-                            <constraint firstItem="liC-ff-Pqh" firstAttribute="top" secondItem="gUk-q1-lNV" secondAttribute="topMargin" constant="92" id="dJ2-vx-Ltx"/>
-                            <constraint firstItem="Om9-1f-MtH" firstAttribute="centerX" secondItem="Ruf-HF-nG3" secondAttribute="centerX" id="dU9-2C-EsI"/>
-                            <constraint firstAttribute="bottom" secondItem="YMD-tv-BBg" secondAttribute="bottom" constant="399" id="e4N-M0-1Qi"/>
-                            <constraint firstAttribute="bottom" secondItem="np1-Pg-aaD" secondAttribute="bottom" id="ewh-aW-bbZ"/>
-                            <constraint firstItem="qjf-Lu-yNx" firstAttribute="top" secondItem="lCz-8Z-2gP" secondAttribute="bottom" constant="27" id="fjh-0l-6iS"/>
-                            <constraint firstItem="Zis-XL-HyN" firstAttribute="leading" secondItem="deB-EJ-BQP" secondAttribute="leading" id="gk0-Wy-BM9"/>
-                            <constraint firstItem="JWD-0a-6xb" firstAttribute="top" secondItem="qjf-Lu-yNx" secondAttribute="top" id="gxK-wm-IAu"/>
-                            <constraint firstItem="ahI-pa-yfd" firstAttribute="baseline" secondItem="Zis-XL-HyN" secondAttribute="firstBaseline" id="hQD-yM-Ijq"/>
-                            <constraint firstItem="ju2-LF-5UE" firstAttribute="trailing" secondItem="Iu4-wF-Lls" secondAttribute="trailing" constant="167" id="huu-PV-GCL"/>
-                            <constraint firstItem="np1-Pg-aaD" firstAttribute="top" secondItem="gUk-q1-lNV" secondAttribute="top" id="kXN-TV-Lpf"/>
-                            <constraint firstItem="ju2-LF-5UE" firstAttribute="trailing" secondItem="qjf-Lu-yNx" secondAttribute="trailing" constant="21" id="lQ0-2J-nx7"/>
-                            <constraint firstItem="deB-EJ-BQP" firstAttribute="top" secondItem="gUk-q1-lNV" secondAttribute="top" constant="263" id="mf0-ae-oet"/>
-                            <constraint firstItem="cqd-JJ-qd8" firstAttribute="leading" secondItem="ahI-pa-yfd" secondAttribute="leading" id="r4i-OF-o26"/>
-                            <constraint firstItem="np1-Pg-aaD" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leading" id="sAG-ZY-RfT"/>
-                            <constraint firstItem="ELr-pR-EAe" firstAttribute="top" secondItem="gUk-q1-lNV" secondAttribute="topMargin" constant="12" id="sKA-fV-MTc"/>
-                            <constraint firstItem="Iu4-wF-Lls" firstAttribute="leading" secondItem="LVM-Yj-sSn" secondAttribute="trailing" constant="34" id="sZB-bQ-xiv"/>
-                            <constraint firstItem="8Wg-3q-0Zk" firstAttribute="trailing" secondItem="lCz-8Z-2gP" secondAttribute="trailing" id="u4P-1o-cwh"/>
-                            <constraint firstAttribute="trailing" secondItem="7U7-mV-NeZ" secondAttribute="trailing" constant="142" id="uay-Nc-edo"/>
-                            <constraint firstItem="Zis-XL-HyN" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leadingMargin" constant="39" id="v1H-Le-smE"/>
-                            <constraint firstItem="LVM-Yj-sSn" firstAttribute="centerX" secondItem="YMD-tv-BBg" secondAttribute="centerX" id="wjH-qk-4hC"/>
-                            <constraint firstItem="JWD-0a-6xb" firstAttribute="top" secondItem="ahI-pa-yfd" secondAttribute="bottom" constant="39" id="xzQ-Ei-yhb"/>
-                            <constraint firstItem="3Bu-TZ-2ot" firstAttribute="top" secondItem="Ruf-HF-nG3" secondAttribute="bottom" constant="40" id="ygZ-dC-C9k"/>
-                            <constraint firstItem="ELr-pR-EAe" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leading" constant="149" id="yup-XO-z1a"/>
+                            <constraint firstItem="Om9-1f-MtH" firstAttribute="centerX" secondItem="Ruf-HF-nG3" secondAttribute="centerX" id="06F-vD-Ucg"/>
+                            <constraint firstItem="cqd-JJ-qd8" firstAttribute="leading" secondItem="ahI-pa-yfd" secondAttribute="leading" id="1iY-iG-QBA"/>
+                            <constraint firstItem="URv-ba-plL" firstAttribute="leading" secondItem="nDq-XE-bch" secondAttribute="leading" id="2Xi-DM-tDA"/>
+                            <constraint firstAttribute="bottom" secondItem="np1-Pg-aaD" secondAttribute="bottom" id="3K2-kI-yIe"/>
+                            <constraint firstItem="nDq-XE-bch" firstAttribute="trailing" secondItem="xeF-GH-DiV" secondAttribute="trailing" id="6DF-Q6-XQA"/>
+                            <constraint firstItem="ahI-pa-yfd" firstAttribute="leading" secondItem="JWD-0a-6xb" secondAttribute="leading" id="6DL-al-E5N"/>
+                            <constraint firstItem="Om9-1f-MtH" firstAttribute="top" secondItem="Iu4-wF-Lls" secondAttribute="bottom" constant="67" id="6gY-Ce-ptT"/>
+                            <constraint firstAttribute="bottom" secondItem="YMD-tv-BBg" secondAttribute="bottom" constant="399" id="6kA-cO-Om9"/>
+                            <constraint firstItem="cqd-JJ-qd8" firstAttribute="top" secondItem="ju2-LF-5UE" secondAttribute="top" constant="37" id="7rS-UH-QBY"/>
+                            <constraint firstItem="np1-Pg-aaD" firstAttribute="top" secondItem="gUk-q1-lNV" secondAttribute="top" id="AgP-rl-sDH"/>
+                            <constraint firstItem="ELr-pR-EAe" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leading" constant="149" id="BWl-5Z-NDu"/>
+                            <constraint firstItem="LVM-Yj-sSn" firstAttribute="top" secondItem="JWD-0a-6xb" secondAttribute="bottom" constant="49" id="CPu-zi-vFa"/>
+                            <constraint firstItem="LVM-Yj-sSn" firstAttribute="centerX" secondItem="YMD-tv-BBg" secondAttribute="centerX" id="DRK-n2-IbS"/>
+                            <constraint firstItem="cqd-JJ-qd8" firstAttribute="centerY" secondItem="URv-ba-plL" secondAttribute="centerY" id="GvQ-8j-Mmh"/>
+                            <constraint firstItem="cqd-JJ-qd8" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="9" id="IzX-mh-jdi"/>
+                            <constraint firstItem="Zis-XL-HyN" firstAttribute="leading" secondItem="deB-EJ-BQP" secondAttribute="leading" id="Jd1-kE-axj"/>
+                            <constraint firstItem="np1-Pg-aaD" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leading" id="Jk8-Fb-krX"/>
+                            <constraint firstItem="liC-ff-Pqh" firstAttribute="top" secondItem="gUk-q1-lNV" secondAttribute="topMargin" constant="92" id="LIM-1Z-UN0"/>
+                            <constraint firstAttribute="trailing" secondItem="np1-Pg-aaD" secondAttribute="trailing" id="MJL-o2-0Q8"/>
+                            <constraint firstItem="91y-oG-0a1" firstAttribute="top" secondItem="nDq-XE-bch" secondAttribute="top" id="Mzn-K4-OQp"/>
+                            <constraint firstItem="91y-oG-0a1" firstAttribute="top" secondItem="cqd-JJ-qd8" secondAttribute="bottom" constant="28" id="Ndj-IM-2cw"/>
+                            <constraint firstItem="Om9-1f-MtH" firstAttribute="top" secondItem="LVM-Yj-sSn" secondAttribute="bottom" constant="66" id="O34-2D-1Zc"/>
+                            <constraint firstItem="YMD-tv-BBg" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leadingMargin" constant="50" id="OBq-6s-moq"/>
+                            <constraint firstItem="ELr-pR-EAe" firstAttribute="top" secondItem="gUk-q1-lNV" secondAttribute="topMargin" constant="12" id="OfQ-bD-J14"/>
+                            <constraint firstItem="91y-oG-0a1" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="6" id="PRU-mN-6Vh"/>
+                            <constraint firstItem="ju2-LF-5UE" firstAttribute="trailing" secondItem="URv-ba-plL" secondAttribute="trailing" constant="21" id="Pat-sE-y83"/>
+                            <constraint firstItem="Zis-XL-HyN" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leadingMargin" constant="39" id="QE6-au-777"/>
+                            <constraint firstItem="Ruf-HF-nG3" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="17" id="Qsk-uA-gTF"/>
+                            <constraint firstItem="URv-ba-plL" firstAttribute="trailing" secondItem="nDq-XE-bch" secondAttribute="trailing" id="Rwe-d3-fby"/>
+                            <constraint firstItem="URv-ba-plL" firstAttribute="top" secondItem="ju2-LF-5UE" secondAttribute="top" constant="33" id="VHF-At-WQp"/>
+                            <constraint firstItem="ahI-pa-yfd" firstAttribute="top" secondItem="91y-oG-0a1" secondAttribute="bottom" constant="34" id="Wtk-yw-KEe"/>
+                            <constraint firstItem="nDq-XE-bch" firstAttribute="leading" secondItem="xeF-GH-DiV" secondAttribute="leading" id="X5C-1c-ZUa"/>
+                            <constraint firstItem="Om9-1f-MtH" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="117" id="cBA-H5-Nmc"/>
+                            <constraint firstItem="ahI-pa-yfd" firstAttribute="baseline" secondItem="Zis-XL-HyN" secondAttribute="firstBaseline" id="dEm-hY-h8H"/>
+                            <constraint firstItem="Iu4-wF-Lls" firstAttribute="leading" secondItem="LVM-Yj-sSn" secondAttribute="trailing" constant="34" id="duU-yI-wAQ"/>
+                            <constraint firstItem="np1-Pg-aaD" firstAttribute="centerX" secondItem="Om9-1f-MtH" secondAttribute="centerX" id="jah-Wj-gN3"/>
+                            <constraint firstItem="3Bu-TZ-2ot" firstAttribute="top" secondItem="Ruf-HF-nG3" secondAttribute="bottom" constant="39" id="kAZ-WQ-7Si"/>
+                            <constraint firstItem="nDq-XE-bch" firstAttribute="leading" secondItem="91y-oG-0a1" secondAttribute="trailing" constant="12" id="lq0-54-gVa"/>
+                            <constraint firstItem="91y-oG-0a1" firstAttribute="leading" secondItem="LVM-Yj-sSn" secondAttribute="leading" id="ne4-3S-tnt"/>
+                            <constraint firstItem="Zis-XL-HyN" firstAttribute="top" secondItem="xeF-GH-DiV" secondAttribute="top" id="nk0-GK-Gsh"/>
+                            <constraint firstItem="91y-oG-0a1" firstAttribute="centerX" secondItem="JWD-0a-6xb" secondAttribute="centerX" id="oEy-UZ-HzX"/>
+                            <constraint firstItem="ju2-LF-5UE" firstAttribute="bottom" secondItem="3Bu-TZ-2ot" secondAttribute="bottom" constant="45" id="q0X-hZ-HH5"/>
+                            <constraint firstItem="3Bu-TZ-2ot" firstAttribute="leading" secondItem="ju2-LF-5UE" secondAttribute="leading" constant="128" id="s6l-qH-kb6"/>
+                            <constraint firstItem="7U7-mV-NeZ" firstAttribute="top" secondItem="Om9-1f-MtH" secondAttribute="bottom" constant="8" symbolic="YES" id="sOY-Uq-phx"/>
+                            <constraint firstItem="JWD-0a-6xb" firstAttribute="top" secondItem="ahI-pa-yfd" secondAttribute="bottom" constant="39" id="tPf-Xf-uRz"/>
+                            <constraint firstItem="liC-ff-Pqh" firstAttribute="leading" secondItem="gUk-q1-lNV" secondAttribute="leadingMargin" constant="42" id="vJh-Wm-d7L"/>
+                            <constraint firstAttribute="trailing" secondItem="7U7-mV-NeZ" secondAttribute="trailing" constant="142" id="x5s-tu-sVr"/>
+                            <constraint firstItem="deB-EJ-BQP" firstAttribute="top" secondItem="gUk-q1-lNV" secondAttribute="top" constant="263" id="xQb-g4-Fm6"/>
+                            <constraint firstItem="Ruf-HF-nG3" firstAttribute="centerX" secondItem="3Bu-TZ-2ot" secondAttribute="centerX" id="xUl-K9-3Oi"/>
+                            <constraint firstItem="Ruf-HF-nG3" firstAttribute="top" secondItem="7U7-mV-NeZ" secondAttribute="bottom" constant="8" symbolic="YES" id="ybr-JJ-xs1"/>
+                            <constraint firstItem="ju2-LF-5UE" firstAttribute="trailing" secondItem="Iu4-wF-Lls" secondAttribute="trailing" constant="167" id="zIt-oG-18c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ju2-LF-5UE"/>
                     </view>
                     <navigationItem key="navigationItem" title="createEvent" id="hEP-bi-03J"/>
                     <connections>
                         <outlet property="EventType" destination="URv-ba-plL" id="mUF-NM-bv9"/>
+                        <outlet property="dateText" destination="xeF-GH-DiV" id="jYn-yf-q8F"/>
                     </connections>
                 </viewController>
                 <exit id="Fu1-eH-I6p" userLabel="Exit" sceneMemberID="exit"/>
@@ -996,6 +976,6 @@
         <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6tk-4e-Hel"/>
+        <segue reference="hya-d9-hjQ"/>
     </inferredMetricsTieBreakers>
 </document>
