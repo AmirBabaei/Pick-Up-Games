@@ -241,7 +241,7 @@
         <!--Profile-->
         <scene sceneID="rTr-5j-YrN">
             <objects>
-                <viewController title="Profile" id="nCM-28-jTA" sceneMemberID="viewController">
+                <viewController title="Profile" id="nCM-28-jTA" customClass="Profile" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0aT-Mg-7UT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,6 +299,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2cn-IT-a61"/>
                     </view>
+                    <connections>
+                        <outlet property="Age" destination="6Fz-M5-VZ5" id="UWk-fy-5IC"/>
+                        <outlet property="Email" destination="ma0-ly-HcQ" id="hAf-IS-wH1"/>
+                        <outlet property="Name" destination="Goo-yo-r7B" id="Cnx-7l-sJ5"/>
+                        <outlet property="Username" destination="Rtx-z0-Us7" id="BEo-rD-LA3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USD-cD-a1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
