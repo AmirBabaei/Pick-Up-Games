@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11BB5EFA218C0A4300462E69 /* PUG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB5EF9218C0A4300462E69 /* PUG.swift */; };
+		11BC92DC21933975002A2907 /* ProfileSubPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC92DB21933975002A2907 /* ProfileSubPages.swift */; };
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
 		293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* LoginView.swift */; };
 		293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		11BB5EF9218C0A4300462E69 /* PUG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUG.swift; sourceTree = "<group>"; };
+		11BC92DB21933975002A2907 /* ProfileSubPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubPages.swift; sourceTree = "<group>"; };
 		293B1B25217095D5005D5CCC /* Pick-Up Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-Up Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B28217095D5005D5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293B1B2A217095D5005D5CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				293B1B28217095D5005D5CCC /* AppDelegate.swift */,
 				293B1B2A217095D5005D5CCC /* LoginView.swift */,
 				293B1B2C217095D5005D5CCC /* Main.storyboard */,
+				11BC92DB21933975002A2907 /* ProfileSubPages.swift */,
 				41350FEB21796DC800597D68 /* RegisterViewController.swift */,
 				293B1B32217095D9005D5CCC /* Assets.xcassets */,
 				293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */,
@@ -435,6 +438,7 @@
 				11BB5EFA218C0A4300462E69 /* PUG.swift in Sources */,
 				29C895E52182C31600A1B80C /* FeedCell.swift in Sources */,
 				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
+				11BC92DC21933975002A2907 /* ProfileSubPages.swift in Sources */,
 				293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */,
 				29C895E92182CD2300A1B80C /* Event.swift in Sources */,
 				41350FEC21796DC800597D68 /* RegisterViewController.swift in Sources */,
