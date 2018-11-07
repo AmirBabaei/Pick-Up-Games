@@ -11,5 +11,9 @@ import UIKit
 import Firebase
 
 class Profile: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     
 }
