@@ -14,7 +14,6 @@ class CreateEvent: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       //date picker
-      
       datePicker = UIDatePicker()
       datePicker?.datePickerMode = .date
       
