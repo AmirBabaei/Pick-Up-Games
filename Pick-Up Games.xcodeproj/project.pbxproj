@@ -21,6 +21,7 @@
 		293B1B41217095D9005D5CCC /* Pick_Up_GamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B40217095D9005D5CCC /* Pick_Up_GamesTests.swift */; };
 		293B1B4C217095D9005D5CCC /* Pick_Up_GamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */; };
 		295808172187E78300031304 /* CreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295808162187E78300031304 /* CreateEvent.swift */; };
+		29B343172190B6C1001E1624 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B343162190B6C1001E1624 /* MapScreen.swift */; };
 		29C895E52182C31600A1B80C /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E42182C31600A1B80C /* FeedCell.swift */; };
 		29C895E72182C6FC00A1B80C /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E62182C6FC00A1B80C /* Feed.swift */; };
 		29C895E92182CD2300A1B80C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E82182CD2300A1B80C /* Event.swift */; };
@@ -69,6 +70,7 @@
 		293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_Up_GamesUITests.swift; sourceTree = "<group>"; };
 		293B1B4D217095DA005D5CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		295808162187E78300031304 /* CreateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEvent.swift; sourceTree = "<group>"; };
+		29B343162190B6C1001E1624 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		29C895E42182C31600A1B80C /* FeedCell.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; tabWidth = 4; };
 		29C895E62182C6FC00A1B80C /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		29C895E82182CD2300A1B80C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -156,6 +158,8 @@
 				11BB5EF9218C0A4300462E69 /* PUG.swift */,
 				11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */,
 				11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */,
+				29B343162190B6C1001E1624 /* MapScreen.swift */,
+
 			);
 			path = "Pick-Up Games";
 			sourceTree = "<group>";
@@ -445,6 +449,7 @@
 				29C895E72182C6FC00A1B80C /* Feed.swift in Sources */,
 				295808172187E78300031304 /* CreateEvent.swift in Sources */,
 				11BB5EFA218C0A4300462E69 /* PUG.swift in Sources */,
+				29B343172190B6C1001E1624 /* MapScreen.swift in Sources */,
 				29C895E52182C31600A1B80C /* FeedCell.swift in Sources */,
 				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
 				11A93A4021960BED002C3F7C /* ProfileBioSubPage.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import CoreLocation
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet var UsernameTF: UITextField!
@@ -20,10 +20,23 @@ class RegisterViewController: UIViewController {
     @IBOutlet var PasswordTf: UITextField!
 
     @IBOutlet var ConPassTF: UITextField!
-    
+  
+  
+  //hide keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      self.view.endEditing(true)
+      return false
+    }
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
+      UsernameTF.delegate = self
+      EmailTF.delegate = self
+      PasswordTf.delegate = self
+      ConPassTF.delegate = self
+      
         // Do any additional setup after loading the view.
     }
     
