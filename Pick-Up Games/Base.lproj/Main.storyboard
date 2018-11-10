@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KFf-bx-3hC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nWt-42-Lve">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -421,7 +421,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBz-AK-cgn">
-                                <rect key="frame" x="31" y="48" width="16" height="22"/>
+                                <rect key="frame" x="31" y="48" width="37" height="37"/>
                                 <state key="normal" title="" image="Back icon"/>
                                 <connections>
                                     <action selector="Backtologin:" destination="OiF-4p-Vti" eventType="touchUpInside" id="FVc-xb-0lW"/>
@@ -596,11 +596,11 @@
         <scene sceneID="9rc-aD-Egv">
             <objects>
                 <viewController id="GSv-Uc-OX6" customClass="MapScreen" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7c5-Lg-mOd">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7c5-Lg-mOd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hT9-hd-oPo">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hT9-hd-oPo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <connections>
                                     <outlet property="delegate" destination="GSv-Uc-OX6" id="KgD-JC-0fa"/>
@@ -609,7 +609,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="rf9-lX-pzx">
                                 <rect key="frame" x="167" y="366" width="40" height="40"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4s-NEW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4s-NEW">
                                 <rect key="frame" x="0.0" y="697" width="375" height="115"/>
                                 <color key="backgroundColor" red="0.1121854056" green="0.1052894435" blue="0.13640873019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -626,6 +626,17 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOJ-wZ-DuG">
+                                <rect key="frame" x="246" y="708" width="113" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.23921568630000001" green="0.99215686270000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="GSv-Uc-OX6" eventType="touchUpInside" id="WdV-Qk-hMh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -778,6 +789,7 @@
                                         <connections>
                                             <action selector="EventField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="x2X-z5-cPk"/>
                                             <action selector="EventTxtField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="ad9-2B-Qvv"/>
+                                            <segue destination="GSv-Uc-OX6" kind="show" id="jeb-21-dWx"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeF-GH-DiV">
@@ -1089,6 +1101,9 @@
         <image name="Login" width="281.25" height="609"/>
         <image name="pin" width="409.60000610351562" height="409.60000610351562"/>
         <image name="sport" width="16" height="16"/>
-        <image name="test-login" width="341" height="204"/>
+        <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6tk-4e-Hel"/>
+    </inferredMetricsTieBreakers>
 </document>

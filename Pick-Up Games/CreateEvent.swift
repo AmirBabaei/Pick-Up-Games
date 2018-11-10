@@ -10,7 +10,8 @@ import UIKit
 import Firebase
 
 class CreateEvent: UIViewController {
-    var ref: DatabaseReference!
+  @IBOutlet weak var addressTexField: UITextField!
+  var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
       //date picker
