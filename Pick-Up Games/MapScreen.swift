@@ -14,6 +14,8 @@ class MapScreen: UIViewController {
 
   @IBOutlet var MapView: MKMapView!
   @IBOutlet var addressLabel: UILabel!
+  @IBAction func doneButton(_ sender: Any) {
+  }
   
   let locationManager = CLLocationManager()
   let regionInMeters: Double = 5000
