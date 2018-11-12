@@ -43,12 +43,11 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
             for user in usersSnapshot {
                 print(user.key)
                 REF_PROF.child("Friends/\(user.key)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
-                    print(friendSnapshot.exists())
                     if (friendSnapshot.exists()) {
                         let name = user.childSnapshot(forPath: "Full Name").value as! String
-                        print(name)
                         funcFriendsArray.append(name)
                     }
+                    handler(funcFriendsArray)
                 })
             }
             handler(funcFriendsArray)
@@ -66,10 +65,11 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell") as? FriendCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Friend Cell") as? FriendCell else { return UITableViewCell() }
         
         let image = UIImage(named: "test-login")
         let friend = friendsArray[indexPath.row]
+        print(friend)
         
         cell.fillCell(profPic: image!, name: friend)
         return cell
