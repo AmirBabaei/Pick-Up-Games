@@ -9,16 +9,25 @@
 import UIKit
 import Firebase
 
-class LoginView: UIViewController{
+class LoginView: UIViewController, UITextFieldDelegate{
     
     @IBOutlet var UsernameTF: UITextField!
     
     @IBOutlet var LoginPasswordTF: UITextField!
-    
+  
+  
+  //hide keyboard
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+    return false
+  }
+  
     override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+      UsernameTF.delegate = self
+      LoginPasswordTF.delegate = self
   }
+
 
   @IBAction func unwindToLogin(segue:UIStoryboardSegue) { }
 

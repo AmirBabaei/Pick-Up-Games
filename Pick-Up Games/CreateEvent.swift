@@ -16,6 +16,17 @@ class CreateEvent: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      //date picker
+      datePicker = UIDatePicker()
+      datePicker?.datePickerMode = .dateAndTime
+      
+      dateText.inputView = datePicker
+      datePicker?.addTarget(self, action: #selector(CreateEvent.dateChanged(datePicker:)), for: .valueChanged)
+      let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateEvent.viewTapped(gestureRecognizer:)))
+      
+      view.addGestureRecognizer(tapGesture)
+      
+      
         // Do any additional setup after loading the view.
         
         self.ParticipLimitTxtField.delegate = self
@@ -127,9 +138,9 @@ class CreateEvent: UIViewController, UITextFieldDelegate{
             ref.child("users").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
                     let value = snapshot.value as? NSDictionary
                     let username = value?["username"] as? String ?? ""
-                	eventID.updateChildValues(["EventCreator_UserName": username])
-                	eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
-	           })
+                    eventID.updateChildValues(["EventCreator_UserName": username])
+                    eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
+               })
         }
         else
         {
@@ -142,14 +153,6 @@ class CreateEvent: UIViewController, UITextFieldDelegate{
         //from here the createEventButton needs to return to the feed page also any checks on values should be done before this button can be pressed.
 
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
