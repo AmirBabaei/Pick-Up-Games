@@ -41,9 +41,12 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
             guard let usersSnapshot = usersSnapshot.children.allObjects as? [DataSnapshot] else { return }
             
             for user in usersSnapshot {
-                REF_PROF.child("Friends/\(user as! String)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
+                print(user.key)
+                REF_PROF.child("Friends/\(user.key)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
+                    print(friendSnapshot.exists())
                     if (friendSnapshot.exists()) {
                         let name = user.childSnapshot(forPath: "Full Name").value as! String
+                        print(name)
                         funcFriendsArray.append(name)
                     }
                 })
