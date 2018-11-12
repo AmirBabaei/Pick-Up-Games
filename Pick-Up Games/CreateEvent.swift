@@ -14,9 +14,8 @@ class CreateEvent: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       //date picker
-      
       datePicker = UIDatePicker()
-      datePicker?.datePickerMode = .date
+      datePicker?.datePickerMode = .dateAndTime
       
       dateText.inputView = datePicker
       datePicker?.addTarget(self, action: #selector(CreateEvent.dateChanged(datePicker:)), for: .valueChanged)
@@ -33,16 +32,22 @@ class CreateEvent: UIViewController {
     view.endEditing(true)
   }
   
+  
+  
   @objc func dateChanged(datePicker: UIDatePicker){
     
-      let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = "MM/dd/yyy"
-      dateText.text = dateFormatter.string(from: datePicker.date)
-      //view.endEditing(true)
-    }
+    //date formatter
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MM/dd/yyy 'at' HH : mm"
+    dateText.text = dateFormatter.string(from: datePicker.date)
     
-    @IBOutlet var EventType: UITextField!
-    @IBOutlet weak var dateText: UITextField!
+    //Time formatter
+
+  }
+    
+  @IBOutlet var EventType: UITextField!
+  @IBOutlet weak var dateText: UITextField!
+
   
   //date picker
   private var datePicker: UIDatePicker?

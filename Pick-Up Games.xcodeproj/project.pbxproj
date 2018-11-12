@@ -7,20 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11A93A3E2195F7DF002C3F7C /* ProfileObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */; };
+		11A93A4021960BED002C3F7C /* ProfileBioSubPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */; };
 		11BB5EFA218C0A4300462E69 /* PUG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB5EF9218C0A4300462E69 /* PUG.swift */; };
+		11BC92DC21933975002A2907 /* ProfileSubPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC92DB21933975002A2907 /* ProfileSubPages.swift */; };
+		11BC92DF21936893002A2907 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC92DD219363FA002A2907 /* Profile.swift */; };
+		11BC92E0219368B0002A2907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
 		293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* LoginView.swift */; };
-		293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
 		293B1B31217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2F217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld */; };
 		293B1B33217095D9005D5CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B32217095D9005D5CCC /* Assets.xcassets */; };
 		293B1B36217095D9005D5CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */; };
-		293B1B41217095D9005D5CCC /* Pick_Up_GamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B40217095D9005D5CCC /* Pick_Up_GamesTests.swift */; };
 		293B1B4C217095D9005D5CCC /* Pick_Up_GamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */; };
 		295808172187E78300031304 /* CreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295808162187E78300031304 /* CreateEvent.swift */; };
 		29B343172190B6C1001E1624 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B343162190B6C1001E1624 /* MapScreen.swift */; };
 		29C895E52182C31600A1B80C /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E42182C31600A1B80C /* FeedCell.swift */; };
 		29C895E72182C6FC00A1B80C /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E62182C6FC00A1B80C /* Feed.swift */; };
 		29C895E92182CD2300A1B80C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E82182CD2300A1B80C /* Event.swift */; };
+		323671CC21960C480095ABF7 /* RegisterViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323671CB21960C480095ABF7 /* RegisterViewControllerTest.swift */; };
+		323671CE219613DC0095ABF7 /* LoginViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323671CD219613DC0095ABF7 /* LoginViewTest.swift */; };
 		41350FEC21796DC800597D68 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41350FEB21796DC800597D68 /* RegisterViewController.swift */; };
 		41AB20C721781324000A5760 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41AB20C621781323000A5760 /* GoogleService-Info.plist */; };
 		4D5B21358A10D03DA94AEE65 /* Pods_Pick_Up_Games.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CF25F61D943C4E5F4E0180 /* Pods_Pick_Up_Games.framework */; };
@@ -46,7 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileObject.swift; sourceTree = "<group>"; };
+		11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBioSubPage.swift; sourceTree = "<group>"; };
 		11BB5EF9218C0A4300462E69 /* PUG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUG.swift; sourceTree = "<group>"; };
+		11BC92DB21933975002A2907 /* ProfileSubPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubPages.swift; sourceTree = "<group>"; };
+		11BC92DD219363FA002A2907 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		293B1B25217095D5005D5CCC /* Pick-Up Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-Up Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B28217095D5005D5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293B1B2A217095D5005D5CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -56,7 +65,6 @@
 		293B1B35217095D9005D5CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		293B1B37217095D9005D5CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		293B1B3C217095D9005D5CCC /* Pick-Up GamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pick-Up GamesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		293B1B40217095D9005D5CCC /* Pick_Up_GamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_Up_GamesTests.swift; sourceTree = "<group>"; };
 		293B1B42217095D9005D5CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		293B1B47217095D9005D5CCC /* Pick-Up GamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pick-Up GamesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_Up_GamesUITests.swift; sourceTree = "<group>"; };
@@ -67,6 +75,8 @@
 		29C895E62182C6FC00A1B80C /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		29C895E82182CD2300A1B80C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		2A1B26F55B0068310C6DD840 /* Pods-Pick-Up GamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesTests/Pods-Pick-Up GamesTests.release.xcconfig"; sourceTree = "<group>"; };
+		323671CB21960C480095ABF7 /* RegisterViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTest.swift; sourceTree = "<group>"; };
+		323671CD219613DC0095ABF7 /* LoginViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTest.swift; sourceTree = "<group>"; };
 		41350FEB21796DC800597D68 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		41AB20C621781323000A5760 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C25347BED44C42D67299A39 /* Pods-Pick-Up Games.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up Games.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up Games/Pods-Pick-Up Games.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +145,8 @@
 				293B1B28217095D5005D5CCC /* AppDelegate.swift */,
 				293B1B2A217095D5005D5CCC /* LoginView.swift */,
 				293B1B2C217095D5005D5CCC /* Main.storyboard */,
+				11BC92DB21933975002A2907 /* ProfileSubPages.swift */,
+				11BC92DD219363FA002A2907 /* Profile.swift */,
 				41350FEB21796DC800597D68 /* RegisterViewController.swift */,
 				293B1B32217095D9005D5CCC /* Assets.xcassets */,
 				293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */,
@@ -146,7 +158,10 @@
 				29C895E82182CD2300A1B80C /* Event.swift */,
 				295808162187E78300031304 /* CreateEvent.swift */,
 				11BB5EF9218C0A4300462E69 /* PUG.swift */,
+				11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */,
+				11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */,
 				29B343162190B6C1001E1624 /* MapScreen.swift */,
+
 			);
 			path = "Pick-Up Games";
 			sourceTree = "<group>";
@@ -154,8 +169,9 @@
 		293B1B3F217095D9005D5CCC /* Pick-Up GamesTests */ = {
 			isa = PBXGroup;
 			children = (
-				293B1B40217095D9005D5CCC /* Pick_Up_GamesTests.swift */,
 				293B1B42217095D9005D5CCC /* Info.plist */,
+				323671CB21960C480095ABF7 /* RegisterViewControllerTest.swift */,
+				323671CD219613DC0095ABF7 /* LoginViewTest.swift */,
 			);
 			path = "Pick-Up GamesTests";
 			sourceTree = "<group>";
@@ -270,6 +286,7 @@
 					};
 					293B1B3B217095D9005D5CCC = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 						TestTargetID = 293B1B24217095D5005D5CCC;
 					};
 					293B1B46217095D9005D5CCC = {
@@ -306,7 +323,7 @@
 				293B1B36217095D9005D5CCC /* LaunchScreen.storyboard in Resources */,
 				41AB20C721781324000A5760 /* GoogleService-Info.plist in Resources */,
 				293B1B33217095D9005D5CCC /* Assets.xcassets in Resources */,
-				293B1B2E217095D5005D5CCC /* Main.storyboard in Resources */,
+				11BC92E0219368B0002A2907 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +456,11 @@
 				29B343172190B6C1001E1624 /* MapScreen.swift in Sources */,
 				29C895E52182C31600A1B80C /* FeedCell.swift in Sources */,
 				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
+				11A93A4021960BED002C3F7C /* ProfileBioSubPage.swift in Sources */,
+				11A93A3E2195F7DF002C3F7C /* ProfileObject.swift in Sources */,
+				11BC92DC21933975002A2907 /* ProfileSubPages.swift in Sources */,
 				293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */,
+				11BC92DF21936893002A2907 /* Profile.swift in Sources */,
 				29C895E92182CD2300A1B80C /* Event.swift in Sources */,
 				41350FEC21796DC800597D68 /* RegisterViewController.swift in Sources */,
 			);
@@ -449,7 +470,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				293B1B41217095D9005D5CCC /* Pick_Up_GamesTests.swift in Sources */,
+				323671CE219613DC0095ABF7 /* LoginViewTest.swift in Sources */,
+				323671CC21960C480095ABF7 /* RegisterViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +678,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 594BSCP8F4;
 				INFOPLIST_FILE = "Pick-Up GamesTests/Info.plist";
@@ -666,6 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amir.Pick-Up-GamesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pick-Up Games.app/Pick-Up Games";
@@ -678,6 +702,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 594BSCP8F4;
 				INFOPLIST_FILE = "Pick-Up GamesTests/Info.plist";
