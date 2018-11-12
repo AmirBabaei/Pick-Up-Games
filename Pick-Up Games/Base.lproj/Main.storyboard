@@ -1061,7 +1061,7 @@
         <!--ProfileFriendsSubPage-->
         <scene sceneID="Ncm-xi-LHX">
             <objects>
-                <viewController storyboardIdentifier="ProfileFriendsSubPage" title="ProfileFriendsSubPage" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HGg-xx-Xam" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileFriendsSubPage" title="ProfileFriendsSubPage" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HGg-xx-Xam" customClass="ProfileFriendsSubPage" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="trd-rM-6KQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1071,7 +1071,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jeX-wH-I2i">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jeX-wH-I2i" customClass="FriendCell" customModule="Pick_Up_Games" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="359" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jeX-wH-I2i" id="xGh-tU-OkV">
@@ -1096,6 +1096,10 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="Xcc-km-6ui" id="EJp-xu-wCp"/>
+                                            <outlet property="profPic" destination="DB0-vn-E9G" id="PRY-tr-ObM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1103,6 +1107,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="M64-q2-q9S"/>
                     </view>
+                    <connections>
+                        <outlet property="myFriendsTable" destination="pAx-Z4-w8U" id="MPC-0K-Yhm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0n3-e0-aGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
