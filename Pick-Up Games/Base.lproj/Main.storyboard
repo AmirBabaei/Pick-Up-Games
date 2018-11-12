@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ynS-0a-Via">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fCb-6n-Owd">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -342,7 +342,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBz-AK-cgn">
-                                <rect key="frame" x="31" y="48" width="37" height="37"/>
+                                <rect key="frame" x="31" y="48" width="16" height="22"/>
                                 <state key="normal" title="" image="Back icon"/>
                                 <connections>
                                     <action selector="Backtologin:" destination="OiF-4p-Vti" eventType="touchUpInside" id="FVc-xb-0lW"/>
@@ -969,11 +969,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back icon" width="37.5" height="37.5"/>
-        <image name="Login" width="281.25" height="609"/>
-        <image name="pin" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="Back icon" width="16" height="16"/>
+        <image name="Login" width="125" height="270"/>
+        <image name="pin" width="16" height="16"/>
         <image name="sport" width="16" height="16"/>
-        <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
+        <image name="test-login" width="341" height="204"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hya-d9-hjQ"/>
