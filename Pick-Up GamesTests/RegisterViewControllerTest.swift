@@ -32,3 +32,7 @@ class RegisterViewControllerTest: XCTestCase {
         XCTAssertNil(viewcontroller.UsernameTF, "UsernameTF IS  NOT NIL")
     }
 }
+class sampleUser {
+    var userEmail = "testing@ucsc.edu"
+    
+}
