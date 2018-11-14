@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ynS-0a-Via">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nWt-42-Lve">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -595,7 +595,7 @@
         <!--Map Screen-->
         <scene sceneID="9rc-aD-Egv">
             <objects>
-                <viewController id="GSv-Uc-OX6" customClass="MapScreen" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapScreen" id="GSv-Uc-OX6" customClass="MapScreen" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7c5-Lg-mOd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -796,11 +796,11 @@
                                             <action selector="EventTxtField:" destination="Fu1-eH-I6p" eventType="editingDidEnd" id="59g-D5-SHe"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-XE-bch">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-XE-bch">
                                         <rect key="frame" x="0.0" y="51" width="199.66666666666666" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <segue destination="GSv-Uc-OX6" kind="show" id="ICn-BJ-oQY"/>
@@ -1120,6 +1120,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6tk-4e-Hel"/>
+        <segue reference="ICn-BJ-oQY"/>
         <segue reference="zY5-GC-Tiu"/>
     </inferredMetricsTieBreakers>
 </document>

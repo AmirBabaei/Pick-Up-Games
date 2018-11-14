@@ -20,6 +20,8 @@ class CreateEvent: UIViewController {
     override func viewDidLoad() {
       super.viewDidLoad()
       
+      addressTexField.addTarget(self, action: #selector(myTargetFunction), for: UIControl.Event.touchDown)
+
       //address text
       addressTexField.text = addressString
       
@@ -36,6 +38,14 @@ class CreateEvent: UIViewController {
       
         // Do any additional setup after loading the view.
     }
+  
+  @objc func myTargetFunction(textField: UITextField) {
+    
+    let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let vc2 = vc.instantiateViewController(withIdentifier: "mapScreen")
+    navigationController?.pushViewController(vc2, animated: false)
+    dismiss(animated: true, completion: nil)
+  }
   
     //dimiss date picker
   @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
