@@ -24,7 +24,7 @@ class ProfileFriendsSubPage: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        getAllFriends { (returnedFriendsArray) in self.friendsArray = returnedFriendsArray
+        getAllFriends { (returnedFriendsArray) in self.friendsArray = returnedFriendsArray.reversed()
             self.myFriendsTable.reloadData()
             
         }
@@ -32,8 +32,7 @@ class ProfileFriendsSubPage: UIViewController{
 }
 extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
     
-    func getAllFriends(handler: @escaping (_ events: [String]) -> ()) {
-        var funcFriendsArray = [String]()
+    func getAllFriends(handler: @escaping (_ friends: [String]) -> ()) {
         let userID = Auth.auth().currentUser?.uid
         let REF_PROF = Database.database().reference().child("users").child(userID!)
         let REF_USERS = Database.database().reference().child("users")
@@ -45,12 +44,11 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
                 REF_PROF.child("Friends/\(user.key)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
                     if (friendSnapshot.exists()) {
                         let name = user.childSnapshot(forPath: "Full Name").value as! String
-                        funcFriendsArray.append(name)
+                        if (!self.friendsArray.contains(name)) { self.friendsArray.append(name) }
                     }
-                    handler(funcFriendsArray)
+                    self.myFriendsTable.reloadData()
                 })
             }
-            handler(funcFriendsArray)
         }
     }
     
@@ -69,7 +67,6 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
         
         let image = UIImage(named: "test-login")
         let friend = friendsArray[indexPath.row]
-        print(friend)
         
         cell.fillCell(profPic: image!, name: friend)
         return cell
