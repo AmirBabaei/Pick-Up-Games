@@ -9,13 +9,22 @@
 import UIKit
 import Firebase
 
-class CreateEvent: UIViewController, UITextFieldDelegate{
-    
-    var ref: DatabaseReference!
-    
-    
+class CreateEvent: UIViewController {
+  
+  //for address text field
+  var addressString = String()
+  @IBOutlet weak var addressTexField: UITextField!
+  
+  
+  var ref: DatabaseReference!
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
+      
+      addressTexField.addTarget(self, action: #selector(myTargetFunction), for: UIControl.Event.touchDown)
+
+      //address text
+      addressTexField.text = addressString
+      
       //date picker
       datePicker = UIDatePicker()
       datePicker?.datePickerMode = .dateAndTime
@@ -28,97 +37,46 @@ class CreateEvent: UIViewController, UITextFieldDelegate{
       
       
         // Do any additional setup after loading the view.
-        
-        self.ParticipLimitTxtField.delegate = self
     }
+  
+  @objc func myTargetFunction(textField: UITextField) {
     
+    let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let vc2 = vc.instantiateViewController(withIdentifier: "mapScreen")
+    navigationController?.pushViewController(vc2, animated: false)
+    dismiss(animated: true, completion: nil)
+  }
+  
+    //dimiss date picker
+  @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
+    view.endEditing(true)
+  }
+  
+  
+  
+  @objc func dateChanged(datePicker: UIDatePicker){
     
-    @IBOutlet var EventType: UITextField!
-    @IBOutlet var ParticipLimitTxtField: UITextField!
-    @IBOutlet var AgeLimitMinTxtField: UITextField!
-    @IBOutlet var AgeLimitMaxTxtField: UITextField!
-    @IBOutlet var DescriptionTxtField: UITextField!
+    //date formatter
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MM/dd/yyy 'at' HH : mm"
+    dateText.text = dateFormatter.string(from: datePicker.date)
     
+    //Time formatter
+
+  }
     
-    // This stuff has to do with the sport picker view that I have been looking into, but doesn't work
-    /*
-    var eventTypes = ["Football", "Baseball"]
-    var selectedEvent: String?
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return eventTypes.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return eventTypes[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedEvent = eventTypes[row]
-        EventType.text = selectedEvent!
-    }
-    
-    func createPickerView() {
-        let view = UIPickerView()
-        view.delegate = self
-        
-        EventType.inputView = view
-    }
- */
-   /*
-    func stringToInt(from textField: UITextField) -> Int {
-        guard let text = textField.text, let number = Int(text) else {
-            return -1
-        }
-        
-        return number
-    }
- */
-    /*
-    
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        ParticipLimitTxtField.resignFirstResponder()
-        return true
-    }
-    */
+  @IBOutlet var EventType: UITextField!
+  @IBOutlet weak var dateText: UITextField!
+
+  
+  //date picker
+  private var datePicker: UIDatePicker?
+  
+  
+  
+  
     @IBAction func CreateEventButton(_ sender: Any)
     {
-        /*
-        var event: String?
-        var partLimit: String?
-        var maxAge: String?
-        var minAge: String?
-        var description: String?
-
-        // Getting the Participant Limit
-        if(ParticipLimitTxtField.text! == "")
-        {
-            partLimit = "No participant limit specified."
-        } else {
-            partLimit = ParticipLimitTxtField.text!
-        }
- */
-        /*
-        // Comparing min and max age fields so that they are in order
-        var max = stringToInt(from: AgeLimitMaxTxtField)
-        var min = stringToInt(from: AgeLimitMinTxtField)
-        
-        // The max age is less than the min age, so lets just swap them around
-        if(max < min) {
-            maxAge = AgeLimitMinTxtField.text!
-            minAge = AgeLimitMaxTxtField.text!
-        }
- */
-        
         print(EventType.text!)//prints to debug console used for testing
         ref = Database.database().reference()
         let eventID = ref.child("Event").childByAutoId()
@@ -138,9 +96,9 @@ class CreateEvent: UIViewController, UITextFieldDelegate{
             ref.child("users").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
                     let value = snapshot.value as? NSDictionary
                     let username = value?["username"] as? String ?? ""
-                    eventID.updateChildValues(["EventCreator_UserName": username])
-                    eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
-               })
+                	eventID.updateChildValues(["EventCreator_UserName": username])
+                	eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
+	           })
         }
         else
         {
