@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Pick_Up_Games
+import Firebase
 
 class RegisterViewControllerTest: XCTestCase {
 
@@ -15,7 +16,7 @@ class RegisterViewControllerTest: XCTestCase {
     override func setUp() {
         sample = sampleUser()
     }
-
+    
     override func tearDown() {
         sample = nil
     }
@@ -31,6 +32,11 @@ class RegisterViewControllerTest: XCTestCase {
     func testUsername(){
         let viewcontroller = RegisterViewController()
         XCTAssertNil(viewcontroller.UsernameTF, "UsernameTF IS  NOT NIL")
+    }
+    func testRegister(){
+        Auth.auth().createUser(withEmail: sample.userEmail, password: sample.userPassword) { (user, error) in
+            XCTAssertNotNil(user)
+        }
     }
 }
 class sampleUser {

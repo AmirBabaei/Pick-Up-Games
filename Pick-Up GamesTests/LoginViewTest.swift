@@ -7,16 +7,20 @@
 //
 
 import XCTest
+@testable import Pick_Up_Games
+import Firebase
 
 class LoginViewTest: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var sample: sampleUser!
+    override func setUp()
+    {
+        sample = sampleUser()
     }
-
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sample = nil
     }
+    
 
 
 }
