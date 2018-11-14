@@ -11,12 +11,13 @@ import XCTest
 
 class RegisterViewControllerTest: XCTestCase {
 
+    var sample: sampleUser!
     override func setUp() {
-        super.setUp()
+        sample = sampleUser()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sample = nil
     }
     func testPassword(){
         let viewcontroller = RegisterViewController()
@@ -34,5 +35,6 @@ class RegisterViewControllerTest: XCTestCase {
 }
 class sampleUser {
     var userEmail = "testing@ucsc.edu"
-    
+    var userPassword = "password"
+    var userName = "testUser"
 }
