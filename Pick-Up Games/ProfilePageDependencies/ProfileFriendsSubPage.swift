@@ -14,7 +14,9 @@ class ProfileFriendsSubPage: UIViewController{
 
     @IBOutlet weak var myFriendsTable: UITableView!
     
-    var friendsArray = [String]()
+    var friendsArray = [FriendObject]()
+    
+    var cellID: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class ProfileFriendsSubPage: UIViewController{
 }
 extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
     
-    func getAllFriends(handler: @escaping (_ friends: [String]) -> ()) {
+    func getAllFriends(handler: @escaping (_ friends: [FriendObject]) -> ()) {
         let userID = Auth.auth().currentUser?.uid
         let REF_PROF = Database.database().reference().child("users").child(userID!)
         let REF_USERS = Database.database().reference().child("users")
@@ -40,11 +42,12 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
             guard let usersSnapshot = usersSnapshot.children.allObjects as? [DataSnapshot] else { return }
             
             for user in usersSnapshot {
-                print(user.key)
                 REF_PROF.child("Friends/\(user.key)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
                     if (friendSnapshot.exists()) {
                         let name = user.childSnapshot(forPath: "Full Name").value as! String
-                        if (!self.friendsArray.contains(name)) { self.friendsArray.append(name) }
+                        let UID = user.key
+                        let friend = FriendObject(name: name, UID: UID)
+                        if (!self.friendsArray.contains(where: { $0.UID == UID })) { self.friendsArray.append(friend) }
                     }
                     self.myFriendsTable.reloadData()
                 })
@@ -67,9 +70,24 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
         
         let image = UIImage(named: "test-login")
         let friend = friendsArray[indexPath.row]
+
+        cell.fillCell(profPic: image!, name: friend.name)
         
-        cell.fillCell(profPic: image!, name: friend)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let friend = friendsArray[indexPath.row]
+        cellID = friend.UID
+        performSegue(withIdentifier: "PassUIDToOtherProfile", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "FriendProfile") {
+            let vc = segue.destination as! OtherProfiles
+            vc.UID = cellID
+        }
+    }
+    
     
 }

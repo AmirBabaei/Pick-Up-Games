@@ -13,8 +13,10 @@ class FriendCell: UITableViewCell {
     @IBOutlet weak var profPic: UIImageView!
     @IBOutlet weak var name: UILabel!
     
+    
     func fillCell(profPic: UIImage, name: String) {
         self.profPic.image = profPic
         self.name.text = name
+        
     }
 }
