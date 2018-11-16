@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Pick_Up_GamesTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Pick_Up_GamesTestsVersionString[];
+FOUNDATION_EXPORT double Pods_Pick_Up_Games_Pick_Up_GamesUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Pick_Up_Games_Pick_Up_GamesUITestsVersionString[];
 

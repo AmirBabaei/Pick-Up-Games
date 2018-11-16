@@ -20,11 +20,6 @@ class RegisterViewControllerTest: XCTestCase {
     override func tearDown() {
         sample = nil
     }
-    func testPassword(){
-        let viewcontroller = RegisterViewController()
-        XCTAssertEqual(viewcontroller.PasswordTf.text, viewcontroller.ConPassTF.text
-        )
-    }
     func testEmail(){
         let viewcontroller = RegisterViewController()
         XCTAssertNil(viewcontroller.EmailTF, "EMAIL IS  NOT NIL")
