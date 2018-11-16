@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class CreateEvent: UIViewController {
+class CreateEvent: UIViewController, VCFinalDelegate {
   
   //for address text field
   var addressString = String()
@@ -40,17 +40,24 @@ class CreateEvent: UIViewController {
     }
   
   @objc func myTargetFunction(textField: UITextField) {
-    
+   
+      
     let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    let vc2 = vc.instantiateViewController(withIdentifier: "mapScreen")
-    navigationController?.pushViewController(vc2, animated: false)
-    dismiss(animated: true, completion: nil)
+    let vc2 = vc.instantiateViewController(withIdentifier: "mapScreen") as! MapScreen
+        vc2.delegate = self
+    present(vc2, animated: true, completion: nil)
+    //navigationController?.pushViewController(vc2, animated: false)
+    //dismiss(animated: true, completion: nil)
   }
   
     //dimiss date picker
   @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
     view.endEditing(true)
   }
+  func finishPassing(string: String) {
+    addressTexField.text = string
+  }
+  
   
   
   
@@ -109,6 +116,9 @@ class CreateEvent: UIViewController {
             
         }
         //from here the createEventButton needs to return to the feed page also any checks on values should be done before this button can be pressed.
+      let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      let vc2 = vc.instantiateViewController(withIdentifier: "feed")
+      navigationController?.pushViewController(vc2, animated: false)
 
     }
 

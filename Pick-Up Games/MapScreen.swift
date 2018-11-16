@@ -10,7 +10,13 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol VCFinalDelegate {
+  func finishPassing(string: String)
+}
+
 class MapScreen: UIViewController {
+
+  var delegate: VCFinalDelegate?
 
   @IBOutlet var MapView: MKMapView!
   var addy = String()
@@ -18,12 +24,21 @@ class MapScreen: UIViewController {
   @IBOutlet var addressLabel: UILabel!
   @IBAction func doneButton(_ sender: Any) {
     //checkLocationServices()
-    performSegue(withIdentifier: "mapSegue", sender: self)
+    delegate?.finishPassing(string: ""+addy)
+    //performSegue(withIdentifier: "mapSegue", sender: self)
+    dismiss(animated: true, completion: nil)
   }
-  
+    
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let createEvent = segue.destination as! CreateEvent
     createEvent.addressString = addy
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Hide the Navigation Bar
+    self.navigationController?.setNavigationBarHidden(true, animated: animated)
   }
   
   let locationManager = CLLocationManager()
