@@ -20,15 +20,16 @@ class MapScreen: UIViewController {
 
   @IBOutlet var MapView: MKMapView!
   var addy = String()
+  var loc = String()
   //address text
   @IBOutlet var addressLabel: UILabel!
   @IBAction func doneButton(_ sender: Any) {
     //checkLocationServices()
-    delegate?.finishPassing(string: ""+addy)
+    delegate?.finishPassing(string: addy)
     //performSegue(withIdentifier: "mapSegue", sender: self)
     dismiss(animated: true, completion: nil)
   }
-    
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let createEvent = segue.destination as! CreateEvent
     createEvent.addressString = addy
@@ -153,11 +154,18 @@ extension MapScreen: MKMapViewDelegate {
       let locationName = placemark.name ?? ""
       
       DispatchQueue.main.async {
-       // if (locationName != (" \(streetNumber) \(streetName)")){
-           //self.addressLabel.text = " \(locationName) \n"
-       // }
-        self.addressLabel.text = " \(streetNumber) \(streetName)\n \(cityName)"
-        self.addy = " \(streetNumber) \(streetName)\n, \(cityName)"
+        var str = "\(streetNumber) \(streetName)"
+        
+        if locationName == str {
+           self.addressLabel.text = " \(locationName) \n  \(cityName)"
+            self.addy = " \(locationName), \(cityName)"
+
+        }else {
+           self.addressLabel.text = " \(locationName) \n \(streetNumber) \(streetName)\n \(cityName)"
+          self.addy = "\(locationName), \(cityName)"
+
+        }
+        self.loc = "\(locationName)"
       }
     }
   }

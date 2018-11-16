@@ -14,7 +14,8 @@ class CreateEvent: UIViewController, VCFinalDelegate {
   //for address text field
   var addressString = String()
   @IBOutlet weak var addressTexField: UITextField!
-  
+  var destination:String = ""
+  var dateString:String = ""
   
   var ref: DatabaseReference!
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class CreateEvent: UIViewController, VCFinalDelegate {
 
       //address text
       addressTexField.text = addressString
+      
       
       //date picker
       datePicker = UIDatePicker()
@@ -55,7 +57,18 @@ class CreateEvent: UIViewController, VCFinalDelegate {
     view.endEditing(true)
   }
   func finishPassing(string: String) {
+    
+    
     addressTexField.text = string
+    
+    var delimiter = ","
+    var newstr = string
+    var token = newstr.components(separatedBy: delimiter)
+    print ("checkx",token[0])
+    
+    destination = token[0]
+    
+    
   }
   
   
@@ -89,13 +102,13 @@ class CreateEvent: UIViewController, VCFinalDelegate {
         let eventID = ref.child("Event").childByAutoId()
         eventID.setValue(["EventType": self.EventType.text!])
         //all values as strings for now
-        eventID.updateChildValues(["EventLocation": "INSERT LOCATION VALUE HERE"])
-        eventID.updateChildValues(["EventDate_Time": "INSERT Data and time"])
+        eventID.updateChildValues(["EventLocation": destination])
+        eventID.updateChildValues(["EventDate_Time": dateString])
         eventID.updateChildValues(["EventParticipant_Limit": "INSERT Max # participants here"])
         eventID.updateChildValues(["EventAge_Min": "INSERT Min age here"])
         eventID.updateChildValues(["EventAge_Max": "INSERT Max age here"])
         eventID.updateChildValues(["EventPrivate?": "Yes or No"])
-        eventID.updateChildValues(["EventDescription": "Description of event"])
+        eventID.updateChildValues(["EventDescription": description])
         let user = Auth.auth().currentUser
         if user != nil
         {
@@ -105,6 +118,11 @@ class CreateEvent: UIViewController, VCFinalDelegate {
                     let username = value?["username"] as? String ?? ""
                 	eventID.updateChildValues(["EventCreator_UserName": username])
                 	eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
+             
+              let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+              let vc2 = vc.instantiateViewController(withIdentifier: "feed")
+              self.navigationController?.pushViewController(vc2, animated: false)
+
 	           })
         }
         else
@@ -113,12 +131,14 @@ class CreateEvent: UIViewController, VCFinalDelegate {
             //This should only happen in the case of testing where you go around login
             eventID.updateChildValues(["EventCreator_UserName": "DefaultUsername"])
             eventID.updateChildValues(["EventCreator_UserID": "DefaultUserID"])
+          
+          let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+          let vc2 = vc.instantiateViewController(withIdentifier: "feed")
+          self.navigationController?.pushViewController(vc2, animated: false)
+
             
         }
         //from here the createEventButton needs to return to the feed page also any checks on values should be done before this button can be pressed.
-      let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-      let vc2 = vc.instantiateViewController(withIdentifier: "feed")
-      navigationController?.pushViewController(vc2, animated: false)
 
     }
 
