@@ -11,6 +11,7 @@ import Firebase
 
 class CreateEvent: UIViewController {
     var ref: DatabaseReference!
+    var eventID: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
       //date picker
@@ -57,10 +58,9 @@ class CreateEvent: UIViewController {
   
     @IBAction func CreateEventButton(_ sender: Any)
     {
-        print(EventType.text!)//prints to debug console used for testing
         ref = Database.database().reference()
-        let eventID = ref.child("Event").childByAutoId()
-        eventID.setValue(["EventType": self.EventType.text!])
+        eventID = ref.child("Event").childByAutoId()
+        eventID.setValue(["EventType": self.EventType?.text!])
         //all values as strings for now
         eventID.updateChildValues(["EventLocation": "INSERT LOCATION VALUE HERE"])
         eventID.updateChildValues(["EventDate_Time": "INSERT Data and time"])
@@ -76,8 +76,8 @@ class CreateEvent: UIViewController {
             ref.child("users").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
                     let value = snapshot.value as? NSDictionary
                     let username = value?["username"] as? String ?? ""
-                	eventID.updateChildValues(["EventCreator_UserName": username])
-                	eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
+                self.eventID.updateChildValues(["EventCreator_UserName": username])
+                self.eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
 	           })
         }
         else

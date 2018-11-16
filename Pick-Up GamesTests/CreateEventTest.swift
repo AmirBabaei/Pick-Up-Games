@@ -2,32 +2,28 @@
 //  CreateEventTest.swift
 //  Pick-Up GamesTests
 //
-//  Created by user146820 on 11/12/18.
+//  Created by user146820 on 11/15/18.
 //  Copyright © 2018 Amir Babaei. All rights reserved.
 //
-
+import UIKit
 import XCTest
+@testable import Pick_Up_Games
+import Firebase
 
 class CreateEventTest: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_viewDidLoad()
+    {
+        let sut = CreateEvent()
+        
+        _ = sut.view
+        XCTAssertNotNil(sut.view)
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testCreateEvent()
+    {
+        let viewController = CreateEvent()
+        viewController.CreateEventButton(CreateEventTest.self)
+        XCTAssertNotNil(viewController.eventID)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
