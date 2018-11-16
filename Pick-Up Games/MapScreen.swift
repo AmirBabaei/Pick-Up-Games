@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 protocol VCFinalDelegate {
-  func finishPassing(string: String)
+  func finishPassing(dict: Dictionary<String, Any>)
 }
 
 class MapScreen: UIViewController {
@@ -20,12 +20,13 @@ class MapScreen: UIViewController {
 
   @IBOutlet var MapView: MKMapView!
   var addy = String()
+  var dict: Dictionary<String,Any> = Dictionary()
   var loc = String()
   //address text
   @IBOutlet var addressLabel: UILabel!
   @IBAction func doneButton(_ sender: Any) {
     //checkLocationServices()
-    delegate?.finishPassing(string: addy)
+    delegate?.finishPassing(dict: self.dict)
     //performSegue(withIdentifier: "mapSegue", sender: self)
     dismiss(animated: true, completion: nil)
   }
@@ -154,14 +155,38 @@ extension MapScreen: MKMapViewDelegate {
       let locationName = placemark.name ?? ""
       
       DispatchQueue.main.async {
+        print("streetNumber",streetNumber)
+        print("sreetName",streetName)
+        print("city",cityName)
+        print("location",locationName)
+
         var str = "\(streetNumber) \(streetName)"
         
         if locationName == str {
-           self.addressLabel.text = " \(locationName) \n  \(cityName)"
+          print("theyre equal ",str,locationName)
+           self.addressLabel.text = " \(locationName) /n \(cityName)"
+         
+          var dict2:Dictionary<String,Any> = [
+            "address": " \(streetNumber) \(streetName) \(cityName)",
+            "locationName":"\(locationName)",
+            "locLong": mapView.centerCoordinate.longitude,
+            "locLat":mapView.centerCoordinate.latitude
+          ]
+          self.dict = dict2
+
             self.addy = " \(locationName), \(cityName)"
 
         }else {
+          print("theyre not equal ",str,locationName)
+
            self.addressLabel.text = " \(locationName) \n \(streetNumber) \(streetName)\n \(cityName)"
+          var dict2:Dictionary<String,Any> = [
+            "address": "\(locationName)\(streetNumber) \(streetName) \(cityName)",
+            "locationName":"\(locationName)",
+            "locLong": mapView.centerCoordinate.longitude,
+            "locLat":mapView.centerCoordinate.latitude
+          ]
+          self.dict = dict2
           self.addy = "\(locationName), \(cityName)"
 
         }

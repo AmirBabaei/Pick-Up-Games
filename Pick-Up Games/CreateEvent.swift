@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
 class CreateEvent: UIViewController, VCFinalDelegate {
   
@@ -16,6 +17,10 @@ class CreateEvent: UIViewController, VCFinalDelegate {
   @IBOutlet weak var addressTexField: UITextField!
   var destination:String = ""
   var dateString:String = ""
+  var longitude: CLLocationDegrees = CLLocationDegrees()
+  var lattitude: CLLocationDegrees = CLLocationDegrees()
+
+  
   
   var ref: DatabaseReference!
     override func viewDidLoad() {
@@ -56,17 +61,18 @@ class CreateEvent: UIViewController, VCFinalDelegate {
   @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
     view.endEditing(true)
   }
-  func finishPassing(string: String) {
+  func finishPassing(dict: Dictionary<String, Any>) {
     
+    addressTexField.text = dict["address"] as! String
+    longitude = dict["locLong"] as! CLLocationDegrees
+    lattitude = dict["locLat"] as! CLLocationDegrees
     
-    addressTexField.text = string
-    
-    var delimiter = ","
-    var newstr = string
-    var token = newstr.components(separatedBy: delimiter)
-    print ("checkx",token[0])
-    
-    destination = token[0]
+    destination = dict["locationName"] as! String
+    print("destination ",destination)
+    if destination ==  " " {
+       destination = dict["address"] as! String
+    }
+
     
     
   }
@@ -104,6 +110,9 @@ class CreateEvent: UIViewController, VCFinalDelegate {
         //all values as strings for now
         eventID.updateChildValues(["EventLocation": destination])
         eventID.updateChildValues(["EventDate_Time": dateString])
+        eventID.updateChildValues(["Longitude": longitude])
+        eventID.updateChildValues(["Lattitude": lattitude])
+
         eventID.updateChildValues(["EventParticipant_Limit": "INSERT Max # participants here"])
         eventID.updateChildValues(["EventAge_Min": "INSERT Min age here"])
         eventID.updateChildValues(["EventAge_Max": "INSERT Max age here"])
