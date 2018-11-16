@@ -16,7 +16,7 @@ class ProfileFriendsSubPage: UIViewController{
     
     var friendsArray = [FriendObject]()
     
-    var cellID: String?
+    var cellID: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,9 +83,10 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "FriendProfile") {
-            let vc = segue.destination as! OtherProfiles
-            vc.UID = cellID
+        if (segue.destination is OtherProfiles) {
+            let nc = segue.destination as? UINavigationController
+            let vc = nc?.topViewController as? OtherProfiles
+            vc!.UID = cellID
         }
     }
     

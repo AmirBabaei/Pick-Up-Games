@@ -1123,7 +1123,7 @@
         <!--OtherProfiles-->
         <scene sceneID="Pho-0j-3ZX">
             <objects>
-                <viewController storyboardIdentifier="OtherProfiles" title="OtherProfiles" id="SlG-33-Cyl" customClass="OtherProfiles" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OtherProfiles" title="OtherProfiles" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SlG-33-Cyl" customClass="OtherProfiles" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aES-QO-kI8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
