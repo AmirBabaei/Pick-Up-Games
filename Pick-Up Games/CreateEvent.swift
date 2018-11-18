@@ -12,6 +12,10 @@ import CoreLocation
 
 class CreateEvent: UIViewController, VCFinalDelegate {
   
+  //max players
+  let maxPlayer = Array(0...20)
+  var maxp: Int = 0
+  
   //for address text field
   var addressString = String()
   @IBOutlet weak var addressTexField: UITextField!
@@ -42,6 +46,9 @@ class CreateEvent: UIViewController, VCFinalDelegate {
       
       view.addGestureRecognizer(tapGesture)
       
+      //max player
+      createMaxPlayerPicker()
+      createToolbar()
       
         // Do any additional setup after loading the view.
     }
@@ -94,10 +101,48 @@ class CreateEvent: UIViewController, VCFinalDelegate {
   @IBOutlet var EventType: UITextField!
   @IBOutlet weak var dateText: UITextField!
 
+  @IBOutlet weak var maxPlayerTextField: UITextField!
+  
   
   //date picker
   private var datePicker: UIDatePicker?
   
+ 
+  
+  //max palyer picker
+  func createMaxPlayerPicker() {
+    
+    let dayPicker = UIPickerView()
+    dayPicker.delegate = self
+    
+    maxPlayerTextField.inputView = dayPicker
+    
+    //Customizations
+    dayPicker.backgroundColor = .black
+  }
+  
+  
+  func createToolbar() {
+    
+    let toolBar = UIToolbar()
+    toolBar.sizeToFit()
+    
+    //Customizations
+    toolBar.barTintColor = .black
+    toolBar.tintColor = .white
+    
+    let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(CreateEvent.dismissKeyboard))
+    
+    toolBar.setItems([doneButton], animated: false)
+    toolBar.isUserInteractionEnabled = true
+    
+    maxPlayerTextField.inputAccessoryView = toolBar
+  }
+  
+  
+  @objc func dismissKeyboard() {
+    view.endEditing(true)
+  }
   
   
   
@@ -152,4 +197,47 @@ class CreateEvent: UIViewController, VCFinalDelegate {
     }
 
 
+}
+
+extension CreateEvent: UIPickerViewDelegate, UIPickerViewDataSource {
+  
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+  }
+  
+  
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return maxPlayer.count
+  }
+  
+  
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> Int? {
+    return maxPlayer[row]
+  }
+  
+  
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    
+    maxp = maxPlayer[row]
+    maxPlayerTextField.text = String(maxp)
+  }
+  
+  func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    
+    var label: UILabel
+    
+    if let view = view as? UILabel {
+      label = view
+    } else {
+      label = UILabel()
+    }
+    
+    label.textColor = .green
+    label.textAlignment = .center
+    label.font = UIFont(name: "Menlo-Regular", size: 17)
+    
+    label.text = String(maxPlayer[row])
+    
+    return label
+  }
 }

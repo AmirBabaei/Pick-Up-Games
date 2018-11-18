@@ -164,7 +164,7 @@ extension MapScreen: MKMapViewDelegate {
         
         if locationName == str {
           print("theyre equal ",str,locationName)
-           self.addressLabel.text = " \(locationName) /n \(cityName)"
+           self.addressLabel.text = " \(locationName) \n \(cityName)"
          
           var dict2:Dictionary<String,Any> = [
             "address": " \(streetNumber) \(streetName) \(cityName)",
