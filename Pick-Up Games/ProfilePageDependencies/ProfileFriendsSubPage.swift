@@ -79,16 +79,12 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let friend = friendsArray[indexPath.row]
         cellID = friend.UID
-        performSegue(withIdentifier: "PassUIDToOtherProfile", sender: self)
+        
+        let vc = OtherProfiles()
+        print (vc)
+        vc.UID = cellID
+        print (vc.UID)
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.destination is OtherProfiles) {
-            let nc = segue.destination as? UINavigationController
-            let vc = nc?.topViewController as? OtherProfiles
-            vc!.UID = cellID
-        }
-    }
-    
-    
 }

@@ -30,6 +30,7 @@ class OtherProfiles: UIViewController {
 
 extension OtherProfiles {
     func getBasicInfo() {
+        print(UID)
         let REF_PROF = Database.database().reference().child("users").child(UID)
         REF_PROF.observeSingleEvent(of: .value) { (profUserSnapshot) in
             self.Username.text = profUserSnapshot.childSnapshot(forPath: "username").value as? String
