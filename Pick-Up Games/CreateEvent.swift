@@ -158,7 +158,7 @@ class CreateEvent: UIViewController, VCFinalDelegate {
         eventID.updateChildValues(["Longitude": longitude])
         eventID.updateChildValues(["Lattitude": lattitude])
 
-        eventID.updateChildValues(["EventParticipant_Limit": "INSERT Max # participants here"])
+        eventID.updateChildValues(["EventParticipant_Limit": maxPlayerTextField.text])
         eventID.updateChildValues(["EventAge_Min": "INSERT Min age here"])
         eventID.updateChildValues(["EventAge_Max": "INSERT Max age here"])
         eventID.updateChildValues(["EventPrivate?": "Yes or No"])
