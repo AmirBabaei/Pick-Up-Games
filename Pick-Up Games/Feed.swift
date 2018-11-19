@@ -12,7 +12,16 @@ import Firebase
 class Feed: UIViewController {
 
     @IBOutlet weak var feedTable: UITableView!
-  
+    
+    @IBAction func Profile(_ sender: Any) {
+        let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ProfilePage = vc.instantiateViewController(withIdentifier: "Profile") as! Profile
+        let SubPage = vc.instantiateViewController(withIdentifier: "ProfileSubPages") as! ProfileSubPages
+        SubPage.UID = (Auth.auth().currentUser?.uid)!
+        present(ProfilePage, animated: true, completion: nil)
+    }
+    
+    
     var eventArray = [PUG]()
     
     override func viewDidLoad() {

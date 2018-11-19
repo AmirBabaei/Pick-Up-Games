@@ -233,12 +233,13 @@
                             </barButtonItem>
                             <barButtonItem title="Item" id="2p0-cu-0FM">
                                 <connections>
-                                    <segue destination="nCM-28-jTA" kind="show" id="zAR-8n-XsA"/>
+                                    <action selector="Profile:" destination="Wgb-bm-Zk1" id="5SP-lx-rLC"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="Profile" destination="2p0-cu-0FM" id="PBA-pk-LwC"/>
                         <outlet property="feedTable" destination="VVV-YM-cWM" id="tTF-Oe-Cjw"/>
                     </connections>
                 </viewController>
@@ -1278,6 +1279,6 @@
         <image name="test-login" width="341" height="204"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zAR-8n-XsA"/>
+        <segue reference="JZl-LO-2L1"/>
     </inferredMetricsTieBreakers>
 </document>

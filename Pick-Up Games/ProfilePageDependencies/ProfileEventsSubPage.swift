@@ -16,6 +16,8 @@ class ProfileEventsSubPage: UIViewController{
     
     var eventArray = [PUG]()
     
+    var myID = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myEventsTable.delegate = self
@@ -39,7 +41,7 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
             guard let feedEventSnapshot = feedEventSnapshot.children.allObjects as? [DataSnapshot] else { return }
             
             for pug in feedEventSnapshot {
-                if (pug.childSnapshot(forPath: "EventCreator_UserID").value as? String == Auth.auth().currentUser?.uid) {
+                if (pug.childSnapshot(forPath: "EventCreator_UserID").value as! String == self.myID) {/*Auth.auth().currentUser?.uid) {*/
                     let address = pug.childSnapshot(forPath: "EventLocation").value as! String
                     let sport = pug.childSnapshot(forPath: "EventType").value as! String
                     let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
