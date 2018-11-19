@@ -22,6 +22,7 @@ class ProfileSubPages: UIPageViewController {
  */
 
     private(set) lazy var subPages: [UIViewController] = {
+        print ("page controller UID: " + UID)
         let Bio = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileBioSubPage") as! ProfileBioSubPage
         Bio.myID = UID
         

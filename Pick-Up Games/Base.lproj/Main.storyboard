@@ -231,7 +231,7 @@
                                     <segue destination="ynS-0a-Via" kind="show" id="1i7-Co-wVM"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" id="2p0-cu-0FM">
+                            <barButtonItem title="Profile" id="2p0-cu-0FM">
                                 <connections>
                                     <action selector="Profile:" destination="Wgb-bm-Zk1" id="5SP-lx-rLC"/>
                                 </connections>
@@ -239,7 +239,6 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="Profile" destination="2p0-cu-0FM" id="PBA-pk-LwC"/>
                         <outlet property="feedTable" destination="VVV-YM-cWM" id="tTF-Oe-Cjw"/>
                     </connections>
                 </viewController>
@@ -348,7 +347,7 @@
         <!--Profile-->
         <scene sceneID="rTr-5j-YrN">
             <objects>
-                <viewController title="Profile" id="nCM-28-jTA" customClass="Profile" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" title="Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nCM-28-jTA" customClass="Profile" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0aT-Mg-7UT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -991,7 +990,7 @@
         <!--Profile Sub Pages-->
         <scene sceneID="S19-zo-Hq6">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext" id="QCi-xW-C9p" customClass="ProfileSubPages" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileSubPages" modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QCi-xW-C9p" customClass="ProfileSubPages" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDv-SM-iq1" customClass="UIPageControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

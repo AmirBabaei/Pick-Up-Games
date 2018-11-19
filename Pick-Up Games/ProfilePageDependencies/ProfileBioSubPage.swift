@@ -29,6 +29,7 @@ class ProfileBioSubPage: UIViewController{
 extension ProfileBioSubPage {
     func getBioInfo() {
 //        let userID = Auth.auth().currentUser?.uid
+        print(myID)
         let REF_PROF = Database.database().reference().child("users").child(myID)
         REF_PROF.observeSingleEvent(of: .value) { (profUserSnapshot) in
             self.Interests.text = profUserSnapshot.childSnapshot(forPath: "Interests").value as? String
