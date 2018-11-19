@@ -1087,7 +1087,7 @@
     <resources>
         <image name="Back icon" width="16" height="16"/>
         <image name="Login" width="125" height="270"/>
-        <image name="pin" width="16" height="16"/>
+        <image name="pin" width="512" height="512"/>
         <image name="sport" width="16" height="16"/>
         <image name="test-login" width="341" height="204"/>
     </resources>

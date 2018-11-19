@@ -26,6 +26,7 @@
 		29C895E92182CD2300A1B80C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E82182CD2300A1B80C /* Event.swift */; };
 		323671CC21960C480095ABF7 /* RegisterViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323671CB21960C480095ABF7 /* RegisterViewControllerTest.swift */; };
 		323671CE219613DC0095ABF7 /* LoginViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323671CD219613DC0095ABF7 /* LoginViewTest.swift */; };
+		32BBA5C921A358CF003DCAA6 /* .circleci in Resources */ = {isa = PBXBuildFile; fileRef = 32BBA5C821A358CF003DCAA6 /* .circleci */; };
 		3E859C1067234DBA403050AF /* Pods_Pick_Up_Games_Pick_Up_GamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBE61A52B308149EF9A2A61 /* Pods_Pick_Up_Games_Pick_Up_GamesTests.framework */; };
 		41350FEC21796DC800597D68 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41350FEB21796DC800597D68 /* RegisterViewController.swift */; };
 		41AB20C721781324000A5760 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41AB20C621781323000A5760 /* GoogleService-Info.plist */; };
@@ -80,6 +81,7 @@
 		2A1B26F55B0068310C6DD840 /* Pods-Pick-Up GamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesTests/Pods-Pick-Up GamesTests.release.xcconfig"; sourceTree = "<group>"; };
 		323671CB21960C480095ABF7 /* RegisterViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTest.swift; sourceTree = "<group>"; };
 		323671CD219613DC0095ABF7 /* LoginViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTest.swift; sourceTree = "<group>"; };
+		32BBA5C821A358CF003DCAA6 /* .circleci */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .circleci; sourceTree = "<group>"; };
 		41350FEB21796DC800597D68 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		41AB20C621781323000A5760 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C25347BED44C42D67299A39 /* Pods-Pick-Up Games.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up Games.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up Games/Pods-Pick-Up Games.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		293B1B1C217095D4005D5CCC = {
 			isa = PBXGroup;
 			children = (
+				32BBA5C821A358CF003DCAA6 /* .circleci */,
 				293B1B27217095D5005D5CCC /* Pick-Up Games */,
 				293B1B3F217095D9005D5CCC /* Pick-Up GamesTests */,
 				293B1B4A217095D9005D5CCC /* Pick-Up GamesUITests */,
@@ -188,10 +191,18 @@
 		293B1B4A217095D9005D5CCC /* Pick-Up GamesUITests */ = {
 			isa = PBXGroup;
 			children = (
+				32BBA5CA21A359E7003DCAA6 /* Results */,
 				293B1B4B217095D9005D5CCC /* Pick_Up_GamesUITests.swift */,
 				293B1B4D217095DA005D5CCC /* Info.plist */,
 			);
 			path = "Pick-Up GamesUITests";
+			sourceTree = "<group>";
+		};
+		32BBA5CA21A359E7003DCAA6 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 		5EA775EDA11B4AB0F9D7F9B0 /* Frameworks */ = {
@@ -340,6 +351,7 @@
 				293B1B36217095D9005D5CCC /* LaunchScreen.storyboard in Resources */,
 				41AB20C721781324000A5760 /* GoogleService-Info.plist in Resources */,
 				293B1B33217095D9005D5CCC /* Assets.xcassets in Resources */,
+				32BBA5C921A358CF003DCAA6 /* .circleci in Resources */,
 				11BC92E0219368B0002A2907 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
