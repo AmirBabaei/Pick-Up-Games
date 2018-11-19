@@ -1103,7 +1103,6 @@
                                         <connections>
                                             <outlet property="name" destination="Xcc-km-6ui" id="EJp-xu-wCp"/>
                                             <outlet property="profPic" destination="DB0-vn-E9G" id="PRY-tr-ObM"/>
-                                            <segue destination="SlG-33-Cyl" kind="show" identifier="PassUIDToOtherProfile" id="xwl-VZ-JN8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1155,7 +1154,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Profile" id="EpK-2o-ADw" userLabel="Profile">
-                                        <barButtonItem key="leftBarButtonItem" title="feed" image="Back icon" id="wS0-Si-Ydf" userLabel="Back Button"/>
+                                        <barButtonItem key="leftBarButtonItem" title="feed" image="Back icon" id="wS0-Si-Ydf" userLabel="Back Button">
+                                            <connections>
+                                                <action selector="BackButton:" destination="SlG-33-Cyl" id="SQJ-T3-bLJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Edit" image="Back icon" width="50" id="Wzy-GW-eRb" userLabel="Modify Profile">
                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </barButtonItem>

@@ -20,7 +20,11 @@ class OtherProfiles: UIViewController {
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Age: UILabel!
     
-    var UID:String = ""
+    var UID = String()
+    
+    @IBAction func BackButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -80,11 +80,9 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
         let friend = friendsArray[indexPath.row]
         cellID = friend.UID
         
-        let vc = OtherProfiles()
-        print (vc)
-        vc.UID = cellID
-        print (vc.UID)
-        
-        navigationController?.pushViewController(vc, animated: true)
+        let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc2 = vc.instantiateViewController(withIdentifier: "OtherProfiles") as! OtherProfiles
+        vc2.UID = cellID
+        present(vc2, animated: true, completion: nil)
     }
 }
