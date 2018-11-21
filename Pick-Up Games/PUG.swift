@@ -7,13 +7,14 @@
 //
 
 import Foundation
-
+import CoreLocation
 class PUG {
     private var _address: String
     private var _sport: String
     private var _players: String
     private var _name: String
-    
+    private var _timeDate: String
+    private var _distance: CLLocationDistance
     var address: String {
         return _address
     }
@@ -29,11 +30,19 @@ class PUG {
     var name: String {
         return _name
     }
+    var timeDate: String {
+        return _timeDate
+    }
+    var distance: CLLocationDistance {
+      return _distance
+    }
     
-    init(address: String, sport: String, players: String, name: String) {
+  init(address: String, sport: String, players: String, name: String, timeDate: String, distance: CLLocationDistance) {
         self._address = address
         self._sport = sport
         self._players = players
         self._name = name
+        self._timeDate = timeDate
+        self._distance = distance
     }
 }

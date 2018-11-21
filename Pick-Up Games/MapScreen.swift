@@ -170,7 +170,8 @@ extension MapScreen: MKMapViewDelegate {
             "address": " \(streetNumber) \(streetName) \(cityName)",
             "locationName":"\(locationName)",
             "locLong": mapView.centerCoordinate.longitude,
-            "locLat":mapView.centerCoordinate.latitude
+            "locLat":mapView.centerCoordinate.latitude,
+            "distance": previousLocation.distance(from: self.getCenterLocation(for: mapView))
           ]
           self.dict = dict2
 
@@ -184,7 +185,9 @@ extension MapScreen: MKMapViewDelegate {
             "address": "\(locationName)\(streetNumber) \(streetName) \(cityName)",
             "locationName":"\(locationName)",
             "locLong": mapView.centerCoordinate.longitude,
-            "locLat":mapView.centerCoordinate.latitude
+            "locLat":mapView.centerCoordinate.latitude,
+            "distance": previousLocation.distance(from: self.getCenterLocation(for: mapView))
+
           ]
           self.dict = dict2
           self.addy = "\(locationName), \(cityName)"

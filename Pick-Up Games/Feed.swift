@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
 class Feed: UIViewController {
 
@@ -29,7 +30,7 @@ class Feed: UIViewController {
         }
     }
 }
-extension Feed: UITableViewDelegate, UITableViewDataSource {
+extension Feed: UITableViewDelegate, UITableViewDataSource{
     
     func getAllEvents(handler: @escaping (_ events: [PUG]) -> ()) {
         var funcEventArray = [PUG]()
@@ -39,11 +40,14 @@ extension Feed: UITableViewDelegate, UITableViewDataSource {
             
             for pug in feedEventSnapshot {
                 let address = pug.childSnapshot(forPath: "EventLocation").value as! String
+                let distance = pug.childSnapshot(forPath: "distance").value as! CLLocationDistance
                 let sport = pug.childSnapshot(forPath: "EventType").value as! String
                 let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
+                let timeDate = pug.childSnapshot(forPath: "timeDate").value as! String
                 let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
-                let pug = PUG(address: address, sport: sport, players: players, name: name)
+              let pug = PUG(address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance)
                 funcEventArray.append(pug)
+             
                 }
             handler(funcEventArray)
             }
@@ -64,8 +68,8 @@ extension Feed: UITableViewDelegate, UITableViewDataSource {
         
         let image = UIImage(named: "test-login")
         let event = eventArray[indexPath.row]
-        
-        cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, name: event.name)
+      
+      cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, timeDate: event.timeDate, name: event.name, distance: event.distance)
         return cell
         
     }

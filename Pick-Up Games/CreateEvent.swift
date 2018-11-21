@@ -23,6 +23,7 @@ class CreateEvent: UIViewController, VCFinalDelegate {
   var dateString:String = ""
   var longitude: CLLocationDegrees = CLLocationDegrees()
   var lattitude: CLLocationDegrees = CLLocationDegrees()
+  var distance: CLLocationDistance = CLLocationDistance()
 
   
   
@@ -73,6 +74,7 @@ class CreateEvent: UIViewController, VCFinalDelegate {
     addressTexField.text = dict["address"] as! String
     longitude = dict["locLong"] as! CLLocationDegrees
     lattitude = dict["locLat"] as! CLLocationDegrees
+    distance = dict["distance"] as! CLLocationDistance
     
     destination = dict["locationName"] as! String
     print("destination ",destination)
@@ -153,14 +155,14 @@ class CreateEvent: UIViewController, VCFinalDelegate {
         let eventID = ref.child("Event").childByAutoId()
         eventID.setValue(["EventType": self.EventType.text!])
         //all values as strings for now
+        eventID.updateChildValues(["timeDate": dateText.text ?? ""])
         eventID.updateChildValues(["EventLocation": destination])
-        eventID.updateChildValues(["EventDate_Time": dateString])
+        //eventID.updateChildValues(["EventDate_Time": dateString])
         eventID.updateChildValues(["Longitude": longitude])
         eventID.updateChildValues(["Lattitude": lattitude])
+        eventID.updateChildValues(["distance": distance])
 
-        eventID.updateChildValues(["EventParticipant_Limit": maxPlayerTextField.text])
-        eventID.updateChildValues(["EventAge_Min": "INSERT Min age here"])
-        eventID.updateChildValues(["EventAge_Max": "INSERT Max age here"])
+      eventID.updateChildValues(["EventParticipant_Limit": maxPlayerTextField.text ?? ""])
         eventID.updateChildValues(["EventPrivate?": "Yes or No"])
         eventID.updateChildValues(["EventDescription": description])
         let user = Auth.auth().currentUser
