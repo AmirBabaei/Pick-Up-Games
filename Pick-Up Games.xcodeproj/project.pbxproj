@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		111CB8B4219A297F00027616 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111CB8B3219A297F00027616 /* FriendCell.swift */; };
+		115C244121A8A03600D9ED69 /* SharedUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115C244021A8A03600D9ED69 /* SharedUID.swift */; };
 		1189B885219E7E6600A09189 /* OtherProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189B884219E7E6600A09189 /* OtherProfiles.swift */; };
 		11A93A3E2195F7DF002C3F7C /* ProfileObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */; };
 		11A93A4021960BED002C3F7C /* ProfileBioSubPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		111CB8B3219A297F00027616 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		115C244021A8A03600D9ED69 /* SharedUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUID.swift; sourceTree = "<group>"; };
 		1189B884219E7E6600A09189 /* OtherProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfiles.swift; sourceTree = "<group>"; };
 		11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileObject.swift; sourceTree = "<group>"; };
 		11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBioSubPage.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				111CB8B3219A297F00027616 /* FriendCell.swift */,
 				1189B884219E7E6600A09189 /* OtherProfiles.swift */,
 				11ADFBFA219E6E820012071C /* FriendObject.swift */,
+				115C244021A8A03600D9ED69 /* SharedUID.swift */,
 			);
 			path = ProfilePageDependencies;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				29B343172190B6C1001E1624 /* MapScreen.swift in Sources */,
 				29C895E52182C31600A1B80C /* FeedCell.swift in Sources */,
 				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
+				115C244121A8A03600D9ED69 /* SharedUID.swift in Sources */,
 				11A93A4021960BED002C3F7C /* ProfileBioSubPage.swift in Sources */,
 				11ADFBFB219E6E820012071C /* FriendObject.swift in Sources */,
 				1189B885219E7E6600A09189 /* OtherProfiles.swift in Sources */,

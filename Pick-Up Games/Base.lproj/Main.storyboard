@@ -1141,6 +1141,9 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cof-nx-Sp9">
                                 <rect key="frame" x="0.0" y="203" width="375" height="539"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="QCi-xW-C9p" kind="embed" id="3RW-qg-mp1"/>
+                                </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVT-nK-ZoT">
                                 <rect key="frame" x="149" y="122" width="45" height="21"/>
@@ -1184,7 +1187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHS-rB-jh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2671" y="1138"/>
+            <point key="canvasLocation" x="1286" y="1114"/>
         </scene>
         <!--ProfileEventsSubPage-->
         <scene sceneID="N1d-J8-iG0">
@@ -1279,5 +1282,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JZl-LO-2L1"/>
+        <segue reference="3RW-qg-mp1"/>
     </inferredMetricsTieBreakers>
 </document>

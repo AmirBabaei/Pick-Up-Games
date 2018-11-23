@@ -12,25 +12,11 @@ import Foundation
 class ProfileSubPages: UIPageViewController {
     
     var UID = String()
-    
-    /*
-    private func newSubPage(ID: String, CLASS: UIViewController) -> UIViewController {
-        let childController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: ID) as! CLASS
-        childController.myID = UID
-        return childController
-    }
- */
 
     private(set) lazy var subPages: [UIViewController] = {
-        print ("page controller UID: " + UID)
         let Bio = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileBioSubPage") as! ProfileBioSubPage
-        Bio.myID = UID
-        
         let Friends = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileFriendsSubPage") as! ProfileFriendsSubPage
-        Friends.myID = UID
-        
         let Events = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileEventsSubPage") as! ProfileEventsSubPage
-        Events.myID = UID
         
         return [Bio, Friends, Events]
     }()

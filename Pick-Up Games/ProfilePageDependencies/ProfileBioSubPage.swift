@@ -18,8 +18,6 @@ class ProfileBioSubPage: UIViewController{
     @IBOutlet weak var Interests: UILabel!
     @IBOutlet weak var Bio: UILabel!
     
-    var myID = String()
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getBioInfo()
@@ -28,7 +26,8 @@ class ProfileBioSubPage: UIViewController{
 
 extension ProfileBioSubPage {
     func getBioInfo() {
-//        let userID = Auth.auth().currentUser?.uid
+        let sharedID = SharedUID()
+        let myID = sharedID.sharedInstance.UID
         print(myID)
         let REF_PROF = Database.database().reference().child("users").child(myID)
         REF_PROF.observeSingleEvent(of: .value) { (profUserSnapshot) in

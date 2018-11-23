@@ -18,8 +18,6 @@ class ProfileFriendsSubPage: UIViewController{
     
     var cellID: String!
     
-    var myID = String()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         myFriendsTable.delegate = self
@@ -37,7 +35,9 @@ class ProfileFriendsSubPage: UIViewController{
 extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
     
     func getAllFriends(handler: @escaping (_ friends: [FriendObject]) -> ()) {
-//        let userID = Auth.auth().currentUser?.uid
+        let sharedID = SharedUID()
+        let myID = sharedID.sharedInstance.UID
+        
         let REF_PROF = Database.database().reference().child("users").child(myID)
         let REF_USERS = Database.database().reference().child("users")
         REF_USERS.observeSingleEvent(of: .value) { (usersSnapshot) in
@@ -82,9 +82,13 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
         let friend = friendsArray[indexPath.row]
         cellID = friend.UID
         
+        let sharedID = SharedUID()
+        sharedID.sharedInstance.UID = cellID
+        
         let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc2 = vc.instantiateViewController(withIdentifier: "OtherProfiles") as! OtherProfiles
         vc2.UID = cellID
+        
         present(vc2, animated: true, completion: nil)
     }
 }
