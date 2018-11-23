@@ -396,7 +396,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Profile" id="Not-x3-7f5" userLabel="Profile">
-                                        <barButtonItem key="leftBarButtonItem" title="feed" image="Back icon" id="J3h-Ac-PiR" userLabel="Back Button"/>
+                                        <barButtonItem key="leftBarButtonItem" title="feed" image="Back icon" id="J3h-Ac-PiR" userLabel="Add Friends">
+                                            <connections>
+                                                <segue destination="cEy-T1-m7u" kind="show" id="fyI-LH-gPF"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Edit" image="Back icon" width="50" id="rpK-O8-rhY" userLabel="Modify Profile">
                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
@@ -1187,7 +1191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHS-rB-jh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="1114"/>
+            <point key="canvasLocation" x="1286" y="1167"/>
         </scene>
         <!--ProfileEventsSubPage-->
         <scene sceneID="N1d-J8-iG0">
@@ -1272,6 +1276,64 @@
             </objects>
             <point key="canvasLocation" x="3424.8000000000002" y="416.74876847290642"/>
         </scene>
+        <!--ProfileAddFriends-->
+        <scene sceneID="gVL-uG-hbg">
+            <objects>
+                <viewController storyboardIdentifier="ProfileAddFriends" title="ProfileAddFriends" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cEy-T1-m7u" customClass="ProfileAddFriends" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jku-Se-0w7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-RY-jIq">
+                                <rect key="frame" x="8" y="44" width="359" height="734"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Friend Cell" id="Kwy-b3-e1Y" customClass="FriendCell" customModule="Pick_Up_Games" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kwy-b3-e1Y" id="zvF-JV-SBj">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="39.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRL-kH-aBR" userLabel="Attendie Pic">
+                                                    <rect key="frame" x="15" y="-1" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name Last Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAc-fu-L2c" userLabel="Attendie Name">
+                                                    <rect key="frame" x="89" y="4" width="180" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhW-9C-Nnu" userLabel="Add Friend">
+                                                    <rect key="frame" x="314" y="4" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="+"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="name" destination="IAc-fu-L2c" id="wBQ-QH-faB"/>
+                                            <outlet property="profPic" destination="pRL-kH-aBR" id="qoS-te-hL2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZCB-GN-gYR"/>
+                    </view>
+                    <connections>
+                        <outlet property="myFriendsTable" destination="Z87-RY-jIq" id="zy2-9d-ycR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rni-yl-Fhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="1167"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Back icon" width="16" height="16"/>
@@ -1282,6 +1344,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JZl-LO-2L1"/>
-        <segue reference="3RW-qg-mp1"/>
+        <segue reference="Q9I-Vm-PGx"/>
     </inferredMetricsTieBreakers>
 </document>
