@@ -1093,14 +1093,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Css-Lb-kEa" userLabel="Add Friend">
-                                                    <rect key="frame" x="314" y="4" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+"/>
-                                                    <connections>
-                                                        <action selector="PassUIDToProfile:" destination="jeX-wH-I2i" eventType="touchUpInside" id="T7C-fU-F1H"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1166,8 +1158,11 @@
                                                 <action selector="BackButton:" destination="SlG-33-Cyl" id="SQJ-T3-bLJ"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Edit" image="Back icon" width="50" id="Wzy-GW-eRb" userLabel="Modify Profile">
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" image="Back icon" width="50" id="Wzy-GW-eRb" userLabel="Add Friend">
                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="AddFriend:" destination="SlG-33-Cyl" id="p6f-o0-74J"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1307,11 +1302,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhW-9C-Nnu" userLabel="Add Friend">
-                                                    <rect key="frame" x="314" y="4" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="+"/>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1344,6 +1334,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JZl-LO-2L1"/>
-        <segue reference="Q9I-Vm-PGx"/>
+        <segue reference="3RW-qg-mp1"/>
     </inferredMetricsTieBreakers>
 </document>

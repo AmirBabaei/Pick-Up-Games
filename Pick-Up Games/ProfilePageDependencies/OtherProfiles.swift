@@ -25,6 +25,16 @@ class OtherProfiles: UIViewController {
     @IBAction func BackButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func AddFriend(_ sender: Any) {
+        let myUserID = Auth.auth().currentUser?.uid
+        let REF_MY_PROF = Database.database().reference().child("users").child(myUserID!)
+        
+        REF_MY_PROF.child("Friends/\(UID)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
+            if (!friendSnapshot.exists()) {
+                REF_MY_PROF.child("Friends/\(self.UID)").setValue("")
+            }
+        })
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
