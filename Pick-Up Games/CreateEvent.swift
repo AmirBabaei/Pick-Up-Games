@@ -10,9 +10,21 @@ import UIKit
 import Firebase
 
 class CreateEvent: UIViewController {
-    var ref: DatabaseReference!
+  
+  //for address text field
+  var addressString = String()
+  @IBOutlet weak var addressTexField: UITextField!
+  
+  
+  var ref: DatabaseReference!
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
+      
+      addressTexField.addTarget(self, action: #selector(myTargetFunction), for: UIControl.Event.touchDown)
+
+      //address text
+      addressTexField.text = addressString
+      
       //date picker
       datePicker = UIDatePicker()
       datePicker?.datePickerMode = .dateAndTime
@@ -26,6 +38,14 @@ class CreateEvent: UIViewController {
       
         // Do any additional setup after loading the view.
     }
+  
+  @objc func myTargetFunction(textField: UITextField) {
+    
+    let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let vc2 = vc.instantiateViewController(withIdentifier: "mapScreen")
+    navigationController?.pushViewController(vc2, animated: false)
+    dismiss(animated: true, completion: nil)
+  }
   
     //dimiss date picker
   @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
@@ -64,9 +84,9 @@ class CreateEvent: UIViewController {
         //all values as strings for now
         eventID.updateChildValues(["EventLocation": "INSERT LOCATION VALUE HERE"])
         eventID.updateChildValues(["EventDate_Time": "INSERT Data and time"])
-        eventID.updateChildValues(["EventParticipant_Limit": "INSERT Max # participants here"])
-        eventID.updateChildValues(["EventAge_Min": "INSERT Min age here"])
-        eventID.updateChildValues(["EventAge_Max": "INSERT Max age here"])
+        eventID.updateChildValues(["EventParticipant_Limit": "wumob"])
+        eventID.updateChildValues(["EventAge_Min": "test1"])
+        eventID.updateChildValues(["EventAge_Max": "test2"])
         eventID.updateChildValues(["EventPrivate?": "Yes or No"])
         eventID.updateChildValues(["EventDescription": "Description of event"])
         let user = Auth.auth().currentUser

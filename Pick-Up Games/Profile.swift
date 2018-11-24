@@ -16,6 +16,14 @@ class Profile: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func button(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
+        print("User has logged out")
+        self.performSegue(withIdentifier: "Logout", sender: self)
+        
+    }
+    
     @IBOutlet weak var Username: UILabel!
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Name: UILabel!

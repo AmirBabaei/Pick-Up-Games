@@ -13,7 +13,18 @@ import CoreLocation
 class MapScreen: UIViewController {
 
   @IBOutlet var MapView: MKMapView!
+  var addy = String()
+  //address text
   @IBOutlet var addressLabel: UILabel!
+  @IBAction func doneButton(_ sender: Any) {
+    //checkLocationServices()
+    performSegue(withIdentifier: "mapSegue", sender: self)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let createEvent = segue.destination as! CreateEvent
+    createEvent.addressString = addy
+  }
   
   let locationManager = CLLocationManager()
   let regionInMeters: Double = 5000
@@ -131,6 +142,7 @@ extension MapScreen: MKMapViewDelegate {
            //self.addressLabel.text = " \(locationName) \n"
        // }
         self.addressLabel.text = " \(streetNumber) \(streetName)\n \(cityName)"
+        self.addy = " \(streetNumber) \(streetName)\n, \(cityName)"
       }
     }
   }
