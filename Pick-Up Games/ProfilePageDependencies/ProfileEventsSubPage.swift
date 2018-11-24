@@ -1,69 +1,62 @@
 //
-//  Feed.swift
+//  ProfileEventsSubPage.swift
 //  Pick-Up Games
 //
-//  Created by Amir Babaei on 10/25/18.
+//  Created by David Otwell on 11/12/18.
 //  Copyright © 2018 Amir Babaei. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Firebase
 
-class Feed: UIViewController {
+class ProfileEventsSubPage: UIViewController{
 
-    @IBOutlet weak var feedTable: UITableView!
-    
-    @IBAction func Profile(_ sender: Any) {
-        let UID = (Auth.auth().currentUser?.uid)!
-        print("Feed UID: " + UID)
-        
-        let sharedID = SharedUID()
-        sharedID.sharedInstance.UID = UID
-        
-        let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ProfilePage = vc.instantiateViewController(withIdentifier: "Profile") as! Profile
-        
-        present(ProfilePage, animated: true, completion: nil)
-    }
-    
+    @IBOutlet weak var myEventsTable: UITableView!
     
     var eventArray = [PUG]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        feedTable.delegate = self
-        feedTable.dataSource = self
+        myEventsTable.delegate = self
+        myEventsTable.dataSource = self
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getAllEvents { (returnedEventsArray) in self.eventArray = returnedEventsArray.reversed()
-            self.feedTable.reloadData()
+            self.myEventsTable.reloadData()
             
         }
     }
 }
-extension Feed: UITableViewDelegate, UITableViewDataSource {
+extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
     
     func getAllEvents(handler: @escaping (_ events: [PUG]) -> ()) {
         var funcEventArray = [PUG]()
+        
+        let sharedID = SharedUID()
+        let myID = sharedID.sharedInstance.UID
+        
         let REF_FEED = Database.database().reference().child("Event")
         REF_FEED.observeSingleEvent(of: .value) { (feedEventSnapshot) in
             guard let feedEventSnapshot = feedEventSnapshot.children.allObjects as? [DataSnapshot] else { return }
             
             for pug in feedEventSnapshot {
-                let address = pug.childSnapshot(forPath: "EventLocation").value as! String
-                let sport = pug.childSnapshot(forPath: "EventType").value as! String
-                let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
-                let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
-                let pug = PUG(address: address, sport: sport, players: players, name: name)
-                funcEventArray.append(pug)
+                if (pug.childSnapshot(forPath: "EventCreator_UserID").value as! String == myID) {/*Auth.auth().currentUser?.uid) {*/
+                    let address = pug.childSnapshot(forPath: "EventLocation").value as! String
+                    let sport = pug.childSnapshot(forPath: "EventType").value as! String
+                    let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
+                    let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
+                    let pug = PUG(address: address, sport: sport, players: players, name: name)
+                    funcEventArray.append(pug)
                 }
-            handler(funcEventArray)
             }
+            handler(funcEventArray)
+        }
     }
     
-    func numberOfSections(in feedTable: UITableView) -> Int {
+    func numberOfSections(in myEventsTable: UITableView) -> Int {
         return 1
     }
     
@@ -72,7 +65,7 @@ extension Feed: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-  
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCell else { return UITableViewCell() }
         
@@ -83,6 +76,5 @@ extension Feed: UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
-  
+    
 }
-
