@@ -225,17 +225,41 @@
                                     <outlet property="delegate" destination="Wgb-bm-Zk1" id="MAA-pR-DjE"/>
                                 </connections>
                             </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="3sH-dw-N36">
+                                <rect key="frame" x="122" y="102" width="188" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="jjV-ID-Ch8"/>
+                                    <constraint firstAttribute="height" constant="3" id="rTv-Jj-pfw"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.4415405919" green="0.4415405919" blue="0.4415405919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.23921568630000001" green="0.99215686270000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="slider:" destination="Wgb-bm-Zk1" eventType="valueChanged" id="at2-dg-8av"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="within 10 mils" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQL-e5-Ex2">
+                                <rect key="frame" x="7" y="90" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LOf-MH-bVJ" firstAttribute="top" secondItem="TxO-S9-Dim" secondAttribute="top" constant="-7" id="64c-16-kLz"/>
-                            <constraint firstItem="VVV-YM-cWM" firstAttribute="leading" secondItem="LOf-MH-bVJ" secondAttribute="leading" id="B0S-vc-ueK"/>
-                            <constraint firstAttribute="trailing" secondItem="LOf-MH-bVJ" secondAttribute="trailing" id="P4h-UH-06V"/>
-                            <constraint firstItem="VVV-YM-cWM" firstAttribute="trailing" secondItem="LOf-MH-bVJ" secondAttribute="trailing" id="R9Y-ZS-cQw"/>
-                            <constraint firstAttribute="bottom" secondItem="LOf-MH-bVJ" secondAttribute="bottom" id="dL7-XF-2Vk"/>
-                            <constraint firstItem="LOf-MH-bVJ" firstAttribute="leading" secondItem="TxO-S9-Dim" secondAttribute="leading" id="eeW-uP-GUp"/>
-                            <constraint firstItem="VVV-YM-cWM" firstAttribute="bottom" secondItem="7gW-sy-cpX" secondAttribute="bottom" id="hHr-Df-uaU"/>
-                            <constraint firstItem="VVV-YM-cWM" firstAttribute="top" secondItem="7gW-sy-cpX" secondAttribute="top" constant="31" id="kWl-1f-gA4"/>
+                            <constraint firstAttribute="bottom" secondItem="LOf-MH-bVJ" secondAttribute="bottom" id="0eR-PY-hbq"/>
+                            <constraint firstItem="HQL-e5-Ex2" firstAttribute="leading" secondItem="7gW-sy-cpX" secondAttribute="leading" constant="7" id="7KH-3m-wRG"/>
+                            <constraint firstItem="HQL-e5-Ex2" firstAttribute="top" secondItem="7gW-sy-cpX" secondAttribute="top" constant="2" id="9y7-9E-R4B"/>
+                            <constraint firstItem="LOf-MH-bVJ" firstAttribute="leading" secondItem="VVV-YM-cWM" secondAttribute="leading" id="AFZ-b0-Kkg"/>
+                            <constraint firstItem="VVV-YM-cWM" firstAttribute="top" secondItem="HQL-e5-Ex2" secondAttribute="bottom" constant="8" symbolic="YES" id="KOr-fz-rLo"/>
+                            <constraint firstItem="VVV-YM-cWM" firstAttribute="leading" secondItem="TxO-S9-Dim" secondAttribute="leading" id="U09-zX-CjS"/>
+                            <constraint firstAttribute="trailing" secondItem="VVV-YM-cWM" secondAttribute="trailing" id="bFH-3t-exs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3sH-dw-N36" secondAttribute="trailing" constant="51" id="ccW-y1-hqR"/>
+                            <constraint firstItem="LOf-MH-bVJ" firstAttribute="top" secondItem="TxO-S9-Dim" secondAttribute="topMargin" constant="-95" id="g0C-Fo-SLj"/>
+                            <constraint firstItem="LOf-MH-bVJ" firstAttribute="trailing" secondItem="VVV-YM-cWM" secondAttribute="trailing" id="iw6-gw-iFg"/>
+                            <constraint firstItem="3sH-dw-N36" firstAttribute="top" secondItem="7gW-sy-cpX" secondAttribute="top" constant="14" id="mnR-G3-EQh"/>
+                            <constraint firstItem="VVV-YM-cWM" firstAttribute="bottom" secondItem="7gW-sy-cpX" secondAttribute="bottom" id="rQm-bw-NWF"/>
+                            <constraint firstItem="7gW-sy-cpX" firstAttribute="trailing" secondItem="HQL-e5-Ex2" secondAttribute="trailing" constant="264" id="tAv-Jd-rFZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7gW-sy-cpX"/>
                     </view>
@@ -256,6 +280,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="feedTable" destination="VVV-YM-cWM" id="tTF-Oe-Cjw"/>
+                        <outlet property="sliderValue" destination="HQL-e5-Ex2" id="xb1-MO-HzW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJQ-xi-hkr" userLabel="First Responder" sceneMemberID="firstResponder"/>

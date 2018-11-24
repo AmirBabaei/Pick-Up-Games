@@ -61,25 +61,23 @@ class CreateEvent: UIViewController, VCFinalDelegate {
     let vc2 = vc.instantiateViewController(withIdentifier: "mapScreen") as! MapScreen
         vc2.delegate = self
     present(vc2, animated: true, completion: nil)
-    //navigationController?.pushViewController(vc2, animated: false)
-    //dismiss(animated: true, completion: nil)
   }
   
-    //dimiss date picker
+    //dismiss date picker
   @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
     view.endEditing(true)
   }
   func finishPassing(dict: Dictionary<String, Any>) {
     
-    addressTexField.text = dict["address"] as! String
-    longitude = dict["locLong"] as! CLLocationDegrees
-    lattitude = dict["locLat"] as! CLLocationDegrees
-    distance = dict["distance"] as! CLLocationDistance
+    addressTexField.text = dict["address"] as? String ?? ""
+    //longitude = dict["locLong"] as! CLLocationDegrees
+    //lattitude = dict["locLat"] as! CLLocationDegrees
+    distance = dict["distance"] as? CLLocationDistance ?? 0
     
-    destination = dict["locationName"] as! String
+    destination = dict["locationName"] as? String ?? ""
     print("destination ",destination)
     if destination ==  " " {
-       destination = dict["address"] as! String
+       destination = dict["address"] as? String ?? " "
     }
 
     
@@ -114,13 +112,12 @@ class CreateEvent: UIViewController, VCFinalDelegate {
   //max palyer picker
   func createMaxPlayerPicker() {
     
-    let dayPicker = UIPickerView()
-    dayPicker.delegate = self
+    let maxPPicker = UIPickerView()
+    maxPPicker.backgroundColor = .black
+    maxPPicker.delegate = self
     
-    maxPlayerTextField.inputView = dayPicker
+    maxPlayerTextField.inputView = maxPPicker
     
-    //Customizations
-    dayPicker.backgroundColor = .black
   }
   
   
