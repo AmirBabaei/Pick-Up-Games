@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class FeedCell: UITableViewCell {
 
@@ -15,12 +16,16 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var sportType: UILabel!
     @IBOutlet weak var players: UILabel!
     @IBOutlet weak var uName: UILabel!
-  
-    func fillCell(profPic: UIImage, address: String, sport: String, playerCount: String, name: String) {
+    @IBOutlet weak var timeDate: UILabel!
+    @IBOutlet weak var distance: UILabel!
+    
+    func fillCell(profPic: UIImage, address: String, sport: String, playerCount: String, timeDate: String, name: String, distance: CLLocationDistance) {
         self.profPic.image = profPic
         self.address.text = address
         self.sportType.text = sport
         self.players.text = playerCount
         self.uName.text = name
+        self.timeDate.text = timeDate
+        self.distance.text = "\((round(10*(distance * 0.000621371192))/10)) mil"
     }
 }

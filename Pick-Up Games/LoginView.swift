@@ -8,10 +8,19 @@
 
 import UIKit
 import Firebase
+//import FacebookCore
+//import FacebookLogin
 
 class LoginView: UIViewController, UITextFieldDelegate{
     
-    @IBOutlet var UsernameTF: UITextField!
+  //Facebook Login
+  @IBAction func fbLogin(_ sender: Any) {
+    
+  }
+
+  
+  
+  @IBOutlet var UsernameTF: UITextField!
     
     @IBOutlet var LoginPasswordTF: UITextField!
     
@@ -63,5 +72,8 @@ class LoginView: UIViewController, UITextFieldDelegate{
             
         }
     }
+  
+  //Facebook login
+  
 }
 
