@@ -155,12 +155,14 @@ extension MapScreen: MKMapViewDelegate {
       let locationName = placemark.name ?? ""
       
       DispatchQueue.main.async {
+        print("marker",self.getCenterLocation(for: mapView));
+        print("user",mapView.userLocation.location)
         print("streetNumber",streetNumber)
         print("sreetName",streetName)
         print("city",cityName)
         print("location",locationName)
 
-        var str = "\(streetNumber) \(streetName)"
+        let str = "\(streetNumber) \(streetName)"
         
         if locationName == str {
           print("theyre equal ",str,locationName)
@@ -171,10 +173,12 @@ extension MapScreen: MKMapViewDelegate {
             "locationName":"\(locationName)",
             "locLong": mapView.centerCoordinate.longitude,
             "locLat":mapView.centerCoordinate.latitude,
-            "distance": previousLocation.distance(from: self.getCenterLocation(for: mapView))
+            "distance": previousLocation.distance(from: mapView.userLocation.location!)
           ]
+          
+          
           self.dict = dict2
-
+          
             self.addy = " \(locationName), \(cityName)"
 
         }else {

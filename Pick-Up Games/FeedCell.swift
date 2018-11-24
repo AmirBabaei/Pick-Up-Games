@@ -26,6 +26,6 @@ class FeedCell: UITableViewCell {
         self.players.text = playerCount
         self.uName.text = name
         self.timeDate.text = timeDate
-        self.distance.text = "\(round(10*(distance * 0.000621371192))/10) mil"
+        self.distance.text = "\((round(10*(distance * 0.000621371192))/10)) mil"
     }
 }

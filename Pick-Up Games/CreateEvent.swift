@@ -79,7 +79,7 @@ class CreateEvent: UIViewController, VCFinalDelegate {
     if destination ==  " " {
        destination = dict["address"] as? String ?? " "
     }
-
+    print("DISTANCE",distance)
     
     
   }
@@ -210,7 +210,7 @@ extension CreateEvent: UIPickerViewDelegate, UIPickerViewDataSource {
   }
   
   
-  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> Int? {
+  private func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> Int? {
     return maxPlayer[row]
   }
   
