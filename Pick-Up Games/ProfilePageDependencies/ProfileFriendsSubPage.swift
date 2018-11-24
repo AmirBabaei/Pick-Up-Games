@@ -89,6 +89,6 @@ extension ProfileFriendsSubPage: UITableViewDelegate, UITableViewDataSource {
         let vc2 = vc.instantiateViewController(withIdentifier: "OtherProfiles") as! OtherProfiles
         vc2.UID = cellID
         
-        present(vc2, animated: true, completion: nil)
+        navigationController?.pushViewController(vc2, animated: true)
     }
 }

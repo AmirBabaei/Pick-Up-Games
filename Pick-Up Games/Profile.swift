@@ -28,7 +28,21 @@ class Profile: UIViewController {
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Age: UILabel!
-
+    
+    @IBAction func AddFriends(_ sender: Any) {
+        let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let addFriends = vc.instantiateViewController(withIdentifier: "ProfileAddFriends") as! ProfileAddFriends
+        
+        navigationController?.pushViewController(addFriends, animated: true)
+    }
+    
+    @IBAction func EditProfile(_ sender: Any) {
+        let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let editProfile = vc.instantiateViewController(withIdentifier: "ProfileEdit") as! ProfileEdit
+        
+        navigationController?.pushViewController(editProfile, animated: true)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getBasicInfo()

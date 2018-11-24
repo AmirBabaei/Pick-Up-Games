@@ -23,7 +23,7 @@ class Feed: UIViewController {
         let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let ProfilePage = vc.instantiateViewController(withIdentifier: "Profile") as! Profile
         
-        present(ProfilePage, animated: true, completion: nil)
+        navigationController?.pushViewController(ProfilePage, animated: true)
     }
     
     

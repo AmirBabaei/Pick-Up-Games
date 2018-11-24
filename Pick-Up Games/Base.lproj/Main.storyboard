@@ -400,12 +400,14 @@
                                     <navigationItem title="Profile" id="Not-x3-7f5" userLabel="Profile">
                                         <barButtonItem key="leftBarButtonItem" title="feed" image="Back icon" id="J3h-Ac-PiR" userLabel="Add Friends">
                                             <connections>
+                                                <action selector="AddFriends:" destination="nCM-28-jTA" id="2Md-SF-JgK"/>
                                                 <segue destination="cEy-T1-m7u" kind="show" id="fyI-LH-gPF"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Edit" image="Back icon" width="50" id="rpK-O8-rhY" userLabel="Modify Profile">
                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
+                                                <action selector="EditProfile:" destination="nCM-28-jTA" id="Gz0-KN-UAU"/>
                                                 <segue destination="09s-kK-c6A" kind="show" id="JZl-LO-2L1"/>
                                             </connections>
                                         </barButtonItem>
@@ -1370,7 +1372,7 @@
         <image name="test-login" width="341" height="204"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JZl-LO-2L1"/>
-        <segue reference="3RW-qg-mp1"/>
+        <segue reference="rNC-Hm-hIR"/>
+        <segue reference="Q9I-Vm-PGx"/>
     </inferredMetricsTieBreakers>
 </document>
