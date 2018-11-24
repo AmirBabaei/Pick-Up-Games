@@ -13,6 +13,7 @@
 		11BC92DC21933975002A2907 /* ProfileSubPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC92DB21933975002A2907 /* ProfileSubPages.swift */; };
 		11BC92DF21936893002A2907 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC92DD219363FA002A2907 /* Profile.swift */; };
 		11BC92E0219368B0002A2907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
+		2915567E21A9167D0059C287 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915567D21A9167D0059C287 /* EventView.swift */; };
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
 		293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* LoginView.swift */; };
 		293B1B31217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2F217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld */; };
@@ -56,6 +57,7 @@
 		11BB5EF9218C0A4300462E69 /* PUG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUG.swift; sourceTree = "<group>"; };
 		11BC92DB21933975002A2907 /* ProfileSubPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubPages.swift; sourceTree = "<group>"; };
 		11BC92DD219363FA002A2907 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		2915567D21A9167D0059C287 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		293B1B25217095D5005D5CCC /* Pick-Up Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-Up Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B28217095D5005D5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293B1B2A217095D5005D5CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -161,7 +163,7 @@
 				11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */,
 				11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */,
 				29B343162190B6C1001E1624 /* MapScreen.swift */,
-
+				2915567D21A9167D0059C287 /* EventView.swift */,
 			);
 			path = "Pick-Up Games";
 			sourceTree = "<group>";
@@ -458,6 +460,7 @@
 				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
 				11A93A4021960BED002C3F7C /* ProfileBioSubPage.swift in Sources */,
 				11A93A3E2195F7DF002C3F7C /* ProfileObject.swift in Sources */,
+				2915567E21A9167D0059C287 /* EventView.swift in Sources */,
 				11BC92DC21933975002A2907 /* ProfileSubPages.swift in Sources */,
 				293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */,
 				11BC92DF21936893002A2907 /* Profile.swift in Sources */,

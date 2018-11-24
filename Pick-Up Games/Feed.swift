@@ -98,6 +98,20 @@ extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
         
     }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = storyboard?.instantiateViewController(withIdentifier: "EventView") as? EventView
+    let event = eventArray[indexPath.row]
+    vc?.imgs = UIImage(named: "test-login")!
+    vc?.userIDs = event.name
+    vc?.sports = event.sport
+    vc?.addresss = event.address
+    vc?.timeDates = event.timeDate
+    
+    
+  
+    self.navigationController?.pushViewController(vc!, animated: true)
+  }
+  
 
   
 }
