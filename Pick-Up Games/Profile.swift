@@ -16,11 +16,33 @@ class Profile: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func button(_ sender: Any) {
+        UserDefaults.standard.set(nil, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
+        print("User has logged out")
+        self.performSegue(withIdentifier: "Logout", sender: self)
+        
+    }
+    
     @IBOutlet weak var Username: UILabel!
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Age: UILabel!
-
+    
+    @IBAction func AddFriends(_ sender: Any) {
+        let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let addFriends = vc.instantiateViewController(withIdentifier: "ProfileAddFriends") as! ProfileAddFriends
+        
+        navigationController?.pushViewController(addFriends, animated: true)
+    }
+    
+    @IBAction func EditProfile(_ sender: Any) {
+        let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let editProfile = vc.instantiateViewController(withIdentifier: "ProfileEdit") as! ProfileEdit
+        
+        navigationController?.pushViewController(editProfile, animated: true)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getBasicInfo()

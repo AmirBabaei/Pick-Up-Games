@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111CB8B4219A297F00027616 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111CB8B3219A297F00027616 /* FriendCell.swift */; };
+		115C244121A8A03600D9ED69 /* SharedUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115C244021A8A03600D9ED69 /* SharedUID.swift */; };
+		115C244321A8A9FB00D9ED69 /* ProfileAddFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115C244221A8A9FB00D9ED69 /* ProfileAddFriends.swift */; };
+		1189B885219E7E6600A09189 /* OtherProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189B884219E7E6600A09189 /* OtherProfiles.swift */; };
 		11A93A3E2195F7DF002C3F7C /* ProfileObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */; };
 		11A93A4021960BED002C3F7C /* ProfileBioSubPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */; };
+		11ADFBFB219E6E820012071C /* FriendObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ADFBFA219E6E820012071C /* FriendObject.swift */; };
 		11BB5EFA218C0A4300462E69 /* PUG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BB5EF9218C0A4300462E69 /* PUG.swift */; };
 		11BC92DC21933975002A2907 /* ProfileSubPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC92DB21933975002A2907 /* ProfileSubPages.swift */; };
 		11BC92DF21936893002A2907 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BC92DD219363FA002A2907 /* Profile.swift */; };
 		11BC92E0219368B0002A2907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293B1B2C217095D5005D5CCC /* Main.storyboard */; };
+		11C55C27219A0947005F2CB8 /* ProfileFriendsSubPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C55C26219A0947005F2CB8 /* ProfileFriendsSubPage.swift */; };
+		11C55C29219A095F005F2CB8 /* ProfileEventsSubPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C55C28219A095F005F2CB8 /* ProfileEventsSubPage.swift */; };
+		11C55C2B219A0DAB005F2CB8 /* ProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C55C2A219A0DAB005F2CB8 /* ProfileEdit.swift */; };
 		293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B28217095D5005D5CCC /* AppDelegate.swift */; };
 		293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2A217095D5005D5CCC /* LoginView.swift */; };
 		293B1B31217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 293B1B2F217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld */; };
@@ -51,11 +59,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111CB8B3219A297F00027616 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		115C244021A8A03600D9ED69 /* SharedUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUID.swift; sourceTree = "<group>"; };
+		115C244221A8A9FB00D9ED69 /* ProfileAddFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAddFriends.swift; sourceTree = "<group>"; };
+		1189B884219E7E6600A09189 /* OtherProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfiles.swift; sourceTree = "<group>"; };
 		11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileObject.swift; sourceTree = "<group>"; };
 		11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBioSubPage.swift; sourceTree = "<group>"; };
+		11ADFBFA219E6E820012071C /* FriendObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendObject.swift; sourceTree = "<group>"; };
 		11BB5EF9218C0A4300462E69 /* PUG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PUG.swift; sourceTree = "<group>"; };
 		11BC92DB21933975002A2907 /* ProfileSubPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubPages.swift; sourceTree = "<group>"; };
 		11BC92DD219363FA002A2907 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		11C55C26219A0947005F2CB8 /* ProfileFriendsSubPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsSubPage.swift; sourceTree = "<group>"; };
+		11C55C28219A095F005F2CB8 /* ProfileEventsSubPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEventsSubPage.swift; sourceTree = "<group>"; };
+		11C55C2A219A0DAB005F2CB8 /* ProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEdit.swift; sourceTree = "<group>"; };
 		293B1B25217095D5005D5CCC /* Pick-Up Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-Up Games.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		293B1B28217095D5005D5CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		293B1B2A217095D5005D5CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -117,6 +133,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11C55C25219A08E4005F2CB8 /* ProfilePageDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */,
+				11C55C2A219A0DAB005F2CB8 /* ProfileEdit.swift */,
+				11BC92DB21933975002A2907 /* ProfileSubPages.swift */,
+				11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */,
+				11C55C26219A0947005F2CB8 /* ProfileFriendsSubPage.swift */,
+				115C244221A8A9FB00D9ED69 /* ProfileAddFriends.swift */,
+				11C55C28219A095F005F2CB8 /* ProfileEventsSubPage.swift */,
+				111CB8B3219A297F00027616 /* FriendCell.swift */,
+				1189B884219E7E6600A09189 /* OtherProfiles.swift */,
+				11ADFBFA219E6E820012071C /* FriendObject.swift */,
+				115C244021A8A03600D9ED69 /* SharedUID.swift */,
+			);
+			path = ProfilePageDependencies;
+			sourceTree = "<group>";
+		};
 		293B1B1C217095D4005D5CCC = {
 			isa = PBXGroup;
 			children = (
@@ -145,8 +179,8 @@
 				293B1B28217095D5005D5CCC /* AppDelegate.swift */,
 				293B1B2A217095D5005D5CCC /* LoginView.swift */,
 				293B1B2C217095D5005D5CCC /* Main.storyboard */,
-				11BC92DB21933975002A2907 /* ProfileSubPages.swift */,
 				11BC92DD219363FA002A2907 /* Profile.swift */,
+				11C55C25219A08E4005F2CB8 /* ProfilePageDependencies */,
 				41350FEB21796DC800597D68 /* RegisterViewController.swift */,
 				293B1B32217095D9005D5CCC /* Assets.xcassets */,
 				293B1B34217095D9005D5CCC /* LaunchScreen.storyboard */,
@@ -158,10 +192,7 @@
 				29C895E82182CD2300A1B80C /* Event.swift */,
 				295808162187E78300031304 /* CreateEvent.swift */,
 				11BB5EF9218C0A4300462E69 /* PUG.swift */,
-				11A93A3D2195F7DF002C3F7C /* ProfileObject.swift */,
-				11A93A3F21960BED002C3F7C /* ProfileBioSubPage.swift */,
 				29B343162190B6C1001E1624 /* MapScreen.swift */,
-
 			);
 			path = "Pick-Up Games";
 			sourceTree = "<group>";
@@ -450,15 +481,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				293B1B31217095D5005D5CCC /* Pick_Up_Games.xcdatamodeld in Sources */,
+				11C55C27219A0947005F2CB8 /* ProfileFriendsSubPage.swift in Sources */,
+				11C55C29219A095F005F2CB8 /* ProfileEventsSubPage.swift in Sources */,
 				29C895E72182C6FC00A1B80C /* Feed.swift in Sources */,
+				11C55C2B219A0DAB005F2CB8 /* ProfileEdit.swift in Sources */,
 				295808172187E78300031304 /* CreateEvent.swift in Sources */,
 				11BB5EFA218C0A4300462E69 /* PUG.swift in Sources */,
 				29B343172190B6C1001E1624 /* MapScreen.swift in Sources */,
 				29C895E52182C31600A1B80C /* FeedCell.swift in Sources */,
 				293B1B2B217095D5005D5CCC /* LoginView.swift in Sources */,
+				115C244121A8A03600D9ED69 /* SharedUID.swift in Sources */,
 				11A93A4021960BED002C3F7C /* ProfileBioSubPage.swift in Sources */,
+				11ADFBFB219E6E820012071C /* FriendObject.swift in Sources */,
+				1189B885219E7E6600A09189 /* OtherProfiles.swift in Sources */,
 				11A93A3E2195F7DF002C3F7C /* ProfileObject.swift in Sources */,
 				11BC92DC21933975002A2907 /* ProfileSubPages.swift in Sources */,
+				111CB8B4219A297F00027616 /* FriendCell.swift in Sources */,
+				115C244321A8A9FB00D9ED69 /* ProfileAddFriends.swift in Sources */,
 				293B1B29217095D5005D5CCC /* AppDelegate.swift in Sources */,
 				11BC92DF21936893002A2907 /* Profile.swift in Sources */,
 				29C895E92182CD2300A1B80C /* Event.swift in Sources */,
