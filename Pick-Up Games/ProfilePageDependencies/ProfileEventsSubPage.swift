@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Firebase
+import CoreLocation
 
 class ProfileEventsSubPage: UIViewController{
 
@@ -44,12 +45,13 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
             
             for pug in feedEventSnapshot {
                 if (pug.childSnapshot(forPath: "EventCreator_UserID").value as! String == myID) {/*Auth.auth().currentUser?.uid) {*/
-                    let address = pug.childSnapshot(forPath: "EventLocation").value as! String
-                    let sport = pug.childSnapshot(forPath: "EventType").value as! String
-                    let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
-                    let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
-                    let pug = PUG(address: address, sport: sport, players: players, name: name)
-                    funcEventArray.append(pug)
+                  let address = pug.childSnapshot(forPath: "EventLocation").value as! String
+                  let distance = pug.childSnapshot(forPath: "distance").value as! CLLocationDistance
+                  let sport = pug.childSnapshot(forPath: "EventType").value as! String
+                  let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
+                  let timeDate = pug.childSnapshot(forPath: "timeDate").value as! String
+                  let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
+                  let pug = PUG(address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance)
                 }
             }
             handler(funcEventArray)
@@ -72,7 +74,7 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
         let image = UIImage(named: "test-login")
         let event = eventArray[indexPath.row]
         
-        cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, name: event.name)
+      cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, timeDate: event.timeDate, name: event.name, distance: event.distance)
         return cell
         
     }

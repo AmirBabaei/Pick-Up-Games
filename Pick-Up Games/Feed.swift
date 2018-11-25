@@ -19,8 +19,9 @@ class Feed: UIViewController {
     sliderValue.text = "within " + String(self.slideVal) + " mils"
     getAllEvents { (returnedEventsArray) in self.eventArray = returnedEventsArray.reversed()
       self.feedTable.reloadData()
-      
-    @IBOutlet weak var feedTable: UITableView!
+    }
+  }
+  //  @IBOutlet weak var feedTable: UITableView!
     
     @IBAction func Profile(_ sender: Any) {
         let UID = (Auth.auth().currentUser?.uid)!
@@ -34,19 +35,11 @@ class Feed: UIViewController {
         
         navigationController?.pushViewController(ProfilePage, animated: true)
     }
-    
-    
   
-  }
   @IBOutlet weak var sliderValue: UILabel!
   
   @IBOutlet weak var feedTable: UITableView!
-  
-  
-  //slider
 
-  
-  
     var eventArray = [PUG]()
     
     override func viewDidLoad() {
@@ -66,12 +59,12 @@ class Feed: UIViewController {
 extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
   
   
-    
+  
     func getAllEvents(handler: @escaping (_ events: [PUG]) -> ()) {
         var funcEventArray = [PUG]()
         let REF_FEED = Database.database().reference().child("Event")
         REF_FEED.observeSingleEvent(of: .value) { (feedEventSnapshot) in
-            guard let feedEventSnapshot = feedEventSnapshot.children.allObjects as? [DataSnapshot] else { return }
+          guard let feedEventSnapshot = feedEventSnapshot.children.allObjects as? [DataSnapshot] else { return }
           
             for pug in feedEventSnapshot {
               

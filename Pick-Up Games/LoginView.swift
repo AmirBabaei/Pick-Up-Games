@@ -14,9 +14,9 @@ import Firebase
 class LoginView: UIViewController, UITextFieldDelegate{
     
   //Facebook Login
-  @IBAction func fbLogin(_ sender: Any) {
+ // @IBAction func fbLogin(_ sender: Any) {
     
-  }
+ // }
 
   
   

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nWt-42-Lve">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fCb-6n-Owd">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,23 +94,6 @@
                                     <segue destination="KFf-bx-3hC" kind="show" id="hya-d9-hjQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-ox-mU1">
-                                <rect key="frame" x="73" y="490" width="253" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="aRR-Q2-hMH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Facebook Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="Login_button:" destination="fCb-6n-Owd" eventType="touchUpInside" id="reH-1i-h35"/>
-                                    <action selector="fbLogin:" destination="fCb-6n-Owd" eventType="touchUpInside" id="1jC-3c-Fiu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -124,8 +107,6 @@
                             <constraint firstItem="LSB-zu-z50" firstAttribute="top" secondItem="LKi-5W-B3R" secondAttribute="bottom" constant="33" id="Hsu-0F-M0f"/>
                             <constraint firstItem="3yp-tY-AAB" firstAttribute="trailing" secondItem="RIu-MZ-Wwg" secondAttribute="trailing" id="MJt-Sb-87v"/>
                             <constraint firstItem="Sqa-T5-SZf" firstAttribute="trailing" secondItem="bib-Ch-AnH" secondAttribute="trailing" constant="179" id="MMa-pC-f1R"/>
-                            <constraint firstItem="q5y-ox-mU1" firstAttribute="trailing" secondItem="RIu-MZ-Wwg" secondAttribute="trailing" id="QWX-We-bEr"/>
-                            <constraint firstItem="q5y-ox-mU1" firstAttribute="leading" secondItem="RIu-MZ-Wwg" secondAttribute="leading" id="Srf-Si-B5D"/>
                             <constraint firstItem="bib-Ch-AnH" firstAttribute="trailing" secondItem="HFN-Lk-Bob" secondAttribute="trailing" id="Tgq-Sn-Vl3"/>
                             <constraint firstItem="ujZ-Fg-luI" firstAttribute="top" secondItem="Mvf-xl-moG" secondAttribute="top" id="Tjn-To-GcC"/>
                             <constraint firstItem="ujZ-Fg-luI" firstAttribute="leading" secondItem="Mvf-xl-moG" secondAttribute="leading" id="VeG-UP-TZS"/>
@@ -141,7 +122,6 @@
                             <constraint firstItem="Sqa-T5-SZf" firstAttribute="bottom" secondItem="Aw2-Vx-tUD" secondAttribute="bottom" constant="126" id="kG0-f8-Avd"/>
                             <constraint firstItem="LSB-zu-z50" firstAttribute="top" secondItem="bib-Ch-AnH" secondAttribute="bottom" constant="8" symbolic="YES" id="mJF-Cf-eXF"/>
                             <constraint firstItem="bib-Ch-AnH" firstAttribute="top" secondItem="Sqa-T5-SZf" secondAttribute="top" constant="155" id="pVo-3B-zEZ"/>
-                            <constraint firstItem="q5y-ox-mU1" firstAttribute="top" secondItem="RIu-MZ-Wwg" secondAttribute="bottom" constant="52" id="q0B-Z3-VWj"/>
                             <constraint firstItem="3yp-tY-AAB" firstAttribute="leading" secondItem="RIu-MZ-Wwg" secondAttribute="leading" id="xzh-bh-IsW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sqa-T5-SZf"/>
@@ -149,7 +129,6 @@
                     <connections>
                         <outlet property="LoginPasswordTF" destination="3yp-tY-AAB" id="945-9k-gZH"/>
                         <outlet property="UsernameTF" destination="LSB-zu-z50" id="SIc-Jr-Jyg"/>
-                        <outlet property="fbLogin" destination="q5y-ox-mU1" id="Jaa-Lb-NdL"/>
                         <segue destination="nWt-42-Lve" kind="show" identifier="gotoFeed" id="9Bw-9P-jDS"/>
                     </connections>
                 </viewController>
@@ -759,11 +738,11 @@
         <scene sceneID="9rc-aD-Egv">
             <objects>
                 <viewController storyboardIdentifier="mapScreen" id="GSv-Uc-OX6" customClass="MapScreen" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7c5-Lg-mOd">
+                    <view key="view" contentMode="scaleToFill" id="7c5-Lg-mOd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hT9-hd-oPo">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hT9-hd-oPo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <connections>
                                     <outlet property="delegate" destination="GSv-Uc-OX6" id="KgD-JC-0fa"/>
@@ -772,7 +751,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="rf9-lX-pzx">
                                 <rect key="frame" x="167" y="366" width="40" height="40"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4s-NEW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4s-NEW">
                                 <rect key="frame" x="0.0" y="697" width="375" height="115"/>
                                 <color key="backgroundColor" red="0.1121854056" green="0.1052894435" blue="0.13640873019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1297,7 +1276,6 @@
         <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hya-d9-hjQ"/>
         <segue reference="1i7-Co-wVM"/>
     </inferredMetricsTieBreakers>
 </document>
