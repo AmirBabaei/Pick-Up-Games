@@ -26,11 +26,6 @@
 		29C895E92182CD2300A1B80C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C895E82182CD2300A1B80C /* Event.swift */; };
 		323671CC21960C480095ABF7 /* RegisterViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323671CB21960C480095ABF7 /* RegisterViewControllerTest.swift */; };
 		323671CE219613DC0095ABF7 /* LoginViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323671CD219613DC0095ABF7 /* LoginViewTest.swift */; };
-		325341C921ACB30300DD224E /* Pods_Pick_Up_Games.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325341C821ACB30300DD224E /* Pods_Pick_Up_Games.framework */; };
-		325341CB21ACB32000DD224E /* Pods_Pick_Up_GamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325341CA21ACB32000DD224E /* Pods_Pick_Up_GamesTests.framework */; };
-		325341CC21ACB32000DD224E /* Pods_Pick_Up_GamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325341CA21ACB32000DD224E /* Pods_Pick_Up_GamesTests.framework */; };
-		325341CE21ACB33800DD224E /* Pods_Pick_Up_GamesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325341CD21ACB33800DD224E /* Pods_Pick_Up_GamesUITests.framework */; };
-		325341CF21ACB33800DD224E /* Pods_Pick_Up_GamesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325341CD21ACB33800DD224E /* Pods_Pick_Up_GamesUITests.framework */; };
 		32B4F4D321A9F45700A59E93 /* bitrise.yml in Resources */ = {isa = PBXBuildFile; fileRef = 32B4F4D221A9F45700A59E93 /* bitrise.yml */; };
 		41350FEC21796DC800597D68 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41350FEB21796DC800597D68 /* RegisterViewController.swift */; };
 		41AB20C721781324000A5760 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41AB20C621781323000A5760 /* GoogleService-Info.plist */; };
@@ -80,9 +75,6 @@
 		29C895E82182CD2300A1B80C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		323671CB21960C480095ABF7 /* RegisterViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerTest.swift; sourceTree = "<group>"; };
 		323671CD219613DC0095ABF7 /* LoginViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTest.swift; sourceTree = "<group>"; };
-		325341C821ACB30300DD224E /* Pods_Pick_Up_Games.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Pick_Up_Games.framework; path = "../../Library/Developer/Xcode/DerivedData/Pick-Up_Games-crevqypghsbdmieossteiidzjyeu/Build/Products/Debug-iphoneos/Pods_Pick_Up_Games.framework"; sourceTree = "<group>"; };
-		325341CA21ACB32000DD224E /* Pods_Pick_Up_GamesTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Pick_Up_GamesTests.framework; path = "../../Library/Developer/Xcode/DerivedData/Pick-Up_Games-crevqypghsbdmieossteiidzjyeu/Build/Products/Debug-iphoneos/Pods_Pick_Up_GamesTests.framework"; sourceTree = "<group>"; };
-		325341CD21ACB33800DD224E /* Pods_Pick_Up_GamesUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Pick_Up_GamesUITests.framework; path = "../../Library/Developer/Xcode/DerivedData/Pick-Up_Games-crevqypghsbdmieossteiidzjyeu/Build/Products/Debug-iphoneos/Pods_Pick_Up_GamesUITests.framework"; sourceTree = "<group>"; };
 		32B4F4D221A9F45700A59E93 /* bitrise.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = bitrise.yml; sourceTree = "<group>"; };
 		41350FEB21796DC800597D68 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		41AB20C621781323000A5760 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -98,9 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325341CE21ACB33800DD224E /* Pods_Pick_Up_GamesUITests.framework in Frameworks */,
-				325341CB21ACB32000DD224E /* Pods_Pick_Up_GamesTests.framework in Frameworks */,
-				325341C921ACB30300DD224E /* Pods_Pick_Up_Games.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325341CC21ACB32000DD224E /* Pods_Pick_Up_GamesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325341CF21ACB33800DD224E /* Pods_Pick_Up_GamesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,9 +197,6 @@
 		5EA775EDA11B4AB0F9D7F9B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				325341CD21ACB33800DD224E /* Pods_Pick_Up_GamesUITests.framework */,
-				325341CA21ACB32000DD224E /* Pods_Pick_Up_GamesTests.framework */,
-				325341C821ACB30300DD224E /* Pods_Pick_Up_Games.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
