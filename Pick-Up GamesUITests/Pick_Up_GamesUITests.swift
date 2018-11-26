@@ -26,7 +26,7 @@ class Pick_Up_GamesUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testRegister_login() {
+  /*  func testRegister_login() {
         
         let app = XCUIApplication()
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["An event!"]/*[[".cells.staticTexts[\"An event!\"]",".staticTexts[\"An event!\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -77,5 +77,5 @@ class Pick_Up_GamesUITests: XCTestCase {
         app.navigationBars["feed"].buttons["Item"].tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .navigationBar)["Profile"].buttons["feed"].tap()
         
-    }
+    }*/
 }
