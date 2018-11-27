@@ -14,12 +14,12 @@ class LoginViewTest: XCTestCase {
 
     var sample: sampleUser!
     var sample2: sampleUser2!
-    let config = 1;
+    var config = 1;
     override func setUp()
     {
         if (config == 1){
             FirebaseApp.configure()
-            let config = 0
+            config = 0
         }
         sample = sampleUser()
         sample2 = sampleUser2()
