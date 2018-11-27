@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class Event: NSObject {
   
   var name: String?
   var address: String?
   var sport: String?
-
+  var timeDate: String?
+  var distance: CLLocationDistance?
 }

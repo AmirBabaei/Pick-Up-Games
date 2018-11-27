@@ -10,20 +10,37 @@ import UIKit
 import MapKit
 import CoreLocation
 
+protocol VCFinalDelegate {
+  func finishPassing(dict: Dictionary<String, Any>)
+}
+
 class MapScreen: UIViewController {
+
+  var delegate: VCFinalDelegate?
 
   @IBOutlet var MapView: MKMapView!
   var addy = String()
+  var dict: Dictionary<String,Any> = Dictionary()
+  var loc = String()
   //address text
   @IBOutlet var addressLabel: UILabel!
   @IBAction func doneButton(_ sender: Any) {
     //checkLocationServices()
-    performSegue(withIdentifier: "mapSegue", sender: self)
+    delegate?.finishPassing(dict: self.dict)
+    //performSegue(withIdentifier: "mapSegue", sender: self)
+    dismiss(animated: true, completion: nil)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let createEvent = segue.destination as! CreateEvent
     createEvent.addressString = addy
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Hide the Navigation Bar
+    self.navigationController?.setNavigationBarHidden(true, animated: animated)
   }
   
   let locationManager = CLLocationManager()
@@ -138,11 +155,49 @@ extension MapScreen: MKMapViewDelegate {
       let locationName = placemark.name ?? ""
       
       DispatchQueue.main.async {
-       // if (locationName != (" \(streetNumber) \(streetName)")){
-           //self.addressLabel.text = " \(locationName) \n"
-       // }
-        self.addressLabel.text = " \(streetNumber) \(streetName)\n \(cityName)"
-        self.addy = " \(streetNumber) \(streetName)\n, \(cityName)"
+        print("marker",self.getCenterLocation(for: mapView));
+        print("user",mapView.userLocation.location)
+        print("streetNumber",streetNumber)
+        print("sreetName",streetName)
+        print("city",cityName)
+        print("location",locationName)
+
+        let str = "\(streetNumber) \(streetName)"
+        
+        if locationName == str {
+          print("theyre equal ",str,locationName)
+           self.addressLabel.text = " \(locationName) \n \(cityName)"
+         
+          var dict2:Dictionary<String,Any> = [
+            "address": " \(streetNumber) \(streetName) \(cityName)",
+            "locationName":"\(locationName)",
+            "locLong": mapView.centerCoordinate.longitude,
+            "locLat":mapView.centerCoordinate.latitude,
+            "distance": previousLocation.distance(from: mapView.userLocation.location!)
+          ]
+          
+          
+          self.dict = dict2
+          
+            self.addy = " \(locationName), \(cityName)"
+
+        }else {
+          print("theyre not equal ",str,locationName)
+
+           self.addressLabel.text = " \(locationName) \n \(streetNumber) \(streetName)\n \(cityName)"
+          var dict2:Dictionary<String,Any> = [
+            "address": "\(locationName)\(streetNumber) \(streetName) \(cityName)",
+            "locationName":"\(locationName)",
+            "locLong": mapView.centerCoordinate.longitude,
+            "locLat":mapView.centerCoordinate.latitude,
+            "distance": previousLocation.distance(from: self.getCenterLocation(for: mapView))
+
+          ]
+          self.dict = dict2
+          self.addy = "\(locationName), \(cityName)"
+
+        }
+        self.loc = "\(locationName)"
       }
     }
   }

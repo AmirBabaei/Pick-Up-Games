@@ -30,6 +30,7 @@ class ProfileAddFriends: UIViewController{
             self.myFriendsTable.reloadData()
             
         }
+        //let searchController = UISearchController(searchResultsController: nil)
     }
     
 
@@ -44,7 +45,7 @@ extension ProfileAddFriends: UITableViewDelegate, UITableViewDataSource {
             
             for user in usersSnapshot {
                 REF_PROF.child("Friends/\(user.key)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
-                    if (!friendSnapshot.exists()) {
+                    if (!friendSnapshot.exists() && user.hasChild("Full Name")) {
                         let name = user.childSnapshot(forPath: "Full Name").value as! String
                         let UID = user.key
                         let friend = FriendObject(name: name, UID: UID)
@@ -88,6 +89,14 @@ extension ProfileAddFriends: UITableViewDelegate, UITableViewDataSource {
         let vc2 = vc.instantiateViewController(withIdentifier: "OtherProfiles") as! OtherProfiles
         vc2.UID = cellID
         
-        present(vc2, animated: true, completion: nil)
+        navigationController?.pushViewController(vc2, animated: true)
     }
 }
+/*
+extension ProfileAddFriends: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        <#code#>
+    }
+    
+}
+ */
