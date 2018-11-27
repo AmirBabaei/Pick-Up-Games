@@ -16,6 +16,7 @@ class LoginViewTest: XCTestCase {
     var sample2: sampleUser2!
     override func setUp()
     {
+        FirebaseApp.configure()
         sample = sampleUser()
         sample2 = sampleUser2()
     }
