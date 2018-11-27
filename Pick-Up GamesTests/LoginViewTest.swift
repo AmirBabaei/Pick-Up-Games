@@ -9,12 +9,12 @@
 import XCTest
 @testable import Pick_Up_Games
 import Firebase
+var config = 1;
 
 class LoginViewTest: XCTestCase {
 
     var sample: sampleUser!
     var sample2: sampleUser2!
-    var config = 1;
     override func setUp()
     {
         if (config == 1){
