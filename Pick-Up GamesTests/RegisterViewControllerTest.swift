@@ -14,8 +14,8 @@ class RegisterViewControllerTest: XCTestCase {
 
     var sample: sampleUser!
     
+    
     override func setUp() {
-        FirebaseApp.configure()
         sample = sampleUser()
     }
     
