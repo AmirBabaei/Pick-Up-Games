@@ -46,7 +46,7 @@ class ProfileEdit: UIViewController {
 
   }
 
-
+  
   
     @IBAction func DoneEditing(_ sender: Any) {
         let userID = Auth.auth().currentUser?.uid
@@ -86,9 +86,10 @@ class ProfileEdit: UIViewController {
             // Uh-oh, an error occurred!
             return
           }
-          print("print URL \(url)")
+    
         }
       }
+      
       //imagesRef.putFile(from: , metadata: T##StorageMetadata?, completion: <#T##((StorageMetadata?, Error?) -> Void)?##((StorageMetadata?, Error?) -> Void)?##(StorageMetadata?, Error?) -> Void#>)
       //let storageRef = stor.storage().reference(forURL: "gs://pick-up-games-e98cf.appspot.com")
       //let uploadTask = storageRef.putData(data, metadata: nil) { (metadata, error) in

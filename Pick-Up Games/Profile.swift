@@ -24,7 +24,8 @@ class Profile: UIViewController {
         
     }
     
-    @IBOutlet weak var Username: UILabel!
+  @IBOutlet weak var profilePic: UIImageView!
+  @IBOutlet weak var Username: UILabel!
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Age: UILabel!
@@ -59,5 +60,20 @@ extension Profile {
             self.Email.text = Auth.auth().currentUser?.email
             self.Age.text = profUserSnapshot.childSnapshot(forPath: "Age").value as? String
         }
+      
+      //download pic
+      let storage = Storage.storage()
+      let storageRef = storage.reference(forURL: "gs://pick-up-games-e98cf.appspot.com")
+      let imagesRef = storageRef.child("profilePics").child(userID!)
+      
+      imagesRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+        if let error = error {
+          // Uh-oh, an error occurred!
+        
+        } else {
+          // Data for "images/island.jpg" is returned
+          self.profilePic.image = UIImage(data: data!)
+        }
+      }
     }
 }
