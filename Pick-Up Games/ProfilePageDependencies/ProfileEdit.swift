@@ -11,7 +11,7 @@ import Firebase
 import CoreLocation
 
 
-class ProfileEdit: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileEdit: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +38,22 @@ class ProfileEdit: UIViewController,UIImagePickerControllerDelegate, UINavigatio
     
     let pickerControler = UIImagePickerController()
     pickerControler.delegate = self
+    pickerControler.allowsEditing = false
+    self.present(pickerControler, animated: true)
     print("In hanler now --------")
     present(pickerControler, animated: true, completion: nil)
 
   }
 
-   private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     
-    print("did finish picking")
-     if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+    //print("did finish picking")
+      if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
      profilePic.image = image
-     //let image = info
-     //print(info)
      }
+     else{
+      //error
+      }
     dismiss(animated: true, completion: nil)
   }
   

@@ -81,7 +81,7 @@
                                 <rect key="frame" x="16" y="44" width="309" height="159"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aw2-Vx-tUD">
-                                <rect key="frame" x="61" y="562" width="253" height="41"/>
+                                <rect key="frame" x="61" y="611" width="253" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="8F3-wO-ApO"/>
                                 </constraints>
@@ -488,19 +488,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-Tz-Lks">
-                                <rect key="frame" x="61" y="152" width="253" height="256"/>
+                                <rect key="frame" x="61" y="152" width="253" height="305"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="GgX-qb-mZq">
-                                        <rect key="frame" x="0.0" y="0.0" width="253" height="52.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="65"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="USERNAME" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLf-Ac-iMK">
-                                                <rect key="frame" x="0.0" y="0.0" width="253" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
                                                 <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvL-rk-uGp">
-                                                <rect key="frame" x="0.0" y="30" width="253" height="22.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="36" width="253" height="29"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -509,16 +509,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Dok-WR-Kxg">
-                                        <rect key="frame" x="0.0" y="67.666666666666657" width="253" height="53"/>
+                                        <rect key="frame" x="0.0" y="80" width="253" height="65"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="EMAIL" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hx4-oX-MbR">
-                                                <rect key="frame" x="0.0" y="0.0" width="253" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
                                                 <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giY-G7-494">
-                                                <rect key="frame" x="0.0" y="30" width="253" height="23"/>
+                                                <rect key="frame" x="0.0" y="36" width="253" height="29"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -527,16 +527,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="k1U-HI-tUc">
-                                        <rect key="frame" x="0.0" y="135.66666666666669" width="253" height="52.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="160" width="253" height="65"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PASSWORD" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="27o-Ne-2Vf">
-                                                <rect key="frame" x="0.0" y="0.0" width="253" height="22.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
                                                 <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5r7-pM-vXP">
-                                                <rect key="frame" x="0.0" y="29.666666666666629" width="253" height="23"/>
+                                                <rect key="frame" x="0.0" y="36" width="253" height="29"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -545,16 +545,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Rpj-18-Vs1">
-                                        <rect key="frame" x="0.0" y="203.33333333333331" width="253" height="52.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="240" width="253" height="65"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="CONFIRM PASSWORD" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbJ-Ud-Emm">
-                                                <rect key="frame" x="0.0" y="0.0" width="253" height="22.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="253" height="29"/>
                                                 <color key="textColor" red="0.23775596269999999" green="0.99316922949999997" blue="0.98085817639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHP-JZ-HOe">
-                                                <rect key="frame" x="0.0" y="29.666666666666686" width="253" height="23"/>
+                                                <rect key="frame" x="0.0" y="36" width="253" height="29"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -565,7 +565,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-oj-2XX">
-                                <rect key="frame" x="61" y="476" width="253" height="30"/>
+                                <rect key="frame" x="61" y="525" width="253" height="30"/>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.99215686270000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="pFl-bw-Wff"/>
@@ -1385,6 +1385,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="rNC-Hm-hIR"/>
         <segue reference="Q9I-Vm-PGx"/>
-        <segue reference="eV5-RT-X8O"/>
+        <segue reference="6tk-4e-Hel"/>
     </inferredMetricsTieBreakers>
 </document>
