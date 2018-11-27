@@ -7,16 +7,45 @@
 //
 
 import XCTest
+@testable import Pick_Up_Games
+import Firebase
+var config = 1;
 
 class LoginViewTest: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    var sample: sampleUser!
+    var sample2: sampleUser2!
+    override func setUp()
+    {
+        if (config == 1){
+            FirebaseApp.configure()
+            config = 0
+        }
+        sample = sampleUser()
+        sample2 = sampleUser2()
     }
-
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sample = nil
+        sample2 = nil
     }
-
-
+    func testLogin()
+    {
+        Auth.auth().signIn(withEmail: sample.userEmail, password: sample.userPassword) { (user, error) in
+            XCTAssertNil(error, "should be nil not a real user")
+        }
+    }
+    
+    func testLogin2()
+    {
+        Auth.auth().signIn(withEmail: sample.userEmail, password: sample.userPassword) { (user, error) in
+            XCTAssertNotNil(error, "should not be nil is a real user")
+        }
+    }
+    
+    
+}
+class sampleUser2 {
+    var userEmail = "repineda@ucsc.edu"
+    var userPassword = "password"
+    var userName = "Lito"
 }
