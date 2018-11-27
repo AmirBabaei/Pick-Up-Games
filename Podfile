@@ -12,6 +12,7 @@ pod 'Firebase/Database'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'Firebase/Storage'
+pod 'Firebase/Core'
 
 pod 'FacebookCore'
 pod 'FacebookLogin'
