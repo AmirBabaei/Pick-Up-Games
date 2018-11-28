@@ -40,7 +40,7 @@ class Profile: UIViewController {
     @IBAction func EditProfile(_ sender: Any) {
         let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let editProfile = vc.instantiateViewController(withIdentifier: "ProfileEdit") as! ProfileEdit
-        
+      editProfile.img1 = profilePic.image!
         navigationController?.pushViewController(editProfile, animated: true)
     }
     

@@ -12,10 +12,16 @@ import CoreLocation
 import FirebaseStorage
 
 
+
 class ProfileEdit: UIViewController {
   
+  
+  public var img1 = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+
+      
     }
   
   var selectedImage: UIImage?
@@ -78,6 +84,7 @@ class ProfileEdit: UIViewController {
           // Uh-oh, an error occurred!
           return
         }
+        
         // Metadata contains file metadata such as size, content-type.
         let size = metadata.size
         // You can also access to download URL after upload.
@@ -86,17 +93,12 @@ class ProfileEdit: UIViewController {
             // Uh-oh, an error occurred!
             return
           }
+          let urlString = url?.absoluteString
+          REF_PROF.child("ProfilePicURL").setValue(urlString)
     
         }
       }
-      
-      //imagesRef.putFile(from: , metadata: T##StorageMetadata?, completion: <#T##((StorageMetadata?, Error?) -> Void)?##((StorageMetadata?, Error?) -> Void)?##(StorageMetadata?, Error?) -> Void#>)
-      //let storageRef = stor.storage().reference(forURL: "gs://pick-up-games-e98cf.appspot.com")
-      //let uploadTask = storageRef.putData(data, metadata: nil) { (metadata, error) in
-       // guard let metadata = metadata else {
-          // Uh-oh, an error occurred!
-         // return
-      }
+    }
   }
 
 
