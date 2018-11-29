@@ -27,8 +27,31 @@ class Pick_Up_GamesUITests: XCTestCase {
     }
 
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let getStartedButton = app.buttons["GET STARTED"]
+        XCTAssertTrue(getStartedButton.exists)
+        getStartedButton.tap()
+        
+        let registerButton = app.buttons["REGISTER"]
+        XCTAssertTrue(registerButton.exists)
+        registerButton.tap()
+        
+        let window = app.children(matching: .window).element(boundBy: 0)
+        let element = window.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        XCTAssertTrue(element.children(matching: .other).element(boundBy: 0).children(matching: .textField).element.exists)
+        XCTAssertTrue(element.children(matching: .other).element(boundBy: 1).children(matching: .textField).element.exists)
+        XCTAssertTrue(element.children(matching: .other).element(boundBy: 2).children(matching: .secureTextField).element.exists)
+        XCTAssertTrue(element.children(matching: .other).element(boundBy: 3).children(matching: .secureTextField).element.exists)
+        XCTAssertTrue(app.buttons["Back icon"].exists)
+        app.buttons["Back icon"].tap()
+        
+        let element2 = window.children(matching: .other).element(boundBy: 1).children(matching: .other).element
+        XCTAssertTrue(element2.children(matching: .textField).element.exists)
+        XCTAssertTrue(element2.children(matching: .secureTextField).element.exists)
+        
+        
     }
 
 }
