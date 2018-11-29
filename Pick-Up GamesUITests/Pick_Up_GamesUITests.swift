@@ -60,17 +60,15 @@ class Pick_Up_GamesUITests: XCTestCase {
     func testFEED(){
         
         let app = XCUIApplication()
-        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        XCTAssertTrue(app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.exists)
         
         let feedNavigationBar = app.navigationBars["feed"]
-        sleep(20)
+        XCTAssertTrue(feedNavigationBar.buttons["Profile"].exists)
         feedNavigationBar.buttons["Profile"].tap()
         app.navigationBars["Profile"].buttons["feed"].tap()
         feedNavigationBar.buttons["Add"].tap()
         app.navigationBars["createEvent"].buttons["feed"].tap()
-        
-
-        
+                
             }
 
 }
