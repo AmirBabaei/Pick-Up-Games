@@ -24,11 +24,6 @@ pod 'SwiftyJSON'
     # Pods for testing
   end
 
-  target 'Pick-Up GamesUITests' do
-       inherit! :search_paths
-    # Pods for testing
-  end
-
 end
 
 post_install do |installer|
