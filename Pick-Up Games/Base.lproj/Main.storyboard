@@ -455,6 +455,18 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKi-Ij-CaH">
+                                <rect key="frame" x="292" y="97" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.17064204220000001" green="1" blue="0.98835409669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button:" destination="nCM-28-jTA" eventType="touchUpInside" id="uje-ye-qBk"/>
+                                    <segue destination="fCb-6n-Owd" kind="showDetail" identifier="Logout" id="lTU-Qt-Fcs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration">
@@ -469,7 +481,6 @@
                         <outlet property="Email" destination="ma0-ly-HcQ" id="hAf-IS-wH1"/>
                         <outlet property="Name" destination="kA9-Rh-vEV" id="kEC-VB-fpI"/>
                         <outlet property="Username" destination="Rtx-z0-Us7" id="BEo-rD-LA3"/>
-                        <segue destination="fCb-6n-Owd" kind="show" identifier="Logout" id="eV5-RT-X8O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USD-cD-a1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -579,7 +590,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBz-AK-cgn">
-                                <rect key="frame" x="31" y="48" width="37" height="37"/>
+                                <rect key="frame" x="31" y="48" width="16" height="22"/>
                                 <state key="normal" title="" image="Back icon"/>
                                 <connections>
                                     <action selector="Backtologin:" destination="OiF-4p-Vti" eventType="touchUpInside" id="FVc-xb-0lW"/>
@@ -1377,14 +1388,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back icon" width="37.5" height="37.5"/>
-        <image name="Login" width="281.25" height="609"/>
-        <image name="pin" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
+        <image name="Back icon" width="16" height="16"/>
+        <image name="Login" width="125" height="270"/>
+        <image name="pin" width="512" height="512"/>
+        <image name="test-login" width="341" height="204"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rNC-Hm-hIR"/>
+        <segue reference="JZl-LO-2L1"/>
         <segue reference="Q9I-Vm-PGx"/>
-        <segue reference="6tk-4e-Hel"/>
+        <segue reference="lTU-Qt-Fcs"/>
     </inferredMetricsTieBreakers>
 </document>
