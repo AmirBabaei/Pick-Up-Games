@@ -12,6 +12,7 @@ pod 'Firebase/Database'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'Firebase/Storage'
+pod 'Firebase/Core'
 
 pod 'FacebookCore'
 pod 'FacebookLogin'
@@ -20,11 +21,6 @@ pod 'JGProgressHUD'
 pod 'SwiftyJSON'
 
   target 'Pick-Up GamesTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Pick-Up GamesUITests' do
     inherit! :search_paths
     # Pods for testing
   end

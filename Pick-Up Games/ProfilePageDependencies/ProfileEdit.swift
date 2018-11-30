@@ -9,14 +9,22 @@
 import UIKit
 import Firebase
 import CoreLocation
+import FirebaseStorage
 
 
-class ProfileEdit: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
+class ProfileEdit: UIViewController {
+  
+  
+  public var img1 = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+
+      
     }
-    
+  
+  var selectedImage: UIImage?
   @IBOutlet weak var profilePic: UIImageView!
   @IBOutlet weak var Username: UITextField!
     @IBOutlet weak var Name: UITextField!
@@ -40,22 +48,11 @@ class ProfileEdit: UIViewController, UIImagePickerControllerDelegate, UINavigati
     pickerControler.delegate = self
     pickerControler.allowsEditing = false
     self.present(pickerControler, animated: true)
-    print("In hanler now --------")
     present(pickerControler, animated: true, completion: nil)
 
   }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    
-    //print("did finish picking")
-      if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-     profilePic.image = image
-     }
-     else{
-      //error
-      }
-    dismiss(animated: true, completion: nil)
-  }
+  
   
     @IBAction func DoneEditing(_ sender: Any) {
         let userID = Auth.auth().currentUser?.uid
@@ -76,19 +73,48 @@ class ProfileEdit: UIViewController, UIImagePickerControllerDelegate, UINavigati
         if (self.Interests.text != "Edit Interests") {
             REF_PROF.child("Interests").setValue(self.Interests.text!)
         }
-    }
-  
-}
-
-/*extension ProfileEdit: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+      let data = Data()
+      //store the pictur
+      let storage = Storage.storage()
+      let storageRef = storage.reference(forURL: "gs://pick-up-games-e98cf.appspot.com")
+      let imagesRef = storageRef.child("profilePics").child(userID!)
+      let imageData = selectedImage!.jpegData(compressionQuality: 0.75)
+      let uploadTask = imagesRef.putData(imageData!, metadata: nil) { (metadata, error) in
+        guard let metadata = metadata else {
+          // Uh-oh, an error occurred!
+          return
+        }
+        
+        // Metadata contains file metadata such as size, content-type.
+        let size = metadata.size
+        // You can also access to download URL after upload.
+        imagesRef.downloadURL { (url, error) in
+          guard let downloadURL = url else {
+            // Uh-oh, an error occurred!
+            return
+          }
+          let urlString = url?.absoluteString
+          REF_PROF.child("ProfilePicURL").setValue(urlString)
     
-    print("did finish picking")
-    /* if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+        }
+      }
+    }
+  }
+
+
+
+
+extension ProfileEdit: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    
+    //print("did finish picking")
+    if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+      selectedImage = image
       profilePic.image = image
-    //let image = info
-    //print(info)
-    }*/
+    }
+    else{
+      //error
+    }
     dismiss(animated: true, completion: nil)
   }
-}*/
+}

@@ -8,20 +8,19 @@
 
 import XCTest
 @testable import Pick_Up_Games
+import Firebase
 
 class RegisterViewControllerTest: XCTestCase {
-
+    
+    var sample: sampleUser!
+    
+    
     override func setUp() {
-        super.setUp()
+        sample = sampleUser()
     }
-
+    
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    func testPassword(){
-        let viewcontroller = RegisterViewController()
-        XCTAssertEqual(viewcontroller.PasswordTf.text, viewcontroller.ConPassTF.text
-        )
+        sample = nil
     }
     func testEmail(){
         let viewcontroller = RegisterViewController()
@@ -31,4 +30,14 @@ class RegisterViewControllerTest: XCTestCase {
         let viewcontroller = RegisterViewController()
         XCTAssertNil(viewcontroller.UsernameTF, "UsernameTF IS  NOT NIL")
     }
+    func testRegister(){
+        Auth.auth().createUser(withEmail: sample.userEmail, password: sample.userPassword) { (user, error) in
+            XCTAssertNotNil(user)
+        }
+    }
+}
+class sampleUser {
+    var userEmail = "testing@ucsc.edu"
+    var userPassword = "password"
+    var userName = "testUser"
 }
