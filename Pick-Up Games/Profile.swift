@@ -24,7 +24,8 @@ class Profile: UIViewController {
         
     }
     
-    @IBOutlet weak var Username: UILabel!
+  @IBOutlet weak var profilePic: UIImageView!
+  @IBOutlet weak var Username: UILabel!
     @IBOutlet weak var Email: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Age: UILabel!
@@ -39,7 +40,7 @@ class Profile: UIViewController {
     @IBAction func EditProfile(_ sender: Any) {
         let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let editProfile = vc.instantiateViewController(withIdentifier: "ProfileEdit") as! ProfileEdit
-        
+      editProfile.img1 = profilePic.image!
         navigationController?.pushViewController(editProfile, animated: true)
     }
     
@@ -61,3 +62,22 @@ extension Profile {
         }
     }
 }
+      
+      //download pic
+      /*
+        let storage = Storage.storage()
+      let storageRef = storage.reference(forURL: "gs://pick-up-games-e98cf.appspot.com")
+      let imagesRef = storageRef.child("profilePics").child(userID!)
+      
+      imagesRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+        if let error = error {
+          // Uh-oh, an error occurred!
+        
+        } else {
+          // Data for "images/island.jpg" is returned
+          self.profilePic.image = UIImage(data: data!)
+        }
+      }
+    }
+}
+*/

@@ -105,6 +105,7 @@ DEPENDENCIES:
   - FacebookLogin
   - Firebase
   - Firebase/Auth
+  - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
   - JGProgressHUD

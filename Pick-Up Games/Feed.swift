@@ -74,7 +74,8 @@ extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
                 let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
                 let timeDate = pug.childSnapshot(forPath: "timeDate").value as! String
                 let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
-              let pug = PUG(address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance)
+                let eventID = pug.key
+                let pug = PUG(address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance, eventID: eventID)
              
               if((round(10*(pug.distance * 0.000621371192))/10) <= self.slideVal){
               funcEventArray.append(pug)
@@ -113,6 +114,7 @@ extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     vc?.sports = event.sport
     vc?.addresss = event.address
     vc?.timeDates = event.timeDate
+    vc?.eventID = event.eventID
     
     
   

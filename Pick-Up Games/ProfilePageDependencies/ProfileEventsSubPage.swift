@@ -44,21 +44,24 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
             guard let feedEventSnapshot = feedEventSnapshot.children.allObjects as? [DataSnapshot] else { return }
             
             for pug in feedEventSnapshot {
-                if (pug.childSnapshot(forPath: "EventCreator_UserID").value as! String == myID) {/*Auth.auth().currentUser?.uid) {*/
-                  let address = pug.childSnapshot(forPath: "EventLocation").value as! String
-                  let distance = pug.childSnapshot(forPath: "distance").value as! CLLocationDistance
-                  let sport = pug.childSnapshot(forPath: "EventType").value as! String
-                  let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
-                  let timeDate = pug.childSnapshot(forPath: "timeDate").value as! String
-                  let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
-                  let pug = PUG(address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance)
+                if (pug.childSnapshot(forPath: "EventCreator_UserID").value as! String == myID || pug.childSnapshot(forPath: "Attendees").hasChild(myID)) {
+                    let address = pug.childSnapshot(forPath: "EventLocation").value as! String
+                    let distance = pug.childSnapshot(forPath: "distance").value as! CLLocationDistance
+                    let sport = pug.childSnapshot(forPath: "EventType").value as! String
+                    let players = pug.childSnapshot(forPath: "EventParticipant_Limit").value as! String
+                    let timeDate = pug.childSnapshot(forPath: "timeDate").value as! String
+                    let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
+                    let eventID = pug.key
+                    let pug = PUG(address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance, eventID: eventID)
+                    
+                    funcEventArray.append(pug)
                 }
             }
             handler(funcEventArray)
         }
     }
     
-    func numberOfSections(in myEventsTable: UITableView) -> Int {
+    func numberOfSections(in feedTable: UITableView) -> Int {
         return 1
     }
     
@@ -74,9 +77,22 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
         let image = UIImage(named: "test-login")
         let event = eventArray[indexPath.row]
         
-      cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, timeDate: event.timeDate, name: event.name, distance: event.distance)
+        cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, timeDate: event.timeDate, name: event.name, distance: event.distance)
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "EventView") as? EventView
+        let event = eventArray[indexPath.row]
+        vc?.imgs = UIImage(named: "test-login")!
+        vc?.userIDs = event.name
+        vc?.sports = event.sport
+        vc?.addresss = event.address
+        vc?.timeDates = event.timeDate
+        vc?.eventID = event.eventID
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
 }
