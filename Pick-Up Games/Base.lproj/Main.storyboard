@@ -273,6 +273,9 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Profile" id="2p0-cu-0FM">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Profile"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Profile:" destination="Wgb-bm-Zk1" id="5SP-lx-rLC"/>
                                 </connections>
