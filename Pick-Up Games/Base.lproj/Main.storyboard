@@ -458,6 +458,18 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKi-Ij-CaH">
+                                <rect key="frame" x="292" y="97" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.17064204220000001" green="1" blue="0.98835409669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="button:" destination="nCM-28-jTA" eventType="touchUpInside" id="uje-ye-qBk"/>
+                                    <segue destination="fCb-6n-Owd" kind="showDetail" identifier="Logout" id="lTU-Qt-Fcs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration">
@@ -1449,6 +1461,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="JZl-LO-2L1"/>
         <segue reference="Q9I-Vm-PGx"/>
+        <segue reference="lTU-Qt-Fcs"/>
         <segue reference="eV5-RT-X8O"/>
     </inferredMetricsTieBreakers>
 </document>

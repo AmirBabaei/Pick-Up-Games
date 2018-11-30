@@ -49,12 +49,8 @@ class LoginView: UIViewController, UITextFieldDelegate{
         }
     }
     
-    
-    @IBAction func unwindToLogin(segue:UIStoryboardSegue) { }
-    
     @IBAction func Login_button(_ sender: Any) {
         Auth.auth().signIn(withEmail: UsernameTF.text!, password: LoginPasswordTF.text!) { (user, error) in
-            
             if error != nil{
                 print(">>>>>>>>> LOGIN FAILED <<<<<<<<<")
                 print(error!)

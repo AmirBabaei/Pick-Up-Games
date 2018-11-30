@@ -17,6 +17,14 @@ class Profile: UIViewController {
     }
     
     @IBAction func button(_ sender: Any) {
+        let logout = Auth.auth()
+        
+        do {
+            try logout.signOut()
+        } catch let signOutError as NSError {
+            print("Critical Error: Logout failed with error ", signOutError)
+        }
+        
         UserDefaults.standard.set(nil, forKey: "isLoggedIn")
         UserDefaults.standard.synchronize()
         print("User has logged out")
