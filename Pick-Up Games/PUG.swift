@@ -15,6 +15,8 @@ class PUG {
     private var _name: String
     private var _timeDate: String
     private var _distance: CLLocationDistance
+    private var _eventID: String
+    
     var address: String {
         return _address
     }
@@ -37,12 +39,17 @@ class PUG {
       return _distance
     }
     
-  init(address: String, sport: String, players: String, name: String, timeDate: String, distance: CLLocationDistance) {
+    var eventID: String {
+        return _eventID
+    }
+    
+    init(address: String, sport: String, players: String, name: String, timeDate: String, distance: CLLocationDistance, eventID: String) {
         self._address = address
         self._sport = sport
         self._players = players
         self._name = name
         self._timeDate = timeDate
         self._distance = distance
+        self._eventID = eventID
     }
 }

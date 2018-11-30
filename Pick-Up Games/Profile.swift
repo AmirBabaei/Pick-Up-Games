@@ -60,9 +60,12 @@ extension Profile {
             self.Email.text = Auth.auth().currentUser?.email
             self.Age.text = profUserSnapshot.childSnapshot(forPath: "Age").value as? String
         }
+    }
+}
       
       //download pic
-      let storage = Storage.storage()
+      /*
+        let storage = Storage.storage()
       let storageRef = storage.reference(forURL: "gs://pick-up-games-e98cf.appspot.com")
       let imagesRef = storageRef.child("profilePics").child(userID!)
       
@@ -77,3 +80,4 @@ extension Profile {
       }
     }
 }
+*/
