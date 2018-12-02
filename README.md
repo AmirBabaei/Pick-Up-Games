@@ -1,10 +1,12 @@
 # Pick-Up-Games
 
+Coding Style Guidelines: https://docs.google.com/document/d/1669exZ2_EptInZq6R51CX6QlXWDq5tW-jYxsV2ZPkfY/edit
+
 Release Plan: http://bit.ly/2RaZrm8
 
 Presentation: http://bit.ly/2Ps0Mrz
 
-Burn-up Chart: http://bit.ly/2EGZaG5
+Burn-up Charts: http://bit.ly/2EGZaG5
 
 Sprint 1 Plan: http://bit.ly/2JdxuHk
 
@@ -16,4 +18,6 @@ Sprint 3 Plan: https://docs.google.com/document/d/183cZNHtjgmdJpJAHy8zw0ReSl6fh7
 
 Sprint 3 Report: https://docs.google.com/document/d/1aiKWVefZCdoQx4W6lVXvH1bILd-WeAciTVgEFYLlfwI/edit
 
-Sprint 4 Plan (Currnetly Incomplete): https://docs.google.com/document/d/1bwpsF97soHQh8I5kl0dcZap2h8y-GCNTnv-relGQ20s/edit
+Sprint 4 Plan: https://docs.google.com/document/d/1bwpsF97soHQh8I5kl0dcZap2h8y-GCNTnv-relGQ20s/edit
+
+Sprint 4 Report: https://docs.google.com/document/d/1JIlB7NMdwkijS_XIxsAYI9iRCYMO9VFgKT6o4xbOTzA/edit
