@@ -100,8 +100,6 @@
 		4C25347BED44C42D67299A39 /* Pods-Pick-Up Games.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up Games.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up Games/Pods-Pick-Up Games.release.xcconfig"; sourceTree = "<group>"; };
 		60CF25F61D943C4E5F4E0180 /* Pods_Pick_Up_Games.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pick_Up_Games.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6417757329CDA7754B883027 /* Pods-Pick-Up Games.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up Games.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up Games/Pods-Pick-Up Games.debug.xcconfig"; sourceTree = "<group>"; };
-		693CEA4F3997B553CACEB1A7 /* Pods-Pick-Up GamesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesUITests/Pods-Pick-Up GamesUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9EA323618020241FFDA01612 /* Pods-Pick-Up GamesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesUITests/Pods-Pick-Up GamesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAA1A3D246E105542313483B /* Pods_Pick_Up_GamesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pick_Up_GamesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55CD70466CEC354AEADBA43 /* Pods-Pick-Up GamesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pick-Up GamesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pick-Up GamesTests/Pods-Pick-Up GamesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7205FAF923D117FBB13132F /* Pods_Pick_Up_GamesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pick_Up_GamesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,8 +234,6 @@
 				4C25347BED44C42D67299A39 /* Pods-Pick-Up Games.release.xcconfig */,
 				B55CD70466CEC354AEADBA43 /* Pods-Pick-Up GamesTests.debug.xcconfig */,
 				2A1B26F55B0068310C6DD840 /* Pods-Pick-Up GamesTests.release.xcconfig */,
-				9EA323618020241FFDA01612 /* Pods-Pick-Up GamesUITests.debug.xcconfig */,
-				693CEA4F3997B553CACEB1A7 /* Pods-Pick-Up GamesUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -780,7 +776,6 @@
 		};
 		293B1B57217095DA005D5CCC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EA323618020241FFDA01612 /* Pods-Pick-Up GamesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -801,7 +796,6 @@
 		};
 		293B1B58217095DA005D5CCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 693CEA4F3997B553CACEB1A7 /* Pods-Pick-Up GamesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
