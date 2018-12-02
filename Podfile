@@ -13,6 +13,8 @@ pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'Firebase/Storage'
 pod 'Firebase/Core'
+pod 'Kingfisher', '~> 4.0'
+
 
 pod 'FacebookCore'
 pod 'FacebookLogin'

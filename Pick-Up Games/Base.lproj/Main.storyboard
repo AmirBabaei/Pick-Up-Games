@@ -367,7 +367,6 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="DoneEditing:" destination="09s-kK-c6A" eventType="touchUpInside" id="8fV-mg-eh5"/>
-                                    <segue destination="nCM-28-jTA" kind="show" id="rNC-Hm-hIR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1384,7 +1383,6 @@
         <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JZl-LO-2L1"/>
         <segue reference="Q9I-Vm-PGx"/>
         <segue reference="eV5-RT-X8O"/>
     </inferredMetricsTieBreakers>

@@ -16,4 +16,5 @@ class Event: NSObject {
   var sport: String?
   var timeDate: String?
   var distance: CLLocationDistance?
+  
 }
