@@ -59,7 +59,7 @@ class EventView: UIViewController {
      sport.text = sports
      address.text = addresss
      timeDate.text = timeDates
-     descript.text = descripts
+
     
     attendeesTable.delegate = self
     attendeesTable.dataSource = self
@@ -84,9 +84,9 @@ extension EventView: UITableViewDelegate, UITableViewDataSource {
             for user in usersSnapshot {
                 REF_EVENT.child("Attendees/\(user.key)").observeSingleEvent(of: .value, with: { (attendeeSnapshot) in
                     if (attendeeSnapshot.exists()) {
-                        let name = user.childSnapshot(forPath: "Full Name").value as! String
+                        let name = user.childSnapshot(forPath: "Full Name").value as? String
                         let UID = user.key
-                        let attendee = FriendObject(name: name, UID: UID)
+                      let attendee = FriendObject(name: name ?? "", UID: UID)
                         if (!self.attendeesArray.contains(where: { $0.UID == UID })) { self.attendeesArray.append(attendee) }
                     }
                     self.attendeesTable.reloadData()
