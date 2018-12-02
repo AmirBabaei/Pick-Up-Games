@@ -370,7 +370,6 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="DoneEditing:" destination="09s-kK-c6A" eventType="touchUpInside" id="8fV-mg-eh5"/>
-                                    <segue destination="nCM-28-jTA" kind="show" id="rNC-Hm-hIR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -595,7 +594,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBz-AK-cgn">
-                                <rect key="frame" x="31" y="48" width="16" height="22"/>
+                                <rect key="frame" x="31" y="48" width="37" height="37"/>
                                 <state key="normal" title="" image="Back icon"/>
                                 <connections>
                                     <action selector="Backtologin:" destination="OiF-4p-Vti" eventType="touchUpInside" id="FVc-xb-0lW"/>
@@ -1453,15 +1452,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back icon" width="16" height="16"/>
-        <image name="Login" width="125" height="270"/>
-        <image name="pin" width="512" height="512"/>
-        <image name="test-login" width="341" height="204"/>
+        <image name="Back icon" width="37.5" height="37.5"/>
+        <image name="Login" width="281.25" height="609"/>
+        <image name="pin" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JZl-LO-2L1"/>
         <segue reference="Q9I-Vm-PGx"/>
-        <segue reference="lTU-Qt-Fcs"/>
         <segue reference="eV5-RT-X8O"/>
     </inferredMetricsTieBreakers>
 </document>

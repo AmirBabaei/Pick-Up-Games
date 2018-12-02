@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import CoreLocation
 import FirebaseStorage
+import Kingfisher
+
 
 
 
@@ -19,8 +21,8 @@ class ProfileEdit: UIViewController {
   public var img1 = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
+        setImage()
       
-
       
     }
   
@@ -40,6 +42,21 @@ class ProfileEdit: UIViewController {
       profilePic.isUserInteractionEnabled = true
       
     }
+  func setImage(){
+    let userID = Auth.auth().currentUser?.uid
+    let REF_PROF = Database.database().reference().child("users").child(userID!)
+    REF_PROF.observeSingleEvent(of: .value) { (profUserSnapshot) in
+      self.Username.text = profUserSnapshot.childSnapshot(forPath: "username").value as? String
+      self.Name.text = profUserSnapshot.childSnapshot(forPath: "Full Name").value as? String
+      //self.Email.text = Auth.auth().currentUser?.email
+      //self.Age.text = profUserSnapshot.childSnapshot(forPath: "Age").value as? String
+      var imageURL = profUserSnapshot.childSnapshot(forPath: "ProfilePicURL").value as? String ?? ""
+      print("------------imageurl",imageURL)
+      let url = URL(string: imageURL)
+      self.profilePic.kf.setImage(with: url)
+      
+    }
+  }
   
   //picking photos
   @objc func handleSelectImageView(){
@@ -73,12 +90,28 @@ class ProfileEdit: UIViewController {
         if (self.Interests.text != "Edit Interests") {
             REF_PROF.child("Interests").setValue(self.Interests.text!)
         }
+      self.navigationController?.popViewController(animated: true)
+      
+  }
+}
+
+
+
+
+extension ProfileEdit: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    
+    //print("did finish picking")
+    if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+      selectedImage = image
+      profilePic.image = image
+      
       let data = Data()
       //store the pictur
       let storage = Storage.storage()
       let storageRef = storage.reference(forURL: "gs://pick-up-games-e98cf.appspot.com")
-      let imagesRef = storageRef.child("profilePics").child(userID!)
-      let imageData = selectedImage!.jpegData(compressionQuality: 0.75)
+      let imagesRef = storageRef.child("profilePics").child((Auth.auth().currentUser?.uid)!)
+      let imageData = selectedImage!.jpegData(compressionQuality: 0.5)
       let uploadTask = imagesRef.putData(imageData!, metadata: nil) { (metadata, error) in
         guard let metadata = metadata else {
           // Uh-oh, an error occurred!
@@ -94,23 +127,10 @@ class ProfileEdit: UIViewController {
             return
           }
           let urlString = url?.absoluteString
+          let REF_PROF = Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!)
           REF_PROF.child("ProfilePicURL").setValue(urlString)
-    
         }
       }
-    }
-  }
-
-
-
-
-extension ProfileEdit: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    
-    //print("did finish picking")
-    if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-      selectedImage = image
-      profilePic.image = image
     }
     else{
       //error
