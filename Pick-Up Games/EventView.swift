@@ -66,7 +66,7 @@ class EventView: UIViewController {
      sport.text = sports
      address.text = addresss
      timeDate.text = timeDates
-     descript.text = descripts
+
     
     attendeesTable.delegate = self
     attendeesTable.dataSource = self
@@ -97,7 +97,7 @@ extension EventView: UITableViewDelegate, UITableViewDataSource {
                         }
                         let name = user.childSnapshot(forPath: "Full Name").value as! String
                         let UID = user.key
-                        let attendee = FriendObject(profPicURL: imageURL, name: name, UID: UID)
+                        let attendee = FriendObject(profPicURL: imageURL, name: name ?? "", UID: UID)
                         if (!self.attendeesArray.contains(where: { $0.UID == UID })) { self.attendeesArray.append(attendee) }
                     }
                     self.attendeesTable.reloadData()
