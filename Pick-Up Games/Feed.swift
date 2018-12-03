@@ -59,7 +59,6 @@ class Feed: UIViewController {
 extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
   
   
-  
     func getAllEvents(handler: @escaping (_ events: [PUG]) -> ()) {
         var funcEventArray = [PUG]()
         let REF_FEED = Database.database().reference().child("Event")
@@ -68,6 +67,10 @@ extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
           
             for pug in feedEventSnapshot {
               
+                var imageURL = ""
+                if (pug.childSnapshot(forPath: "EventCreator_ProfPic").exists()) {
+                    imageURL = pug.childSnapshot(forPath: "EventCreator_ProfPic").value as! String
+                }
                 let address = pug.childSnapshot(forPath: "EventLocation").value as! String
                 let distance = pug.childSnapshot(forPath: "distance").value as! CLLocationDistance
                 let sport = pug.childSnapshot(forPath: "EventType").value as! String
@@ -75,7 +78,8 @@ extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
                 let timeDate = pug.childSnapshot(forPath: "timeDate").value as! String
                 let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
                 let eventID = pug.key
-                let pug = PUG(address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance, eventID: eventID)
+                
+                let pug = PUG(imageURL: imageURL, address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance, eventID: eventID)
              
               if((round(10*(pug.distance * 0.000621371192))/10) <= self.slideVal){
               funcEventArray.append(pug)
@@ -98,10 +102,9 @@ extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCell else { return UITableViewCell() }
         
-        let image = UIImage(named: "test-login")
         let event = eventArray[indexPath.row]
       
-      cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, timeDate: event.timeDate, name: event.name, distance: event.distance)
+      cell.fillCell(profPicURL: event.imageURL, address: event.address, sport: event.sport, playerCount: event.players, timeDate: event.timeDate, name: event.name, distance: event.distance)
         return cell
         
     }
@@ -109,7 +112,7 @@ extension Feed: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let vc = storyboard?.instantiateViewController(withIdentifier: "EventView") as? EventView
     let event = eventArray[indexPath.row]
-    vc?.imgs = UIImage(named: "test-login")!
+    vc?.imgURL = event.imageURL
     vc?.userIDs = event.name
     vc?.sports = event.sport
     vc?.addresss = event.address

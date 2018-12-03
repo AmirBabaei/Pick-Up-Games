@@ -45,6 +45,11 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
             
             for pug in feedEventSnapshot {
                 if (pug.childSnapshot(forPath: "EventCreator_UserID").value as! String == myID || pug.childSnapshot(forPath: "Attendees").hasChild(myID)) {
+                    
+                    var imageURL = ""
+                    if (pug.childSnapshot(forPath: "EventCreator_ProfPic").exists()) {
+                        imageURL = pug.childSnapshot(forPath: "EventCreator_ProfPic").value as! String
+                    }
                     let address = pug.childSnapshot(forPath: "EventLocation").value as! String
                     let distance = pug.childSnapshot(forPath: "distance").value as! CLLocationDistance
                     let sport = pug.childSnapshot(forPath: "EventType").value as! String
@@ -52,7 +57,8 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
                     let timeDate = pug.childSnapshot(forPath: "timeDate").value as! String
                     let name = pug.childSnapshot(forPath: "EventCreator_UserName").value as! String
                     let eventID = pug.key
-                    let pug = PUG(address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance, eventID: eventID)
+                    
+                    let pug = PUG(imageURL: imageURL, address: address, sport: sport, players: players, name: name, timeDate: timeDate, distance: distance, eventID: eventID)
                     
                     funcEventArray.append(pug)
                 }
@@ -73,11 +79,10 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as? FeedCell else { return UITableViewCell() }
-        
-        let image = UIImage(named: "test-login")
+
         let event = eventArray[indexPath.row]
         
-        cell.fillCell(profPic: image!, address: event.address, sport: event.sport, playerCount: event.players, timeDate: event.timeDate, name: event.name, distance: event.distance)
+        cell.fillCell(profPicURL: event.imageURL, address: event.address, sport: event.sport, playerCount: event.players, timeDate: event.timeDate, name: event.name, distance: event.distance)
         return cell
         
     }
@@ -85,7 +90,7 @@ extension ProfileEventsSubPage: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "EventView") as? EventView
         let event = eventArray[indexPath.row]
-        vc?.imgs = UIImage(named: "test-login")!
+        vc?.imgURL = event.imageURL
         vc?.userIDs = event.name
         vc?.sports = event.sport
         vc?.addresss = event.address

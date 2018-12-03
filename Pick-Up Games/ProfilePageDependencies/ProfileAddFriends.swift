@@ -46,9 +46,13 @@ extension ProfileAddFriends: UITableViewDelegate, UITableViewDataSource {
             for user in usersSnapshot {
                 REF_PROF.child("Friends/\(user.key)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
                     if (!friendSnapshot.exists() && user.hasChild("Full Name")) {
+                        var imageURL = ""
+                        if (user.childSnapshot(forPath: "ProfilePicURL").exists()) {
+                            imageURL = user.childSnapshot(forPath: "ProfilePicURL").value as! String
+                        }
                         let name = user.childSnapshot(forPath: "Full Name").value as! String
                         let UID = user.key
-                        let friend = FriendObject(name: name, UID: UID)
+                        let friend = FriendObject(profPicURL: imageURL, name: name, UID: UID)
                         if (!self.friendsArray.contains(where: { $0.UID == UID })) { self.friendsArray.append(friend) }
                     }
                     self.myFriendsTable.reloadData()
@@ -70,10 +74,9 @@ extension ProfileAddFriends: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Friend Cell") as? FriendCell else { return UITableViewCell() }
         
-        let image = UIImage(named: "test-login")
         let friend = friendsArray[indexPath.row]
         
-        cell.fillCell(profPic: image!, name: friend.name)
+        cell.fillCell(profPicURL: friend.profPicURL, name: friend.name)
         
         return cell
     }

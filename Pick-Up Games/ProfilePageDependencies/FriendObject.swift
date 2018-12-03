@@ -9,8 +9,13 @@
 import Foundation
 
 class FriendObject {
+    private var _profPicURL: String
     private var _name: String
     private var _UID: String
+    
+    var profPicURL: String {
+        return _profPicURL
+    }
     
     var name: String {
         return _name
@@ -20,7 +25,8 @@ class FriendObject {
         return _UID
     }
     
-    init(name: String, UID: String) {
+    init(profPicURL: String, name: String, UID: String) {
+        self._profPicURL = profPicURL
         self._name = name
         self._UID = UID
     }

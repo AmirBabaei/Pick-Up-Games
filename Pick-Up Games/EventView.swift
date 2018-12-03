@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 class EventView: UIViewController {
   @IBOutlet weak var img: UIImageView!
@@ -19,7 +20,7 @@ class EventView: UIViewController {
   
   
   
-  var imgs = UIImage()
+  var imgURL = ""
    var userIDs = ""
    var sports = ""
    var addresss = ""
@@ -54,7 +55,13 @@ class EventView: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-     img.image = imgs
+      if (imgURL != "") {
+          print ("I got the url")
+          let url = URL(string: imgURL)
+          self.img.kf.setImage(with: url)
+      } else {
+          self.img.image = UIImage(named: "test-login")
+      }
      userId.text = userIDs
      sport.text = sports
      address.text = addresss
@@ -84,9 +91,13 @@ extension EventView: UITableViewDelegate, UITableViewDataSource {
             for user in usersSnapshot {
                 REF_EVENT.child("Attendees/\(user.key)").observeSingleEvent(of: .value, with: { (attendeeSnapshot) in
                     if (attendeeSnapshot.exists()) {
+                        var imageURL = ""
+                        if (user.childSnapshot(forPath: "ProfilePicURL").exists()) {
+                            imageURL = user.childSnapshot(forPath: "ProfilePicURL").value as! String
+                        }
                         let name = user.childSnapshot(forPath: "Full Name").value as! String
                         let UID = user.key
-                        let attendee = FriendObject(name: name, UID: UID)
+                        let attendee = FriendObject(profPicURL: imageURL, name: name, UID: UID)
                         if (!self.attendeesArray.contains(where: { $0.UID == UID })) { self.attendeesArray.append(attendee) }
                     }
                     self.attendeesTable.reloadData()
@@ -108,10 +119,9 @@ extension EventView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Friend Cell") as? FriendCell else { return UITableViewCell() }
         
-        let image = UIImage(named: "test-login")
         let attendee = attendeesArray[indexPath.row]
         
-        cell.fillCell(profPic: image!, name: attendee.name)
+        cell.fillCell(profPicURL: attendee.profPicURL, name: attendee.name)
         
         return cell
     }

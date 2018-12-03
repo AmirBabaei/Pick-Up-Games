@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Kingfisher
 
 class FeedCell: UITableViewCell {
 
@@ -19,8 +20,14 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var timeDate: UILabel!
     @IBOutlet weak var distance: UILabel!
     
-    func fillCell(profPic: UIImage, address: String, sport: String, playerCount: String, timeDate: String, name: String, distance: CLLocationDistance) {
-        self.profPic.image = profPic
+    func fillCell(profPicURL: String, address: String, sport: String, playerCount: String, timeDate: String, name: String, distance: CLLocationDistance) {
+        if (profPicURL != "") {
+            print ("I got the url")
+            let url = URL(string: profPicURL)
+            self.profPic.kf.setImage(with: url)
+        } else {
+            self.profPic.image = UIImage(named: "test-login")
+        }
         self.address.text = address
         self.sportType.text = sport
         self.players.text = playerCount

@@ -169,8 +169,10 @@ class CreateEvent: UIViewController, VCFinalDelegate {
             ref.child("users").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
                     let value = snapshot.value as? NSDictionary
                     let username = value?["username"] as? String ?? ""
+                    let picURL = value?["ProfilePicURL"] as? String ?? ""
                   eventID.updateChildValues(["EventCreator_UserName": username])
                   eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
+                  eventID.updateChildValues(["EventCreator_ProfPic": picURL])
              
               let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
               let vc2 = vc.instantiateViewController(withIdentifier: "feed")
