@@ -14,9 +14,12 @@ import Kingfisher
 
 
 class Profile: UIViewController {
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      profilePic.roundIt()
+
     }
     
     @IBAction func button(_ sender: Any) {
@@ -104,4 +107,16 @@ extension Profile {
         }
       }
     }
+}
+extension UIImageView {
+  
+  func roundIt() -> UIImageView{
+    let pic = self
+    pic.layer.borderWidth = 1
+    pic.layer.masksToBounds = false
+    pic.layer.borderColor = UIColor.black.cgColor
+    pic.layer.cornerRadius = pic.frame.height/2
+    pic.clipsToBounds = true
+    return pic
+  }
 }

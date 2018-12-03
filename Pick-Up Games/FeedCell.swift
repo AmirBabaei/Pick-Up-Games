@@ -25,8 +25,11 @@ class FeedCell: UITableViewCell {
             print ("I got the url")
             let url = URL(string: profPicURL)
             self.profPic.kf.setImage(with: url)
+            self.profPic.roundIt()
+            self.profPic.contentMode = .scaleAspectFill
         } else {
             self.profPic.image = UIImage(named: "test-login")
+            self.profPic.roundIt()
         }
         self.address.text = address
         self.sportType.text = sport

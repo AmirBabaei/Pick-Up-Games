@@ -19,7 +19,6 @@ class EventView: UIViewController {
   @IBOutlet weak var descript: UILabel!
   
   
-  
   var imgURL = ""
    var userIDs = ""
    var sports = ""
@@ -55,6 +54,8 @@ class EventView: UIViewController {
     var cellID: String!
   
   override func viewDidLoad() {
+    
+    img.roundIt()
     super.viewDidLoad()
       if (imgURL != "") {
           print ("I got the url")
