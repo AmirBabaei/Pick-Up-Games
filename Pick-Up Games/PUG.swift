@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 class PUG {
+    private var _imageURL: String
     private var _address: String
     private var _sport: String
     private var _players: String
@@ -16,6 +17,10 @@ class PUG {
     private var _timeDate: String
     private var _distance: CLLocationDistance
     private var _eventID: String
+    
+    var imageURL: String {
+        return _imageURL
+    }
     
     var address: String {
         return _address
@@ -43,7 +48,8 @@ class PUG {
         return _eventID
     }
     
-    init(address: String, sport: String, players: String, name: String, timeDate: String, distance: CLLocationDistance, eventID: String) {
+    init(imageURL: String, address: String, sport: String, players: String, name: String, timeDate: String, distance: CLLocationDistance, eventID: String) {
+        self._imageURL = imageURL
         self._address = address
         self._sport = sport
         self._players = players

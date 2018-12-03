@@ -14,8 +14,14 @@ class FriendCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     
     
-    func fillCell(profPic: UIImage, name: String) {
-        self.profPic.image = profPic
+    func fillCell(profPicURL: String, name: String) {
+        if (profPicURL != "") {
+            print ("I got the url")
+            let url = URL(string: profPicURL)
+            self.profPic.kf.setImage(with: url)
+        } else {
+            self.profPic.image = UIImage(named: "test-login")
+        }
         self.name.text = name
         
     }
