@@ -173,6 +173,7 @@ class CreateEvent: UIViewController, VCFinalDelegate {
                   eventID.updateChildValues(["EventCreator_UserName": username])
                   eventID.updateChildValues(["EventCreator_UserID": (user?.uid)!])
                   eventID.updateChildValues(["EventCreator_ProfPic": picURL])
+                  eventID.child("Attendees").updateChildValues([(user?.uid)!: ""])
              
               let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
               let vc2 = vc.instantiateViewController(withIdentifier: "feed")
