@@ -45,6 +45,7 @@ class EventView: UIViewController {
                 REF_MY_PROF.child("Events/\(self.eventID)").setValue("")
             }
         })
+      self.navigationController?.popViewController(animated: true)
     }
     
     @IBOutlet weak var attendeesTable: UITableView!

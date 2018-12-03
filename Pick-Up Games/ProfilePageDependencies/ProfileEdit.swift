@@ -111,7 +111,7 @@ extension ProfileEdit: UIImagePickerControllerDelegate, UINavigationControllerDe
       let storage = Storage.storage()
       let storageRef = storage.reference(forURL: "gs://pick-up-games-e98cf.appspot.com")
       let imagesRef = storageRef.child("profilePics").child((Auth.auth().currentUser?.uid)!)
-      let imageData = selectedImage!.jpegData(compressionQuality: 0.5)
+      let imageData = selectedImage!.jpegData(compressionQuality: 0.25)
       let uploadTask = imagesRef.putData(imageData!, metadata: nil) { (metadata, error) in
         guard let metadata = metadata else {
           // Uh-oh, an error occurred!

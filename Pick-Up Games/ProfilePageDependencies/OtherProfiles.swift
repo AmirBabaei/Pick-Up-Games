@@ -35,6 +35,7 @@ class OtherProfiles: UIViewController {
                 REF_MY_PROF.child("Friends/\(self.UID)").setValue("")
             }
         })
+       self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
