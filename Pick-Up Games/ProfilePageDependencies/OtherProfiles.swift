@@ -16,6 +16,7 @@ class OtherProfiles: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var Username: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Age: UILabel!
@@ -50,6 +51,16 @@ extension OtherProfiles {
         print(UID)
         let REF_PROF = Database.database().reference().child("users").child(UID)
         REF_PROF.observeSingleEvent(of: .value) { (profUserSnapshot) in
+            var imageURL = ""
+            if (profUserSnapshot.childSnapshot(forPath: "ProfilePicURL").exists()) {
+                imageURL = profUserSnapshot.childSnapshot(forPath: "ProfilePicURL").value as! String
+            }
+            if (imageURL != "") {
+                let url = URL(string: imageURL)
+                self.proprofilePicfPic.kf.setImage(with: url)
+            } else {
+                self.profilePic.image = UIImage(named: "test-login")
+            }
             self.Username.text = profUserSnapshot.childSnapshot(forPath: "username").value as? String
             self.Name.text = profUserSnapshot.childSnapshot(forPath: "Full Name").value as? String
             self.Age.text = profUserSnapshot.childSnapshot(forPath: "Age").value as? String
