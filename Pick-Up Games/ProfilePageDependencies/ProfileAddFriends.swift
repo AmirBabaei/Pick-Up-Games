@@ -45,12 +45,17 @@ extension ProfileAddFriends: UITableViewDelegate, UITableViewDataSource {
             
             for user in usersSnapshot {
                 REF_PROF.child("Friends/\(user.key)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
-                    if (!friendSnapshot.exists() && user.hasChild("Full Name") && user.key != (Auth.auth().currentUser?.uid)!) {
+                    if (!friendSnapshot.exists() && (user.hasChild("Full Name") || user.hasChild("username")) && user.key != (Auth.auth().currentUser?.uid)!) {
                         var imageURL = ""
                         if (user.childSnapshot(forPath: "ProfilePicURL").exists()) {
                             imageURL = user.childSnapshot(forPath: "ProfilePicURL").value as! String
                         }
-                        let name = user.childSnapshot(forPath: "Full Name").value as! String
+                        var name = ""
+                        if (user.hasChild("Full Name")) {
+                            name = user.childSnapshot(forPath: "Full Name").value as! String
+                        } else {
+                            name = user.childSnapshot(forPath: "username").value as! String
+                        }
                         let UID = user.key
                         let friend = FriendObject(profPicURL: imageURL, name: name, UID: UID)
                         if (!self.friendsArray.contains(where: { $0.UID == UID })) { self.friendsArray.append(friend) }

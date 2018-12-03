@@ -129,6 +129,18 @@ extension ProfileEdit: UIImagePickerControllerDelegate, UINavigationControllerDe
           let urlString = url?.absoluteString
           let REF_PROF = Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!)
           REF_PROF.child("ProfilePicURL").setValue(urlString)
+            
+            let REF_EVENTS = Database.database().reference().child("Event")
+            REF_EVENTS.observeSingleEvent(of: .value) { (eventSnapshot) in
+                guard let eventSnapshot = eventSnapshot.children.allObjects as? [DataSnapshot] else { return }
+                
+                for event in eventSnapshot {
+                    if (event.childSnapshot(forPath: "EventCreator_UserID").value as! String == (Auth.auth().currentUser?.uid)!) {
+                        REF_EVENTS.child(event.key).child("EventCreator_ProfPic").setValue(urlString)
+                            
+                    }
+                }
+            }
         }
       }
     }

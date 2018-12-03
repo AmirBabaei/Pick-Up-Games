@@ -91,12 +91,17 @@ extension EventView: UITableViewDelegate, UITableViewDataSource {
             
             for user in usersSnapshot {
                 REF_EVENT.child("Attendees/\(user.key)").observeSingleEvent(of: .value, with: { (attendeeSnapshot) in
-                    if (attendeeSnapshot.exists()) {
+                    if (attendeeSnapshot.exists() && (user.hasChild("Full Name") || user.hasChild("username"))) {
                         var imageURL = ""
                         if (user.childSnapshot(forPath: "ProfilePicURL").exists()) {
                             imageURL = user.childSnapshot(forPath: "ProfilePicURL").value as! String
                         }
-                        let name = user.childSnapshot(forPath: "Full Name").value as! String
+                        var name = ""
+                        if (user.hasChild("Full Name")) {
+                            name = user.childSnapshot(forPath: "Full Name").value as! String
+                        } else {
+                            name = user.childSnapshot(forPath: "username").value as! String
+                        }
                         let UID = user.key
                         let attendee = FriendObject(profPicURL: imageURL, name: name ?? "", UID: UID)
                         if (!self.attendeesArray.contains(where: { $0.UID == UID })) { self.attendeesArray.append(attendee) }
