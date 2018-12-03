@@ -73,8 +73,43 @@ class Pick_Up_GamesUITests: XCTestCase {
                 
         }
     
-    func testProfile(){
+    func testCreateEvent(){
+        let app = XCUIApplication()
+        checkIfLoggedIn(app: app)
+        sleep(2)
+        app.navigationBars["feed"].buttons["Add"].tap()
         
+        let element = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        element.children(matching: .textField).element(boundBy: 0).tap()
+  
+        
+        let tKey = app/*@START_MENU_TOKEN@*/.keyboards.keys["t"]/*[[".keyboards.keys[\"t\"]",".keys[\"t\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/
+        tKey.tap()
+        
+        let eKey = app/*@START_MENU_TOKEN@*/.keys["e"]/*[[".keyboards.keys[\"e\"]",".keys[\"e\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        eKey.tap()
+        
+        let sKey = app/*@START_MENU_TOKEN@*/.keys["s"]/*[[".keyboards.keys[\"s\"]",".keys[\"s\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        sKey.tap()
+        tKey.tap()
+        
+        element.children(matching: .textField).element(boundBy: 1).tap()
+        sleep(5)
+        if(app.alerts["Allow “Pick-Up Games” to access your location while you are using the app?"].buttons["Allow"].exists)
+        {
+            app.alerts["Allow “Pick-Up Games” to access your location while you are using the app?"].buttons["Allow"].tap()
+        }
+        
+        app.buttons["Done"].tap()
+        
+        element.children(matching: .textField).element(boundBy: 2).tap()
+        XCUIApplication().children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 0).tap()
+        sleep(5)
+        XCTAssertTrue(XCUIApplication()/*@START_MENU_TOKEN@*/.pickerWheels["0"]/*[[".pickers.pickerWheels[\"0\"]",".pickerWheels[\"0\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.exists)
+        app.toolbars["Toolbar"].buttons["Done"].tap()
+        
+        
+        XCTAssertTrue(app.buttons["Create Event"].exists)
     }
     func checkIfLoggedIn(app:XCUIElement){
         let getStartedButton = app.buttons["GET STARTED"]
