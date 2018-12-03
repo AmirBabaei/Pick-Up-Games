@@ -57,7 +57,7 @@ extension OtherProfiles {
             }
             if (imageURL != "") {
                 let url = URL(string: imageURL)
-                self.proprofilePicfPic.kf.setImage(with: url)
+                self.profilePic.kf.setImage(with: url)
             } else {
                 self.profilePic.image = UIImage(named: "test-login")
             }
