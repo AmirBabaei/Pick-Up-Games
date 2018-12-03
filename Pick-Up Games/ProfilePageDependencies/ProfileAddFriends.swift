@@ -45,7 +45,7 @@ extension ProfileAddFriends: UITableViewDelegate, UITableViewDataSource {
             
             for user in usersSnapshot {
                 REF_PROF.child("Friends/\(user.key)").observeSingleEvent(of: .value, with: { (friendSnapshot) in
-                    if (!friendSnapshot.exists() && user.hasChild("Full Name")) {
+                    if (!friendSnapshot.exists() && user.hasChild("Full Name") && user.key != (Auth.auth().currentUser?.uid)!) {
                         var imageURL = ""
                         if (user.childSnapshot(forPath: "ProfilePicURL").exists()) {
                             imageURL = user.childSnapshot(forPath: "ProfilePicURL").value as! String

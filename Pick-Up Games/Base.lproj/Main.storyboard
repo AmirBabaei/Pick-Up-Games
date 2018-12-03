@@ -471,7 +471,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGU-TQ-Dbr">
-                                <rect key="frame" x="0.0" y="239" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="299" width="375" height="479"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="QCi-xW-C9p" kind="embed" id="Q9I-Vm-PGx"/>
@@ -484,27 +484,6 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5M-6q-rn6">
-                                <rect key="frame" x="271" y="187" width="104" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Profile" id="Not-x3-7f5" userLabel="Profile">
-                                        <barButtonItem key="leftBarButtonItem" title="feed" image="Back icon" id="J3h-Ac-PiR" userLabel="Add Friends">
-                                            <connections>
-                                                <action selector="AddFriends:" destination="nCM-28-jTA" id="2Md-SF-JgK"/>
-                                                <segue destination="cEy-T1-m7u" kind="show" id="fyI-LH-gPF"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Edit" image="Back icon" width="50" id="rpK-O8-rhY" userLabel="Modify Profile">
-                                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="EditProfile:" destination="nCM-28-jTA" id="Gz0-KN-UAU"/>
-                                                <segue destination="09s-kK-c6A" kind="show" id="JZl-LO-2L1"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKi-Ij-CaH">
                                 <rect key="frame" x="292" y="97" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -517,6 +496,27 @@
                                     <segue destination="fCb-6n-Owd" kind="showDetail" identifier="Logout" id="lTU-Qt-Fcs"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5M-6q-rn6">
+                                <rect key="frame" x="65" y="243" width="244" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Not-x3-7f5" userLabel="Profile">
+                                        <barButtonItem key="leftBarButtonItem" title="Add Friends" id="J3h-Ac-PiR" userLabel="Add Friends">
+                                            <connections>
+                                                <action selector="AddFriends:" destination="nCM-28-jTA" id="2Md-SF-JgK"/>
+                                                <segue destination="cEy-T1-m7u" kind="show" id="fyI-LH-gPF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Edit Profile" width="50" id="rpK-O8-rhY" userLabel="Modify Profile">
+                                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="EditProfile:" destination="nCM-28-jTA" id="Gz0-KN-UAU"/>
+                                                <segue destination="09s-kK-c6A" kind="show" id="JZl-LO-2L1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration">
@@ -819,6 +819,8 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="0BT-Cx-Fl7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="115" id="FaZ-I7-F6a"/>
+                                    <constraint firstAttribute="width" constant="343" id="JH5-8J-aPV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -827,16 +829,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMh-l6-hYz">
                                 <rect key="frame" x="16" y="44" width="67" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="G5t-rZ-cnM"/>
                                     <constraint firstAttribute="height" constant="21" id="NRt-zV-mSw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="mgw-WE-AGP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAo-dx-XiT">
-                                <rect key="frame" x="16" y="210" width="24" height="20"/>
+                                <rect key="frame" x="16" y="210" width="34" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="ZQh-tp-DsU"/>
+                                    <constraint firstAttribute="width" constant="34" id="eVm-K7-HK0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="fDS-EO-s3o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -845,6 +851,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke4-mc-QBB">
                                 <rect key="frame" x="16" y="238" width="343" height="115"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="1rN-um-agO"/>
+                                    <constraint firstAttribute="height" constant="115" id="Q13-uS-lOo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -855,22 +865,34 @@
                             <constraint firstItem="wAo-dx-XiT" firstAttribute="leading" secondItem="ke4-mc-QBB" secondAttribute="leading" id="1PN-g2-aw1"/>
                             <constraint firstItem="OMh-l6-hYz" firstAttribute="leading" secondItem="Hqi-ax-gJ6" secondAttribute="leading" id="9DK-pv-zQ1"/>
                             <constraint firstItem="Hqi-ax-gJ6" firstAttribute="centerX" secondItem="uLw-Lh-ixC" secondAttribute="centerX" id="9fN-J0-VKI"/>
+                            <constraint firstItem="1lG-5x-8D5" firstAttribute="trailing" secondItem="ke4-mc-QBB" secondAttribute="trailing" constant="16" id="Aqy-my-79R"/>
                             <constraint firstAttribute="bottom" secondItem="uLw-Lh-ixC" secondAttribute="bottom" id="EBQ-nb-oWe"/>
                             <constraint firstItem="OMh-l6-hYz" firstAttribute="centerY" secondItem="w18-zn-cdt" secondAttribute="centerY" id="EvL-91-Hgb"/>
+                            <constraint firstItem="Hqi-ax-gJ6" firstAttribute="leading" secondItem="1lG-5x-8D5" secondAttribute="leading" constant="16" id="M4i-8Q-2nI"/>
+                            <constraint firstItem="wAo-dx-XiT" firstAttribute="leading" secondItem="1lG-5x-8D5" secondAttribute="leading" constant="16" id="NqU-j5-ZC9"/>
                             <constraint firstItem="wAo-dx-XiT" firstAttribute="trailing" secondItem="w18-zn-cdt" secondAttribute="trailing" id="O7Y-ff-Jbz"/>
                             <constraint firstItem="Hqi-ax-gJ6" firstAttribute="trailing" secondItem="ke4-mc-QBB" secondAttribute="trailing" id="P27-Iz-O4D"/>
+                            <constraint firstItem="Hqi-ax-gJ6" firstAttribute="top" secondItem="OMh-l6-hYz" secondAttribute="bottom" constant="12" id="TVj-0R-CLa"/>
                             <constraint firstItem="Hqi-ax-gJ6" firstAttribute="leading" secondItem="wAo-dx-XiT" secondAttribute="leading" id="TuH-P2-UGm"/>
                             <constraint firstItem="uLw-Lh-ixC" firstAttribute="leading" secondItem="DSG-dk-XI4" secondAttribute="leading" id="UKG-hz-ERj"/>
                             <constraint firstItem="wAo-dx-XiT" firstAttribute="top" secondItem="Hqi-ax-gJ6" secondAttribute="bottom" constant="18" id="WwQ-XJ-lbs"/>
+                            <constraint firstItem="wAo-dx-XiT" firstAttribute="top" secondItem="Hqi-ax-gJ6" secondAttribute="bottom" constant="18" id="X2d-OI-LoU"/>
+                            <constraint firstItem="wAo-dx-XiT" firstAttribute="top" secondItem="Hqi-ax-gJ6" secondAttribute="bottom" constant="18" id="XeB-9R-tep"/>
+                            <constraint firstItem="ke4-mc-QBB" firstAttribute="leading" secondItem="1lG-5x-8D5" secondAttribute="leading" constant="16" id="ZFw-5h-9xd"/>
                             <constraint firstItem="Hqi-ax-gJ6" firstAttribute="top" secondItem="OMh-l6-hYz" secondAttribute="bottom" constant="12" id="Zok-sA-GYU"/>
                             <constraint firstItem="uLw-Lh-ixC" firstAttribute="top" secondItem="DSG-dk-XI4" secondAttribute="top" id="aTS-L0-Gyc"/>
                             <constraint firstItem="OMh-l6-hYz" firstAttribute="top" secondItem="1lG-5x-8D5" secondAttribute="top" id="aZj-Ox-Z15"/>
                             <constraint firstItem="OMh-l6-hYz" firstAttribute="top" secondItem="w18-zn-cdt" secondAttribute="top" id="amJ-PI-d8E"/>
                             <constraint firstAttribute="trailing" secondItem="uLw-Lh-ixC" secondAttribute="trailing" id="c0D-gu-9fk"/>
                             <constraint firstItem="OMh-l6-hYz" firstAttribute="leading" secondItem="w18-zn-cdt" secondAttribute="leading" id="ccG-fj-I6I"/>
+                            <constraint firstItem="ke4-mc-QBB" firstAttribute="top" secondItem="wAo-dx-XiT" secondAttribute="bottom" constant="8" id="hUp-Pq-Dya"/>
                             <constraint firstItem="OMh-l6-hYz" firstAttribute="leading" secondItem="DSG-dk-XI4" secondAttribute="leadingMargin" id="j4P-MN-ePr"/>
+                            <constraint firstItem="ke4-mc-QBB" firstAttribute="top" secondItem="wAo-dx-XiT" secondAttribute="bottom" constant="8" id="new-XS-rbZ"/>
                             <constraint firstItem="1lG-5x-8D5" firstAttribute="bottom" secondItem="ke4-mc-QBB" secondAttribute="bottom" constant="425" id="oNd-AM-qWL"/>
+                            <constraint firstItem="OMh-l6-hYz" firstAttribute="leading" secondItem="1lG-5x-8D5" secondAttribute="leading" constant="16" id="q3h-mt-5lc"/>
+                            <constraint firstItem="Hqi-ax-gJ6" firstAttribute="top" secondItem="OMh-l6-hYz" secondAttribute="bottom" constant="12" id="rxH-ar-7rd"/>
                             <constraint firstItem="ke4-mc-QBB" firstAttribute="top" secondItem="wAo-dx-XiT" secondAttribute="bottom" constant="8" symbolic="YES" id="xGo-OD-bwT"/>
+                            <constraint firstItem="OMh-l6-hYz" firstAttribute="top" secondItem="1lG-5x-8D5" secondAttribute="top" id="ytl-Ik-npb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1lG-5x-8D5"/>
                     </view>
@@ -990,16 +1012,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofZ-V1-lUH">
-                                <rect key="frame" x="271" y="151" width="104" height="44"/>
+                                <rect key="frame" x="267" y="151" width="108" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Profile" id="EpK-2o-ADw" userLabel="Profile">
-                                        <barButtonItem key="leftBarButtonItem" title="feed" image="Back icon" id="wS0-Si-Ydf" userLabel="Back Button">
-                                            <connections>
-                                                <action selector="BackButton:" destination="SlG-33-Cyl" id="SQJ-T3-bLJ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Edit" image="Back icon" width="50" id="Wzy-GW-eRb" userLabel="Add Friend">
+                                    <navigationItem id="EpK-2o-ADw" userLabel="Profile">
+                                        <barButtonItem key="rightBarButtonItem" title="Add Friend" width="50" id="Wzy-GW-eRb" userLabel="Add Friend">
                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="AddFriend:" destination="SlG-33-Cyl" id="p6f-o0-74J"/>
@@ -1035,7 +1052,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHS-rB-jh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="1167"/>
+            <point key="canvasLocation" x="1285.5999999999999" y="1166.7487684729065"/>
         </scene>
         <!--ProfileEventsSubPage-->
         <scene sceneID="N1d-J8-iG0">
@@ -1555,6 +1572,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3RW-qg-mp1"/>
-        <segue reference="eDj-mb-Vla"/>
+        <segue reference="lTU-Qt-Fcs"/>
     </inferredMetricsTieBreakers>
 </document>
