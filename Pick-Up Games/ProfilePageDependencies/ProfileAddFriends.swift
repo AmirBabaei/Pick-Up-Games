@@ -30,7 +30,6 @@ class ProfileAddFriends: UIViewController{
             self.myFriendsTable.reloadData()
             
         }
-        //let searchController = UISearchController(searchResultsController: nil)
     }
     
 
@@ -100,11 +99,3 @@ extension ProfileAddFriends: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(vc2, animated: true)
     }
 }
-/*
-extension ProfileAddFriends: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        <#code#>
-    }
-    
-}
- */

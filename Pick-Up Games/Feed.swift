@@ -21,11 +21,9 @@ class Feed: UIViewController {
       self.feedTable.reloadData()
     }
   }
-  //  @IBOutlet weak var feedTable: UITableView!
     
     @IBAction func Profile(_ sender: Any) {
         let UID = (Auth.auth().currentUser?.uid)!
-        print("Feed UID: " + UID)
         
         let sharedID = SharedUID()
         sharedID.sharedInstance.UID = UID

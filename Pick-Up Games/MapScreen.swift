@@ -25,9 +25,7 @@ class MapScreen: UIViewController {
   //address text
   @IBOutlet var addressLabel: UILabel!
   @IBAction func doneButton(_ sender: Any) {
-    //checkLocationServices()
     delegate?.finishPassing(dict: self.dict)
-    //performSegue(withIdentifier: "mapSegue", sender: self)
     dismiss(animated: true, completion: nil)
   }
   
@@ -115,7 +113,6 @@ class MapScreen: UIViewController {
 extension MapScreen: CLLocationManagerDelegate {
   
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    //needs work
   }
   
   func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -182,8 +179,6 @@ extension MapScreen: MKMapViewDelegate {
             self.addy = " \(locationName), \(cityName)"
 
         }else {
-          print("theyre not equal ",str,locationName)
-
            self.addressLabel.text = " \(locationName) \n \(streetNumber) \(streetName)\n \(cityName)"
           var dict2:Dictionary<String,Any> = [
             "address": "\(locationName)\(streetNumber) \(streetName) \(cityName)",

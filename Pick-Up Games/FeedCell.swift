@@ -22,7 +22,6 @@ class FeedCell: UITableViewCell {
     
     func fillCell(profPicURL: String, address: String, sport: String, playerCount: String, timeDate: String, name: String, distance: CLLocationDistance) {
         if (profPicURL != "") {
-            print ("I got the url")
             let url = URL(string: profPicURL)
             self.profPic.kf.setImage(with: url)
             self.profPic.roundIt()

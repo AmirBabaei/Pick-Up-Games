@@ -39,12 +39,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
       
         // Do any additional setup after loading the view.
     }
-    
-
-/*  @IBAction func BackB(_ sender: UIButton) {
-        performSegue(withIdentifier: "unwindToLogin", sender: nil)
-  }*/
-  
   
   
   @IBAction func RegisterPressed(_ sender: Any) {

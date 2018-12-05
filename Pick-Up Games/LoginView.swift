@@ -69,7 +69,6 @@ class LoginView: UIViewController, UITextFieldDelegate{
         }
     }
   
-  //Facebook login
   
 }
 

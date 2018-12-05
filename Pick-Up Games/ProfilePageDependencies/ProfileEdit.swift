@@ -53,7 +53,6 @@ class ProfileEdit: UIViewController {
       //self.Email.text = Auth.auth().currentUser?.email
       //self.Age.text = profUserSnapshot.childSnapshot(forPath: "Age").value as? String
       var imageURL = profUserSnapshot.childSnapshot(forPath: "ProfilePicURL").value as? String ?? ""
-      print("------------imageurl",imageURL)
       let url = URL(string: imageURL)
       self.profilePic.kf.setImage(with: url)
       
