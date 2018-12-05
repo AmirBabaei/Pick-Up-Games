@@ -37,6 +37,8 @@ class ProfileEdit: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
       //cickable image
+      profilePic.roundIt()
+      profilePic.contentMode = .scaleAspectFill
       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileEdit.handleSelectImageView))
       profilePic.addGestureRecognizer(tapGesture)
       profilePic.isUserInteractionEnabled = true

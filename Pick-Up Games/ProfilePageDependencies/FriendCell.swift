@@ -15,8 +15,9 @@ class FriendCell: UITableViewCell {
     
     
     func fillCell(profPicURL: String, name: String) {
-        if (profPicURL != "") {
-            print ("I got the url")
+      profPic.roundIt()
+      profPic.contentMode = .scaleAspectFill
+      if (profPicURL != "") {
             let url = URL(string: profPicURL)
             self.profPic.kf.setImage(with: url)
         } else {

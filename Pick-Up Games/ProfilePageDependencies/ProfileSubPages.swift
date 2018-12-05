@@ -24,7 +24,7 @@ class ProfileSubPages: UIPageViewController {
     var pageControl = UIPageControl()
     
     func configurePageControl() {
-        pageControl = UIPageControl(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 50))
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: 450, width: UIScreen.main.bounds.width, height: 50))
         self.pageControl.numberOfPages = subPages.count
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.black
