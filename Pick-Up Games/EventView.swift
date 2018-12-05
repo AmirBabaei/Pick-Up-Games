@@ -58,7 +58,6 @@ class EventView: UIViewController {
     img.roundIt()
     super.viewDidLoad()
       if (imgURL != "") {
-          print ("I got the url")
           let url = URL(string: imgURL)
           self.img.kf.setImage(with: url)
       } else {
