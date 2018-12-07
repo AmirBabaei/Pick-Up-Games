@@ -40,6 +40,10 @@ class OtherProfiles: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+      
+        profilePic.roundIt()
+        profilePic.contentMode = .scaleAspectFill
+      
         getBasicInfo()
         let vc: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc2 = vc.instantiateViewController(withIdentifier: "ProfileSubPages") as! ProfileSubPages
