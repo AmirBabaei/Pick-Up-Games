@@ -214,7 +214,7 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.077070909229999998" green="0.42628643840000002" blue="0.57052951389999995" alpha="0.50731077979999994" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39459097859999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="address" destination="fad-mh-YPv" id="Ul1-C4-IfP"/>
                                             <outlet property="distance" destination="ns1-qd-Atr" id="NdB-tq-yY0"/>
@@ -901,7 +901,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.077070909229999998" green="0.42628643840000002" blue="0.57052951389999995" alpha="0.50731077979999994" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="name" destination="Xcc-km-6ui" id="EJp-xu-wCp"/>
                                             <outlet property="profPic" destination="DB0-vn-E9G" id="PRY-tr-ObM"/>
@@ -1130,7 +1130,7 @@
                                 </accessibility>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-RY-jIq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="686"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.077070909229999998" green="0.42628643840000002" blue="0.57052951389999995" alpha="0.50731077979999994" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.077070909229999998" green="0.42628643840000002" blue="0.57052951389999995" alpha="0.50731077979999994" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1155,7 +1155,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.077070909229999998" green="0.42628643840000002" blue="0.57052951389999995" alpha="0.50731077979999994" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="name" destination="IAc-fu-L2c" id="wBQ-QH-faB"/>
                                             <outlet property="profPic" destination="pRL-kH-aBR" id="qoS-te-hL2"/>
@@ -1462,7 +1462,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.077070909229999998" green="0.42628643840000002" blue="0.57052951389999995" alpha="0.50731077979999994" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39187930050000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="name" destination="2WY-wg-w1H" id="KeC-rr-IaI"/>
                                             <outlet property="profPic" destination="TSd-Ej-duX" id="4j9-sm-2tr"/>
