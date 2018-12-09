@@ -792,7 +792,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileSubPages" modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QCi-xW-C9p" customClass="ProfileSubPages" customModule="Pick_Up_Games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDv-SM-iq1" customClass="UIPageControl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="494"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="479"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -1522,7 +1522,7 @@
         <image name="test-login" width="737.280029296875" height="442.07998657226562"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3RW-qg-mp1"/>
+        <segue reference="Q9I-Vm-PGx"/>
         <segue reference="lTU-Qt-Fcs"/>
     </inferredMetricsTieBreakers>
 </document>

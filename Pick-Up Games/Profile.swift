@@ -21,7 +21,9 @@ class Profile: UIViewController {
       profilePic.roundIt()
 
     }
-    
+  @objc func dismissKeyboard() {
+    view.endEditing(true)
+  }
     @IBAction func button(_ sender: Any) {
         let logout = Auth.auth()
         

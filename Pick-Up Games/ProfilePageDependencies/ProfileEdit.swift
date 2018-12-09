@@ -15,16 +15,24 @@ import Kingfisher
 
 
 
-class ProfileEdit: UIViewController {
+class ProfileEdit: UIViewController, UITextFieldDelegate {
   
   
   public var img1 = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.Username.delegate = self
         setImage()
       
+      let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
       
+      view.addGestureRecognizer(tapGesture)
     }
+  
+ 
+  @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer){
+    view.endEditing(true)
+  }
   
   var selectedImage: UIImage?
   @IBOutlet weak var profilePic: UIImageView!
